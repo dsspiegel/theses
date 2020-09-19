@@ -1,0 +1,140 @@
+\documentclass[11 pt]{report}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{fact}{Fact}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+
+%commands
+\newcommand{\ep}[0]{\qquad \diamondsuit}
+\newcommand{\wtl}[0]{\widetilde{L}}
+\newcommand{\ex}[1]{\begin{example} \label{#1} \end{example} \vspace{-12pt}}
+\newcommand{\eex}[1]{\vspace{12pt}}
+\newcommand{\emu}[1]{\emph{\underline{#1}}}
+\newcommand{\tr}[0]{\mathrm{tr}}
+\newcommand{\Ad}[0]{\mathrm{Ad}}
+\newcommand{\trd}[0]{\mathrm{tr}}
+\newcommand{\gl}[0]{g_{_L}}
+\newcommand{\glp}[0]{g_{_{L^\prime}}}
+\newcommand{\gla}[0]{g_{_{aL}}}
+\newcommand{\contr}[0]{$\Longrightarrow \Longleftarrow$!$\mbox{ }$}
+
+%Emph, Paren
+\newcommand{\pn}[1]{\mbox{$(#1)$}}
+\newcommand{\pns}[1]{\mbox{$(#1)$}}
+\newcommand{\pes}[1]{\mbox{$(#1)$}}
+\newcommand{\pc}[1]{\mbox{$(#1):$}}
+
+%partial derivatives
+\newcommand{\parr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ppp}[3]{\partial_{#1 #2 #3}}
+\newcommand{\pp}[2]{\partial_{#1 #2}}
+\newcommand{\p}[1]{\partial_{#1}}
+
+%boldface shortcuts
+\newcommand{\bx}[0]{\mathbf{x}}
+\newcommand{\by}[0]{\mathbf{y}}
+\newcommand{\bz}[0]{\mathbf{z}}
+\newcommand{\bu}[0]{\mathbf{u}}
+\newcommand{\bv}[0]{\mathbf{v}}
+\newcommand{\br}[0]{\mathbf{r}}
+\newcommand{\bi}[0]{\mathbf{\imath}}
+\newcommand{\bj}[0]{\mathbf{\jmath}}
+\newcommand{\vu}[0]{\mathbf{\hat{u}}}
+\newcommand{\vv}[0]{\mathbf{\hat{v}}}
+\newcommand{\bX}[0]{\mathbf{X}}
+\newcommand{\bZ}[0]{\mathbf{Z}}
+\newcommand{\bZe}[0]{\mathbf{0}}
+\newcommand{\bN}[0]{\mathbf{N}}
+\newcommand{\bR}[0]{\mathbf{R}}
+\newcommand{\bC}[0]{\mathbf{C}}
+\newcommand{\bA}[0]{\mathbf{A}}
+\newcommand{\bM}[0]{\mathbf{M}}
+\newcommand{\bPo}[0]{\mathbf{P_1}}
+\newcommand{\bPt}[0]{\mathbf{P_2}}
+
+%calligraphic shortcuts
+\newcommand{\cA}[0]{\mathcal{A}}
+\newcommand{\cAt}[0]{\mathcal{A}^\times}
+\newcommand{\cF}[0]{\mathcal{F}}
+\newcommand{\cS}[0]{\mathcal{S}}
+\newcommand{\cK}[0]{\mathcal{K}}
+\newcommand{\cG}[0]{\mathcal{G}}
+\newcommand{\cH}[0]{\mathcal{H}}
+\newcommand{\cU}[0]{\mathcal{U}}
+\newcommand{\cV}[0]{\mathcal{V}}
+\newcommand{\cR}[0]{\mathcal{R}}
+\newcommand{\cO}[0]{\mathcal{O}}
+\newcommand{\cE}[0]{\mathcal{E}}
+\newcommand{\cZ}[0]{\mathcal{Z}}
+\newcommand{\cL}[0]{\mathcal{L}}
+
+%large shortcuts
+\newcommand{\lmO}[0]{\mbox{\LARGE $0$}}
+\newcommand{\lO}[0]{\LARGE $0$}
+
+\def\sl{\it}
+\def\csc{\it}
+
+\def\th{^{th}}
+\def\st{^{st}}
+\def\md{\mbox{---}}
+
+\def\proof{\noindent{\it Proof: $\mbox{ }$}\ }
+
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.51in
+\topmargin 0in
+\textheight 8in
+
+\begin{document}
+\baselineskip 21pt
+\pagenumbering{roman}
+\evensidemargin 0.25in
+\footnotesep 14pt
+
+\begin{titlepage}
+\mbox{}
+\vspace{1in}
+\begin{center}
+\LARGE TITLE \\
+\end{center}
+\vfill
+\begin{center}
+Copyright \copyright\ 2003 Edward Spiegel
+\end{center}
+\end{titlepage}
+
+\evensidemargin 0in
+
+\chapter*{Abstract}
+
+Fill in abstract here.
+
+\chapter*{Acknowledgements}
+
+Fill in acknowledgements here.
+
+\tableofcontents
+% \listoffigures
+\newpage
+
+
+
+\pagenumbering{arabic}
+\setcounter{chapter}{-1}
+
+
+\input nlietheory.tex
+
+\input nsepofvar.tex
+
+\input nsymop.tex
+
+\input nbiblio.tex
+
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass[onecolumn,10pt]{article}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{corollary}{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{fact}{Fact}
+\newtheorem{definition}{Definition}
+
+%commands
+\newcommand{\ep}[0]{\qquad \diamondsuit}
+\newcommand{\wtl}[0]{\widetilde{L}}
+\newcommand{\ex}[1]{\begin{example} \label{#1} \end{example}}
+\newcommand{\eex}[1]{\vspace{12pt}}
+\newcommand{\emu}[1]{\emph{\underline{#1}}}
+\newcommand{\tr}[0]{\mathrm{tr}}
+\newcommand{\Ad}[0]{\mathrm{Ad}}
+\newcommand{\trd}[0]{\mathrm{tr}}
+\newcommand{\gl}[0]{g_{_L}}
+\newcommand{\glp}[0]{g_{_{L^\prime}}}
+\newcommand{\gla}[0]{g_{_{aL}}}
+\newcommand{\contr}[0]{$\Longrightarrow \Longleftarrow$!$\mbox{ }$}
+
+%Emph, Paren
+\newcommand{\pn}[1]{\mbox{$(#1)$}}
+\newcommand{\pns}[1]{\mbox{$(#1)$}}
+\newcommand{\pes}[1]{\mbox{$(#1)$}}
+\newcommand{\pc}[1]{\mbox{$(#1):$}}
+
+%partial derivatives
+\newcommand{\parr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ppp}[3]{\partial_{#1 #2 #3}}
+\newcommand{\pp}[2]{\partial_{#1 #2}}
+\newcommand{\p}[1]{\partial_{#1}}
+
+%boldface shortcuts
+\newcommand{\bx}[0]{\mathbf{x}}
+\newcommand{\by}[0]{\mathbf{y}}
+\newcommand{\bz}[0]{\mathbf{z}}
+\newcommand{\bu}[0]{\mathbf{u}}
+\newcommand{\bv}[0]{\mathbf{v}}
+\newcommand{\br}[0]{\mathbf{r}}
+\newcommand{\bi}[0]{\mathbf{\imath}}
+\newcommand{\bj}[0]{\mathbf{\jmath}}
+\newcommand{\vu}[0]{\mathbf{\hat{u}}}
+\newcommand{\vv}[0]{\mathbf{\hat{v}}}
+\newcommand{\bX}[0]{\mathbf{X}}
+\newcommand{\bZ}[0]{\mathbf{Z}}
+\newcommand{\bZe}[0]{\mathbf{0}}
+\newcommand{\bN}[0]{\mathbf{N}}
+\newcommand{\bR}[0]{\mathbf{R}}
+\newcommand{\bC}[0]{\mathbf{C}}
+\newcommand{\bA}[0]{\mathbf{A}}
+\newcommand{\bM}[0]{\mathbf{M}}
+\newcommand{\bPo}[0]{\mathbf{P_1}}
+\newcommand{\bPt}[0]{\mathbf{P_2}}
+
+%calligraphic shortcuts
+\newcommand{\cA}[0]{\mathcal{A}}
+\newcommand{\cAt}[0]{\mathcal{A}^\times}
+\newcommand{\cF}[0]{\mathcal{F}}
+\newcommand{\cS}[0]{\mathcal{S}}
+\newcommand{\cK}[0]{\mathcal{K}}
+\newcommand{\cG}[0]{\mathcal{G}}
+\newcommand{\cH}[0]{\mathcal{H}}
+\newcommand{\cU}[0]{\mathcal{U}}
+\newcommand{\cV}[0]{\mathcal{V}}
+\newcommand{\cR}[0]{\mathcal{R}}
+\newcommand{\cO}[0]{\mathcal{O}}
+\newcommand{\cE}[0]{\mathcal{E}}
+\newcommand{\cZ}[0]{\mathcal{Z}}
+\newcommand{\cL}[0]{\mathcal{L}}
+
+%large shortcuts
+\newcommand{\lmO}[0]{\mbox{\LARGE $0$}}
+\newcommand{\lO}[0]{\LARGE $0$}
+
+\def\sl{\it}
+\def\csc{\it}
+
+\def\th{^{th}}
+\def\st{^{st}}
+\def\md{\mbox{---}}
+
+\def\proof{\noindent{\it Proof: $\mbox{ }$}\ }
+
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.51in
+\topmargin 0in
+\textheight 8in
+
+\begin{document}
+\baselineskip 21pt
+\pagenumbering{arabic}
+\evensidemargin 0.25in
+\footnotesep 14pt
+
+\begin{center}
+\LARGE Shapewise Equivalence and the Helmholtz Equation \\
+\normalsize \emph{David S. Spiegel} \\[\medskipamount]
+Submitted to: \emph{The Journal of Mathematical Physics}, 8 January 2001 \\
+
+\end{center}
+
+\evensidemargin 0in
+
+\vspace{12pt}
+
+\noindent \LARGE Abstract
+\normalsize
+
+\noindent Separation of variables is by far the most widely used method of solving linear partial differential equations.  The Helmholtz equation ($\parr{^2\Psi}{x^2} + \parr{^2\Psi}{y^2} + \omega^2\Psi = 0$) is one of the simplest equations that can be solved by this method.  This equation is widely used in physics, and so it has been studied for many years.  It is well-known that there are four orthogonal coordinate systems (rectangular, parabolic, polar, and elliptic) up to a certain kind of equivalence in which this equation separates.  Both \cite{miller} and \cite{morse}, among others, derive its four orthogonal separable coordinate systems.  These references, however, never define what it means for a partial differential equation to separate in a coordinate system, and are not specific about in what way the other coordinate systems in which the Helmholtz equation is separable are equivalent to the four derived.  In this paper, we provide a definition of separation of variables that is applicable in a small but important set of types of equations (a set that, of course, includes the Helmholtz equation in orthogonal coordinates), and we introduce \emu{shapewise equivalence}, the equivalence relation holding between any coordinate system in which the Helmholtz equation is separable and one of the four coordinate systems commonly cited as the Helmholtz equation's separable coordinate systems.
+
+\newpage
+
+\input body.tex
+
+\vspace{12pt}
+
+\noindent \LARGE Acknoledgements
+\normalsize
+
+\noindent I thank Professor David A. Cox of Amherst College, whose efforts and support in this research were outstanding.
+
+\input abiblio.tex
+
+\end{document}

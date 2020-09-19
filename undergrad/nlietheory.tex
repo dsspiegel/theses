@@ -1,0 +1,251 @@
+\chapter{Preliminary Lie Theory}
+
+\begin{section}{Lie Algebras}
+Lie groups and Lie algebras arose naturally out of Sophus Lie's study of the symmetries of differential equations.  This paper examines such symmetries --- in particular, the symmetries of the Helmholtz equation --- and, as a result, much of the discussion in Chapter $2$ will be framed in the language of Lie theory.
+
+It is assumed that the reader is familiar with groups, rings, fields, and vector spaces.  Another algebraic structure that will be important in later discussion is an algebra.
+
+\begin{definition}
+\label{alg}
+Given a set $\cA$ and a field $\cK$, $\cA$ is said to be an \emu{algebra} over $\cK$ if
+
+\noindent \pc{i}  $\cA$ is a vector space over $\cK$.
+
+\noindent \pc{ii}  $\cA$ is closed under a product $\cdot$ that distributes over $+$: Given $a, b, c \in \cA$, $a \cdot (b + c) = a \cdot b + a \cdot c$ and $(a + b) \cdot c = a \cdot c + b \cdot c$.
+
+\noindent \pc{iii}  If $\lambda \in \cK$ and $a,b \in \cA$, then $\lambda (a \cdot b) = (\lambda a) \cdot b = a \cdot (\lambda b)$.
+\end{definition}
+
+When there is no ambiguity regarding which product we are referring to, we will often write $ab$ instead of $a \cdot b$.  Now, notice that there is no stipulation that the product $\cdot$ be commutative or associative.  It is often useful to investigate whether two elements of $a, b \in \cA$ commute with one another, and, if not, by how much $ab$ differs from $ba$.  We define the commutator $[-,-]$ operation as follows: $[a,b] = ab - ba$.  The commutator (also called the ``Lie commutator'' or ``Lie bracket,'' for reasons that will be clear presently) can be thought of as measuring the degree of non-commutativity of $a$ and $b$; if $a$ and $b$ commute, $[a,b] = 0$.
+
+\begin{theorem}
+\label{bracket}
+Let $\cA$ be an associative algebra.  Then, given $a,b,c \in \cA$, and $k \in \cK$, the commutator operation $[-,-]$ satisfies the following properties:
+
+\noindent{\pc{i}}  $[a,b] = -[b,a]$
+
+\noindent{\pc{ii}}  $[a,kb] = [ka,b] = k[a,b]$
+
+\noindent{\pc{iii}}  $[a,b+c] = [a,b] + [a,c] \mbox{ and } [a + c, b] = [a,b] + [c,b]$
+
+\noindent{\pc{iv}}  $($\emph{Jacobi Identity}$)$ $[[a,b],c] + [[b,c],a] + [[c,a],b] = 0$
+\end{theorem}
+
+Each of these properties can be verified by a straightforward computation, and so we will omit the verifications.
+
+\ex{Mnn}
+Let $\cK$ be any field.  An example of an algebra is $M_{n \times n}(\cK)$, the set of all $n$ by $n$ matrices whose entries are elements of $\cK$, under ordinary matrix multiplication.  We will not prove that this is an algebra, but the reader should recall that $M_{n \times n}(\cK)$ is a classic example of a vector space over $\cK$, and that matrix multiplication distributes over addition.  This algebra happens to be associative and noncommutative, but we will omit the proof of this claim.
+
+\begin{definition}
+\label{unit}
+If $\cA$ is an algebra that has a multiplicative identity $I$, then, $x \in \cA$ is said to be a \emu{unit} if there exists an element $y \in \cA$ such that $xy = yx = I$.
+\end{definition}
+
+It is routine to check that the set $\cAt$ of units of an associative algebra $\cA$ is a group under multiplication: \pn{i} $I \in \cAt$; \pn{ii} every element of $\cAt$ has an inverse; \pn{iii} $\cdot$ is associative; and \pn{iv} given $a,b \in \cAt$, choose any $c, d \in \cAt$ such that $(ac = ca = I$ and $bd = db = I)$, and since $\cdot$ is associative it is clear that $(ab)(dc) = (dc)(ab) = I$.
+
+Notice that since it turns out that $\cAt$ is a group, the inverses had to be unique after all; and so, for the $c$ and $d$ of \pn{iv}, we may write $c = a^{-1}$, $d = b^{-1}$, and $(b^{-1}a^{-1}) = (ab)^{-1}$.
+
+\begin{definition}
+\label{groupunits}
+The set $\cAt$ of units of an associative algebra $\cA$ is called the \emu{group of units of $\cA$}.
+\end{definition}
+
+\ex{GLx}
+Let $\cK$ be a field.  When $M_{n \times n}(\cK)$ (also written $gl(n,\cK)$) is the associative algebra under consideration, the group of units is called the general linear group of $\cK ^ n$ and is denoted $GL(n,\cK)$.  If $1$ is the identity of $\cK$, then it is clear that
+\[
+I = 	\left(	\begin{array}{ccccc}
+		1 	&0	&\cdots	&	&0 	\\
+		0	&1	&	&	&	\\
+		\vdots	&	&\ddots	&	&\vdots	\\
+			&	&	&1	&0	\\
+		0	&	&\cdots	&0	&1
+\end{array} \right),
+\]
+with $1$ along the main diagonal and $0$ everywhere else, is the identity of $GL(n,\cK)$.  Note that $GL(n,\cK)$ is the group of invertible $n$ by $n$ matrices, which also happens to be the set of matrices with nonzero determinants.
+
+\begin{definition}
+\label{SL}
+Let $\cK$ be a field.  A set $G \subseteq GL(n,\cK)$ is said to be a \emu{matrix group} if it is a subgroup under with ordinary matrix multiplication.  The \emu{special linear group} $SL(n,\cK)$ is the set of $A \in GL(n,\cK)$ such that $\det(A) = 1$.
+\end{definition}
+
+\ex{SLx}
+Consider if our field is $\bR$ and $n = 2$.  $SL(2,\bR)$ is then seen to be:
+\[
+\left\{	\left(	\begin{array}{cc}
+		a 	& b 	\\
+		c	& d
+\end{array} \right) : a,b,c,d \in \bR \mbox{ and } ad - bc = 1 \right\}.
+\]
+
+\begin{definition}
+\label{liealg}
+Given a set $\cA$ and a field $\cK$, $\cA$ is said to be a \emu{Lie algebra} over $\cK$ if it is closed under a product operation $[-,-]$ that satisfies properties \pns{i} through \pns{iv} of Theorem \ref{bracket}.  This product operation is referred to as the \emu{Lie bracket}.
+\end{definition}
+
+The terminology might be somewhat confusing here.  The product operation from Definition~\ref{liealg} is not required to be a commutator, as it is in the hypotheses of Theorem \ref{bracket}.  If it \emph{were}, there would have to be an additional product defined on the Lie algebra.  But the definition of a Lie algebra only requires one product operation.  Now, it turns out that every Lie algebra has an associated Universal Enveloping Algebra for which the Lie algebra's $[-,-]$ is a commutator; and this is why the Lie bracket is often also called is often called the ``Lie commutator.''  But to prove this or to discuss it further would take us too far afield.
+	At this point, it will be useful to consider several examples of Lie algebras.
+
+\ex{Mnnt}
+The set $M_{n \times n}(\bR)$ from Example \ref{Mnn} is a Lie algebra if we define $[A,B] = AB - BA$, for all $A, B \in M_{n \times n}(\cK)$.
+
+\begin{definition}
+\label{slla}
+We denote by \emu{$sl(n,\cK)$} the set of all matrices $A \in M_{n \times n}$ such that $\tr(A) = 0$, where $\tr(A)$, the trace of $A$, is the sum of the diagonal entries of $A$.
+\end{definition}
+
+\ex{slx}
+It turns out that $sl(n,\bR)$ is a Lie algebra under commutator.  The only property of Lie algebras that is in question is closure under Lie bracket.  Recall that given two matrices $A$ and $B$ $\in M_{n \times n}$, $\tr(AB) = \tr(BA)$.  Recall also that $\tr(-)$ is a linear operator; that is, $\tr(A + c \cdot B) = \tr(A) + c \cdot \tr(B)$.  Thus, $\tr([A,B]) = \tr(AB - BA)$ $= \tr(AB) - \tr(BA) = 0$.  So, $sl(n, \bR)$ is closed under Lie bracket.
+
+\eex
+
+Notice that $sl(n,\bR)$ (for $n > 1$) is not closed under ordinary matrix multiplication.  Thus, if we were in a world that contained only elements of $sl(n,\bR)$, it would not make sense to speak of $[-,-]$ as being a commutator (for, given $A,B \in sl(n,\bR)$, we could not in general make sense of $AB$).  The reason we do speak of it as a commutator is that we think of $sl(n,\bR)$ as a subset of $M_{n \times n}(\bR)$, and the latter is an enveloping algebra for the former --- that is, the Lie bracket of $sl(n,\bR)$ is a commutator in $M_{n \times n}(\bR)$.
+
+\end{section}
+
+\begin{section}{The One-Parameter Subgroup}
+
+Here, we will give only a brief introduction to this concept, for we will revisit it in detail later.  It should be assumed that all vector spaces that we discuss have metrics defined on them.  In fact, for the most part we will deal only with vector spaces over $\bR$, although vector spaces over $\bC$ are in most respects completely analogous.  In order to define a one-parameter subgroup, we must build up some machinery; so we will begin by introducing some necessary terms.
+
+First, observe that a matrix group $G \subseteq M_{n \times n}(\bR) \cong \bR^{n^2}$ has a natural metric $d_G$ induced by the usual metric in $\bR^{n^2}$.
+
+\begin{definition}
+\label{cont}
+If $G$ and $H$ are matrix groups with associated metrics $d_G$ and $d_H$, and $\phi: G \longrightarrow H$ is a homomorphism such that for every $g_0 \in G$ and for all $\epsilon > 0$, there exists a $\delta > 0$ such that whenever $d_G(g,g_0) < \delta$, $d_H(\phi(g),\phi(g_0)) < \epsilon$, then we say that $\phi$ is a \emu{continuous homomorphism}.
+\end{definition}
+
+From now on, it will be assumed that the matrix groups that we speak of are in vector spaces that have metrics defined on them, and that the homomorphisms that we speak of are continuous.
+
+\begin{definition}
+\label{curve}
+If $V$ is a finite-dimensional vector space over $\bR$, then $\gamma: (a,b) \longrightarrow V$ is said to be a \emu{curve} in $V$ $($where $(a,b)$ denotes an open interval in $\bR$$)$.
+\end{definition}
+
+\begin{definition}
+\label{differentiable}
+If $\gamma$ is a curve in a vector space $V$, then $\gamma$ is said to be \emu{differentiable} if for all $t \in (a,b)$, $\lim_{h \to 0}\frac{\gamma(t+h) - \gamma(t)}{h}$ exists.
+\end{definition}
+
+\begin{definition}
+\label{smooth}
+If $G$ and $H$ are matrix groups, and $\phi: G \longrightarrow H$ is a continuous homomorphism, then $\phi$ is said to be a \emu{smooth homomorphism} if for every differentiable curve $\gamma$ in $G$, $\phi \circ \gamma$ is a differentiable curve in $H$.
+\end{definition}
+
+\ex{smoothx}
+Let $G = H = GL(n, \bR)$.  The identity map $A \longmapsto A$ for all $A$ is a smooth homomorphism.
+
+\begin{definition}
+\label{oneparam}
+Let $\gamma: \bR \longrightarrow G$ be a homomorphism from $\bR$ to some matrix group $G$, that is differentiable in the sense of Definition~\ref{differentiable}.  Then we say that $\gamma$ is a \emu{one-parameter subgroup} in $G$.
+\end{definition}
+
+Since the identity map on $\bR$, $f_I(x) = x$, is a differentiable curve in $\bR$, the fact that $\gamma$ is a smooth homomorphism implies that $\gamma \circ f_I$ is a differentiable curve in $G$.  But $\gamma \circ f_I$ is just $\gamma$.  So a one-parameter subgroup is a mapping that is a differentiable curve in G whose image is a subgroup of $G$.  This follows from the fact that a one-parameter subgroup $\gamma$ has the property that $\gamma(t_1) \cdot \gamma(t_2) = \gamma(t_1 + t_2)$ (proof omitted\footnote{For a more complete discussion of matrix groups, see for instance \cite{curtis}.}).
+
+A useful example of a one-parameter subgroup has to do with the exponential of a matrix.  The exponential of a square matrix is the natural generalization of the exponential of a real (or complex) number --- using the MacLaurin series definition of exponential.
+
+\begin{definition}
+\label{exp}
+Let $A \in M_{n \times n}(\cK)$, where $\cK \in \{ \bR, \bC \}$.  We define the \emu{exponential} of $A$ $($$\exp A$ or $e^A$$)$ to equal $\sum_{n=0}^\infty \frac{1}{n!}A^n$.
+\end{definition}
+
+We will now state without proof several properties of the matrix exponential.
+
+\noindent{\pn{i}:}  The infinite sum defining $e^A$ converges for every $A$.
+
+\noindent{\pn{ii}:}  If matrices $A$ and $B$ commute, then $e^{A+B} = e^Ae^B = e^Be^A$.
+
+\noindent{\pn{iii}:}  Given $A \in M_{n \times n}(\bR)$ or $M_{n \times n}(\bC)$, $\det(e^A) = e^{\tr(A)} \not= 0$.
+
+And now we are ready for an example of a one-parameter subgroup.
+
+\ex{expx}
+We define $\gamma: \bR \longrightarrow M_{n \times n}(\bR)$ as follows.  Let $A \in M_{n \times n}(\bR)$.  Then, for $t \in \bR$, $\gamma(t) = \exp(tA)$.  We then have that $\gamma$ is a one-parameter subgroup in $GL(n,\bR)$.  Why?  Well, let $f$ be a differentiable curve in $\bR$.  Then $(\gamma \circ f)(t)$ $= \gamma(f(t)) = \exp(f(t)A)$, and this happens to be a differentiable curve in $GL(n,\bR)$ (proof omitted).  That the image of $\gamma$ lies in $GL(n,\bR)$ follows from property \pn{iii} above: the determinant of a matrix exponential never vanishes.
+
+\ex{sltoSL}
+We define $\gamma: \bR \longrightarrow SL(n, \bR)$ as follows.  Let $A \in sl(n, \bR)$.  Then, for $t \in \bR$, $\gamma(t) = \exp(tA)$.  It is easy to verify that $\gamma$ is a one-parameter subgroup in $SL(n, \bR)$:  Since $\tr(A) = 0$, $\det(e^{tA}) = e^{t \cdot \tr(A)} = e^0 = 1$; and thus, $e^{tA} \in SL(n, \bR)$.
+
+\end{section}
+
+\begin{section}{The Tangent Space}
+
+In general, a tangent space (for instance, a tangent line to a curve, or a tangent plane to a surface) consists of the set of tangent vectors.  The case of matrix groups is no exception.
+
+\begin{definition}
+\label{tanvec}
+Let $\gamma: \bR \longrightarrow V$ be a curve that is differentiable at $x_0$.  We define $\gamma^\prime \left( x_0 \right) = \frac{d \gamma}{dx}\left( x_0 \right)$ to equal $\lim_{h \to 0}\frac{\gamma \left( x_0 + h \right) - \gamma \left( x_0 \right) }{h}$, and we call $\gamma^\prime \left( x_0 \right)$ the \emu{tangent vector} at $\gamma \left( x_0 \right)$.
+\end{definition}
+
+A tangent space, properly speaking, is a tangent space at a point (or vector) to a \emph{submanifold} (for our purposes, a submanifold of $\bR^n$).  So the idea of a submanifold is a logically prior concept.  We will not define a submanifold of $\bR^n$ carefully, but will instead rely on our intuition.\footnote{For a proper definition of a manifold and a submanifold, see \cite{munkres}.}  Roughly speaking, a $d$-dimensional submanifold of $\bR^n$ is a subset of $\bR^n$, that, in a small enough neighborhood of every point, resembles $\bR^d$, for some $d$, $0 < d < n$.  For instance, a smooth curve is a $1$-dimenional submanifold in $\bR^n$ for $n \ge 2$, because in a small enough neighborhood of every point, the curve resembles a line.  Similarly, a well-behaved surface is a $2$-dimensional submanifold in $\bR^n$ for $n \ge 3$, because in a small enough neighborhood of every point, the surface resembles a plane.
+
+\begin{definition}
+\label{tanspace}
+Let $S$ be a submanifold in $\bR^n$, and let $\bv_0 \in S$.  Let $\Gamma = \left\{ \gamma : (-\epsilon, \epsilon) \longrightarrow S \right.$ for some $\epsilon > 0$, where $\gamma$ is differentiable and $\left. \gamma(0) = \bv_0 \right\}$.  We define the \emu{tangent space} to $S$ at $\bv_0$ to be
+\[
+T_{\bv_0}S = \left\{ \gamma^\prime(0) : \gamma \in \Gamma \right\}.
+\]
+\end{definition}
+
+One can prove that $T_{\bv_0}S$ is a subspace of $\bR^n$ of dimension $d = \dim(S)$.
+
+\ex{silly}
+A simple example is the tangent space to the unit circle parametrized by $\gamma(\theta) = (\cos(\theta + \pi/2), \sin(\theta + \pi/2))$, for $-\pi \le \theta \le \pi$, at $(0,1)$.  Every curve in this submanifold that maps $0$ to $(0,1)$ is of the form $(\cos f(\theta),\sin f(\theta))$, where $f$ is differentiable and $f(0) = \pi/2$.  The tangent vectors at $(0,1)$ are then of the form $(-\sin(\pi/2)f^\prime(0), \cos(\pi/2)f^\prime(0)) = (-f^\prime(0),0)$, and the tangent space is the set of points of the form $(-f^\prime(0), 0)$ for all differentiable $f$, which is just the subspace $y = 0$.
+
+\end{section}
+
+\begin{section}{Lie Groups}
+Lie groups, much like manifolds, and submanifolds, are objects whose general definition is more complicated than can be explored in this paper.  As with the other two, we can give examples of Lie groups without knowing the general definition.  The important aspect of Lie groups for our purpose is that they are intimately related to Lie algebras.  If we have a Lie algebra $\cA$ of matrices, there is an associated Lie group $\cG$ of matrices that is obtained by exponentiating the elements of $\cA$.  The Lie algebra of a Lie group is the tangent space at the group's identity.  Several examples of this follow.
+
+\ex{glGL}
+Recall from Example \ref{GLx} that $gl(n,\bR)$ is another name for $M_{n \times n}(\bR)$.  Now we see why: as we saw in Example \ref{expx}, given an element $A \in gl(n, \bR)$, $\exp(A) \in GL(n, \bR)$, and, since for all $B \in GL(n, \bR)$, it turns out that there exists some $A \in gl(n,\bR)$ such that $B = \exp(A)$.  Furthermore, one can prove that $gl(n,\bR)$ is the tangent space at the identity of $GL(n,\bR)$.  The Lie algebra and the Lie group are similar entities, and so we name them similarly, differentiating the names only by capitalizing the Lie group.
+
+\ex{euclidean}
+Consider the Lie algebra $\cE(2)$ consisting of elements of the form
+\[
+\left(	\begin{array}{rrr}
+		0		&\theta		& 0	\\
+		-\theta		& 0		& 0	\\
+		a		& b		& 0
+\end{array} \right).
+\]
+A basis for this can be written as follows:
+\[
+\bM = \left( \begin{array}{rrr}
+		0 		& 1		& 0	\\
+		-1		& 0		& 0	\\
+		0		& 0		& 0
+\end{array} \right), \quad
+\bPo = \left( \begin{array}{rrr}
+		0 		& 0		& 0	\\
+		0		& 0		& 0	\\
+		1		& 0		& 0
+\end{array} \right), \quad
+\bPt = \left( \begin{array}{rrr}
+		0 		& 0		& 0	\\
+		0		& 0		& 0	\\
+		0		& 1		& 0
+\end{array} \right).
+\]
+One can easily verify that the commutation relations are $[\bPo,\bPt] = [\bPt,\bPo] = 0$, $[\bM,\bPo] = \bPt$, and $[\bM,\bPt] = -\bPo$.  (Clearly, as always, each element commutes with itself.)
+
+This algebra is the tangent space at the identity of the Lie group $E(2)$, called the \emu{Euclidean} \emu{group in the plane}, which consists of matrices of the form $g(\theta,a,b)$ for $\theta, a, b \in \bR$, where
+\[
+g(\theta,a,b) = \left(	\begin{array}{rrr}
+			\cos \theta	&\sin \theta	& 0	\\
+			-\sin \theta	&\cos \theta	& 0	\\
+			a		& b		& 1
+\end{array} \right).
+\]
+The elements of $E(2)$ act on points in the plane as follows: if $\bx = (x,y)$ and $g \in E(2)$, then $\bx g = (x^\prime,y^\prime)$, where $x^\prime = \hat{\bi} \cdot \Big((x,y,1) \times g \Big)$ (with usual matrix multiplication and the ordinary dot-product) and $y^\prime = \hat{\bj} \cdot \Big((x,y,1) \times g \Big)$.  Note: $\hat{\bi}$ and $\hat{\bj}$ are unit vectors in the $x$ and $y$ directions, respectively.  Thus if $\bx = (x,y)$, then
+\[
+\bx g(\theta,a,b) = (x \cos \theta + y \sin \theta + a, -x \sin \theta + y \cos \theta + b),
+\]
+so that $\bx g$ is a composition of a rotation and a translation.
+
+The elements of $E(2)$ can also be taken to act on functions on the plane.  If we are discussing the action of $g \in E(2)$ on a function $f: \bR^2 \longrightarrow \bR$, we write $T_g$ instead of $g$, so as to distinguish the notation from when we are discussing the action of $g$ on a point.  We then have $T_g f(\bx) = f(\bx g)$.
+
+Note: since every element of $E(2)$ is the exponential of some element of $\cE(2)$ (proof omitted), we always can speak of the action of $T_g$ on $f$ as the action of $e^{c_1 \bPo + c_2 \bPt + c_3 \bM}$ on $f$, for some $c_1, c_2, c_3 \in \bR$.
+
+\eex
+
+The Lie group $E(2)$ and the Lie algebra $\cE(2)$ will be very important to the later discussion.
+
+\end{section}

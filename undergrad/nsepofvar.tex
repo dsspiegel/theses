@@ -1,0 +1,715 @@
+\chapter{Separation of Variables}
+
+\begin{section}{Solving the Helmholtz Equation by Separating the Variables}
+When a solution to a partial differential equation is the product of several functions, each of which is a function of just one of the independent variables, we say that the solution \emph{separates}, and we may find this solution to the differential equation through the method of \emph{separation of variables}.  (We will actually revise this description of separable solutions later in the paper, but it is a good first approximation.)  One of the simplest equations that is solvable via this method is the Helmholtz equation:
+\begin{equation}
+\label{helmholtz}
+\cH \Psi(x, y) = (\Delta_2 + \omega^2)\Psi(x, y) = 0,
+\end{equation}
+where $\cH = \Delta_2 + \omega^2$, with $\omega \in \bR - \{ 0 \}$, is the so-called \emu{Helmholtz operator} (made precise below).
+
+Let $\cF$ denote the set of all $\bC$-valued real-analytic functions on $\Omega$, a non-empty open, connected subset of $\bR^2$.  In (\ref{helmholtz}), $\Delta_2$ is the two-dimensional Laplace operator $\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}$, which we will often write $\pp xx + \pp yy$.  Similarly, we will often write $\frac{\partial^3}{\partial x^3}$ as $\ppp xxx$.  Sometimes, however, it will prove convenient to write multiple derivatives as iterated first derivatives: $\frac{\partial^n}{\partial x^n} \equiv \p x^n$.
+
+Above, we mention the Helmholtz operator, for, when discussing differential equations, it is helpful to use the language of differential operators.  We will now state explicitly what these are.  Consider a (partial) differential equation of the form
+\[
+\sum_{i=0}^m\sum_{j=0}^nC_{ij}\p x^i \p y^j f(\bx) = 0 \qquad \mbox{($C_{ij} \in \cF$, $\bx \in \Omega$)}.
+\]
+
+In such a situation, we say that $Q = \sum_{i=0}^m\sum_{j=0}^nC_{ij}\p x^i \p y^j$ is the \emu{differential operator} associated with this equation; and $Q$ acts on a function $f$ just as one would expect: $Q(f) = \sum_{i=0}^m\sum_{j=0}^nC_{ij}\p x^i \p y^j f$.  Note: we will often write $Q(f)$ as $Qf$.
+
+Now, to solve (\ref{helmholtz}) by separating the variables, we assume that a solution $\Psi_0$ can be expressed as a product of a real-analytic function only of $x$ and a real-analytic function only of $y$:
+\[
+\Psi_0(x,y) = X(x)Y(y).
+\]
+
+Since $\Psi_0$ satisfies (\ref{helmholtz}), we have
+\begin{equation}
+\label{helmsepeq}
+X^{\prime\prime}(x)Y(y) + X(x)Y^{\prime\prime}(y) + \omega^2X(x)Y(y) = 0.
+\end{equation}
+
+It turns out that if $X(x)Y(y) \not\equiv 0$, we may divide through by $XY$ and make sense of the resulting quotient functions.  In Section $2$ of this chapter, we will return to a justification for this statement, but for now we assume it is true and proceed to divide through by $XY$.  After rearranging terms, we arrive at
+\begin{equation}
+\label{helmsep}
+\frac{X^{\prime\prime}}{X} = -\frac{Y^{\prime\prime}}{Y} - \omega^2.
+\end{equation}
+
+In (\ref{helmsep}), the left side is a function only of $x$, and the right side is a function only of $y$.  The only way for this equality to hold is if both sides are equal to a constant.  If they were not, then, by holding constant either $x$ or $y$ and varying the other, we could force the equality not to hold.  We therefore write $\frac{X^{\prime\prime}}{X} = -k^2$, for some $k \in \bC$.  We call $-k^2$ the \emu{separation constant}.
+
+Note that we have now reduced (\ref{helmholtz}) to two ordinary differential equations:
+\begin{equation}
+\label{sepx}
+X^{\prime\prime}(x) + k^2X(x) = 0,
+\end{equation}
+
+and
+\begin{equation}
+\label{sepy}
+Y^{\prime\prime}(y) + (\omega^2 - k^2)Y(y) = 0.
+\end{equation}
+
+Let $X_1(x) = e^{ikx}$ and $X_2(x) = e^{-ikx}$, $Y_1(y) = e^{i\sqrt{\omega^2 - k^2}y}$ and $Y_2(y) = e^{-i\sqrt{\omega^2 - k^2}y}$.  Solutions to (\ref{sepx}) are of the form $X(x) = A_1X_1(x) + A_2X_2(x)$, and solutions to (\ref{sepy}) are of the form $Y(y) = B_1Y_1(y) + B_2Y_2(y)$, for $A_i$, $B_i \in \bC$ with $i \in \{1,2\}$.
+
+Thus, we see that a typical separated solution $\Psi_0$ to (\ref{helmholtz}) may be expressed as follows:
+\begin{equation}
+\label{helmsol}
+\Psi_0(x,y) = (A_1e^{ikx} + A_2e^{-ikx})(B_1e^{i\sqrt{\omega^2 - k^2}y} + B_2e^{-i\sqrt{\omega^2 - k^2}y}).
+\end{equation}
+
+So far, we have not imposed any restrictions on $k$; we have merely required that both sides of (\ref{helmsep}) equal some constant.  In practice, one often uses the method of separation of variables to solve so-called boundary-value problems, where a solution $\Psi$ to (\ref{helmholtz}) must take on certain values at the boundary of a region.  In such cases, we have restrictions on the possible values of $k$.  Since (\ref{helmholtz}) is a linear partial differential equation, a well-behaved infinite sum of solutions is also a solution.  In fact, all solutions to (\ref{helmholtz}) can be expressed as (possibly infinite) linear combinations of separated (product) solutions.  Since the separated solutions involve the complex exponential, it turns out that solutions to the boundary-value problem of (\ref{helmholtz}) together with some boundary condition can often be expressed as Fourier series.\footnote{For a clear exposition of using separation of variables in practice, see \cite{hildebrand}.}
+\end{section}
+
+\begin{section}{The Field of Fractions}
+We now return to the issue, raised earlier, of why we may divide (\ref{helmsepeq}) through by $XY$.
+
+Later in the discussion, the connectedness of $\Omega$ will prove to be important, so we now prove a lemma about open, connected sets.
+
+\begin{definition}
+\label{con}
+A topological space $(\bX, \tau)$, where $\tau$ is the topology on $\bX$, is said to be \emu{connected} if and only if the only sets $V \in \tau$ that are closed are $\bX$ itself and $\emptyset$.\footnote{This can easily be shown to be equivalent to the perhaps more common definition that $(\bX, \tau)$ is connected if and only if it is not disconnected, and it is disconnected if and only if there exist non-empty, disjoint sets $U, V \in \tau$ such that $\bX = U \cup V$.}  We extend this definition to subsets $U \subseteq \bX$ by saying that $U$ is \emu{connected} if and only if the only sets $V \subseteq \tau_{_U}$ that are closed are $U$ itself and $\emptyset$, where $\tau_{_U}$ denotes the subspace topology on $U$.
+\end{definition}
+
+\begin{definition}
+\label{pathcon}
+A topological space $(\bX, \tau)$ is said to be \emu{path connected} if and only if given any two (not necessarily distinct) points $P$ and $P^\prime$ in $\bX$, there exists a continuous map $\gamma$ from the interval $[0,1]$ to $\bX$ such that $\gamma(0) = P$ and $\gamma(1) = P^\prime$.  Such a map is called a \emu{path} connecting $P$ and $P^\prime$.  We extend this definition to subsets $U \subseteq \bX$ in the natural way: $U$ is \emu{path connected} if and only if given any two points in $U$, there is a path connecting them lying entirely in $U$.
+\end{definition}
+
+\begin{lemma}
+\label{conimpliespath}
+If some open subset $U \subseteq \bR^2$ is connected, then it is path connected.
+\end{lemma}
+
+\proof
+If $U = \emptyset$, it is vacuously path connected.  If $U \not= \emptyset$, let $\bx_0 \in U$.  Let $A = \{\bx \in U :$ there exists a path $\gamma$ whose image lies entirely within $U$ connecting $\bx_0$ and $\bx \}$.  We will show that $A$ is both open and closed in $U$.
+
+\noindent{Open:}  Choose $\bx \in A$, with an associated path $\gamma$ connecting it to $\bx_0$.  Choose $\delta$ small enough so that that $B(\bx, \delta) \subseteq U$, where $B(\bx,\delta) = \{\by \in \bR^2 : \|\by-\bx\| < \delta\}$.  Choose $\bx_1 \in B(\bx,\delta)$.  Define $\psi: [0,2] \rightarrow U$ as follows:
+\[
+\psi(t) = \left\{ 	\begin{array}{ccc}
+				\gamma(t) & : & {0 \le t \le 1} \\
+				{\bx + t(\bx_1 - \bx)} & : & {1 < t \le 2}
+			\end{array} \right.
+\]
+and define $\gamma_1(t) = \psi(2t)$.  Note that $\psi$ is continuous, for $\lim_{t \to 1^-}\psi(t)$ $= \lim_{t \to 1^+}\psi(t)$ $= \psi(1) = \bx_0$.  Now $\gamma_1 : [0, 1] \longrightarrow U$ is a path connecting $\bx_0$ and $\bx_1$ whose image clearly lies entirely within $U$.  Thus, $\bx_1 \in A$.  Since $\bx_1$ was arbitrary, $B(\bx,\delta) \subseteq A$.  Since $\bx$ was arbitrary, $A$ is open.
+
+\noindent{Closed:}  Choose $\bx_1 \in \overline{A}$ (the closure of $A$ in $U$).  Since $A$ is open in $U$, we may choose $\delta$ small enough so that $B(\bx_1,\delta) \subseteq U$.  Since $\bx_1 \in \overline{A}$, we have that $B(\bx_1,\delta)$ contains some point $\bx \in A$.  But now we use the same construction we used above.  Given a path $\gamma$ that connects $\bx_0$ to $\bx$, we define
+\[
+\psi(t) = \left\{ 	\begin{array}{ccc}
+				\gamma(t) & : & {0 \le t \le 1} \\
+				{\bx + t(\bx_1 - \bx)} & : & {1 < t \le 2}
+			\end{array} \right.
+\]
+and $\gamma_1(t) = \psi(2t)$.  Now $\gamma_1$ is a path connecting $\bx_0$ and $\bx_1$ whose image clearly lies entirely within $U$, and thus $\bx_1$ meets the criterion for being in $A$.  Since $\bx_1 \in A$, and $\bx_1$ was arbitrary, we have that $\overline{A} \subseteq A$, and thus $A$ is closed.
+
+Since $U$ is connected, and $A \subseteq U$ is non-empty and both open and closed, Definition \ref{con} implies that $A = U$.  Since $\bx_0$ was arbitrary, there exists a path connecting every pair of points in $U$.  In other words, $U$ is path connected.$\ep$
+
+\begin{lemma}
+\label{zeroderivone}
+Let $f \in \cF$, the set of real-analytic functions on $\Omega$, and let there be an open set $U \subseteq \Omega$ such that for all $\bx \in U$, $f(\bx) = k$.  Then for all $\bx \in U$, $\nabla f(\bx) = \bZe$, where $\nabla$ denotes gradient, and $\bZe$ denotes the zero vector.
+\end{lemma}
+
+\proof
+Let $\bx \in U$.  $\p x f(\bx) = \lim_{h \to 0} \frac{f(\bx + h \hat{\bi}) - f(\bx)}{h}$, where $\hat{\bi}$ is a unit vector in the $x$-direction.  Since $U$ is open, there exists a neighborhood of $\bx$ contained entirely in $U$; and for small enough $h$, $\bx + h \hat{\bi}$ will be in this neighborhood.  Thus, for small enough $h$, $f(\bx + h \hat{\bi}) = k = f(x)$.  So, $\lim_{h \to 0} \frac{f(\bx + h \hat{\bi}) - f(\bx)}{h} = \lim_{h \to 0} \frac{k - k}{h} = 0 = \p x f(\bx)$.  Similarly, $\p y f(\bx) = 0$.  This completes the proof.$\ep$
+
+\begin{lemma}
+\label{zeroderiv}
+Let $f \in \cF$.  Suppose that there is an open set $U \subseteq \Omega$ such that, for all $\bx \in U$, $f(\bx) = 0$.  Then
+\[
+\mbox{For all $\bx \in U$ and for all $i,j \in \bN$, } \left( \p x^i \p y^j f \right)(\bx) = 0.
+\]
+\end{lemma}
+
+\proof
+We will prove by induction on $n$ that, for all $n \in \bN$,
+\begin{equation}
+\label{asterisk}
+i, j \le n \Longrightarrow \mbox{ for all $\bx \in U$ } \left( \p x^i \p y^j f \right)(\bx) = 0.
+\end{equation}
+
+\noindent{\emph{Base Case: $n = 0$.}}  Here, (\ref{asterisk}) holds by hypothesis.
+
+\noindent{\emph{Inductive Hypothesis: \pn{\ref{asterisk}} holds for $n = N$.}} This means that for all $\bx \in U$, $\left( \p x^N \p y^N f \right)(\bx) = 0$.  We must show that for all $\bx$ in this same $U$, \pn{i} $\left( \p x^{N+1} \p y^N f \right) (\bx) = 0$, \pn{ii} $\left( \p x^N \p y^{N+1} f \right) (\bx) = 0$, and \pn{iii} $\left( \p x^{N+1} \p y^{N+1} f \right) (\bx) = 0$.  The proof of \pn{ii} is identical in form to the proof of (\emph{i}), and so we will omit it.
+
+\indent{\pc{i}}  Note that since for all $\bx \in U$, $\left( \p x^N \p y^N f \right) (\bx) = 0$, by Lemma \ref{zeroderivone}, we have that for all $\bx \in U$,
+\[
+\left( \p x \left[ (\p x^N \p y^N f) \right] \right) (\bx) = 0
+\]
+
+\indent Which means that, for all $\bx \in U$,
+\[
+\p x^{N+1} \p y^N f(\bx) = 0.
+\]
+
+\indent{\pc{iii}}  From \pn{i} $\p x^{N+1} \p y^N f (\bx) = 0$.  Thus, by Lemma \ref{zeroderivone}, we have that for all $\bx \in U$,
+\[
+\left( \p y \left[ (\p x^{N+1} \p y^N f) \right] \right) (\bx) = 0.
+\]
+
+\indent This means that, for all $\bx \in U$,
+\[
+\p x^{N+1} \p y^{N+1} f(\bx) = 0.
+\]
+
+\indent This completes the proof by induction.$\ep$
+
+\begin{lemma}
+\label{fequalszero}
+Let $f \in \cF$, the set of real-analytic functions on $\Omega$, a non-empty, open, connected subset of $\bR^2$.  If $f$ is zero everywhere on, a nonempty, open subset $U$ of $\Omega$, then $f$ is zero on all of $\Omega$.
+\end{lemma}
+
+\proof
+Let $A = \{ \by \in \Omega :$ there exists a subset $B(\by, \delta) \subseteq \Omega$ for some $\delta > 0$ such that $f( \bx ) = 0$ for all $\bx \in B(\by ,\delta ) \}$; that is, $A$ is the set of all points in $\Omega$ in a neighborhood of which $f \equiv 0$.  We now proceed with reasoning somewhat similar to that used in the proof of Lemma \ref{conimpliespath}.  We claim that $A$ is both open and closed in $\Omega$.
+
+\indent{Open:}  Choose $\by_0 \in A$.  Choose $\delta > 0$ such that $B(\by_0,\delta) \subseteq \Omega$ and $f \equiv 0$ in $B(\by_0,\delta)$.  Then $B(\by_0,\frac{\delta}{2}) \subseteq A$, since it is clear that every point in $B(\by_0,\frac{\delta}{2})$ has a $\frac{\delta}{2}$-neighborhood of it in which $f \equiv 0$.
+
+\indent{Closed:}  Choose $\by_0 \in \overline{A}$.  Choose a sequence of points $\{ \by_n \}_{n=1}^\infty$, each of which is in $A$, that converges to $\by_0$.  By Lemma \ref{zeroderiv}, for every $n$ and for all $i$ and $j$, $(\p x^i \p y^j f)(\by_n) = 0$.  Since $f$ is real-analytic on $\Omega$, $(\p x^i \p y^j f)(\by_0)$ is continuous on $\Omega$ and hence equals $0$ as well.  Furthermore, since $f$ is real-analytic on $\Omega$, and $\bx_0$ is a point in $\Omega$, $f$ has a Taylor series expansion around $\by_0$ valid in some $\delta$-neighborhood of $\by_0$ that lies entirely within $\Omega$.  In other words, $\exists\delta > 0\forall\by \in B(\by_0,\delta)\left( f(\by) = [\sum_{n=0}^\infty\frac{1}{n!}((\by-\by_0)\cdot(\p x, \p y))^n](f)(\by_0)\right)$.\footnote{This notation might look unfamiliar.  If $\bx_0 = (x_0, y_0)$, and $\bx = (x_0 + h, y_0 + k)$ for some $x_0, y_0, h, k \in \bR$, then $(\bx - \bx_0) = (h,k)$, and $(h, k) \cdot (\p x, \p y) = h \p x + k \p y$.  $(h \p x + k \p y)^n$ is then defined in the usual way, and equals $\sum_{i=0}^n \left( {}_i^n \right) h^i k^{n-i} \p x^i \p y^{n-i}$.}  Notice that this series is just a sum of various factors multiplied by derivatives of $f$ evaluated at $\by_0$ --- but we showed above that all these derivatives must equal 0.  Thus, for some appropriate $\delta$, $\forall\bx \in B(\bx_0,\delta)\left( f(\bx) = 0 \right)$.  As above, this means that there exists a $\delta$-neighborhood of $\by_0$ in which $f \equiv 0$.  This means that $\by_0 \in A$.  Since $\by_0$ was arbitrary, we have that $\overline{A} \subseteq A$, and thus that $A$ is closed in $\Omega$.
+
+Since $\Omega$ is connected, and $A \subseteq \Omega$ is non-empty and both open and closed, Definition \ref{con} implies that $A = \Omega$.  In other words, in all of $\Omega$, $f \equiv 0$.$\ep$
+
+\begin{theorem}
+\label{intdomain}
+$\cF$, the set of real-analytic functions on $\Omega$, is an integral domain.
+\end{theorem}
+
+\proof
+First, $\cF$ is a ring, for it is clearly a group under $+$, and is clearly closed under $\times$.  Further, since multiplication of real numbers is a commutative operation, $\cF$ is commutative.
+
+Now suppose $f, g \in \cF$ and $f g \equiv 0$.  We wish to prove that either $f \equiv 0$ or $g \equiv 0$. If $g \equiv 0$ we are done, so suppose that $g \not\equiv 0$.  Thus, we may choose $\bx_0$ with $g(\bx_0) = c \not= 0$, for some $c \in \bC$.
+
+We will show that there exsits a neighborhood $U$ of $\bx_0$ such that for all $\bx \in U$, $\left( \p x^0 \p y^0 f \right) (\bx) = 0$, but this just means showing that there is a neighborhood $U$ of $\bx_0$ such that for all $\bx \in U$, $f(\bx) = 0$.  Recall that $g(\bx_0) \not= 0$.  Since $g$ is continuous, this implies that there is a neighborhood $U$ of $\bx_0$ in which $g$ is never $0$.  Since $f g \equiv 0$, we have that for all $\bx \in U$, $f(\bx)g(\bx) = 0$; but since $g(\bx) \not= 0$ for $\bx \in U$, we may divide through by $g(\bx)$, and this forces $f(\bx) = 0$ for $\bx \in U$.  Thus, $\forall\bx \in U \left( f(\bx) = 0 \right)$.  Now, by Lemma \ref{fequalszero}, we have that $f$ is identically zero on $\Omega$.$\ep$
+
+\eex
+
+It is possible to define a field of fractions on an integral domain.  Let $\Phi$ denote the field of fractions for $\cF$.  Observe that a typical element $\varphi \in \Phi$ can be written several ways.  For instance, $\frac{x}{y} = \frac{2x}{2y}$.  Given $\varphi_1, \varphi_2 \in \Phi$, such that $\varphi_1$ can be written $\frac{f_1}{g_1}$ and $\varphi_2$ can be written $\frac{f_2}{g_2}$ for some $f_1, g_1, f_2, g_2 \in \cF$, with $g_1, g_2 \not\equiv 0$, we say that $\varphi_1 = \varphi_2$ if $f_1 g_2 = f_2 g_1$, as elements of $\cF$.  It is clear that equality defined this way is an equivalence relation.  We therefore say that $\varphi = \left[ \frac{f}{g} \right]$ for some $f, g \in \cF$ with $g \not\equiv 0$ such that $\varphi$ can be written $\frac{f}{g}$, where $\left[ \frac{f}{g} \right]$ denotes the equivalence class of $\frac{f}{g}$.  We will often leave off the brackets, however, when dealing with elements of $\Phi$.  Addition, subtraction, multiplication, and division of fractions will be defined in the usual ways; for instance, $\frac{f_1}{g_1} + \frac{f_2}{g_2}$ = $\frac{g_2 f_1 + g_1 f_2}{g_1 g_2}$.  We define $\p x$ and $\p y$ in the usual ways, as well.  It is a fact, whose proof we will omit, that if $\frac{f}{g}$ is defined at a point $\bx$ (i.e., $g(\bx) \not= 0$), then it is real-analytic in a neighborhood of $\bx$.
+
+\begin{lemma}
+\label{equalk}
+Given $\frac{f}{g} \in \Phi$ such that $\nabla \frac{f}{g} \equiv 0$, there exists a complex number $k$ such that $\frac{f}{g} = k$ in $\Phi$.
+\end{lemma}
+
+\proof
+Pick a point $\bx_0 \in \Omega$ such that $g(\bx_0) \not= 0$.  Since $g$ is continuous, there exists a neighborhood $U$ of $\bx_0$ such that $g$ is never zero on $U$.  $\frac{f}{g}$, then, has a value at all points in $U$.  Let $\frac{f}{g}(\bx_0) = k$, for some $k \in \bC$.  We will first prove that $\frac{f}{g}(\bx) = k$ for all $\bx \in U$.
+
+Since $U$ is an open, connected subset of $\bR^2$, Lemma \ref{conimpliespath} implies that it is path-connected.  Choose $\bx \in U$.  Since $U$ is path connected, there exists a continuous map $\gamma$: $[0,1] \rightarrow \Omega$ such that $\gamma(0) = \bx_0$ and $\gamma(1) = \bx$.  According to the Fundamental Theorem of Calculus,
+\[
+\int_\gamma \left( \nabla\frac{f}{g} \right) (\by) \cdot \vec{\mathbf{dr}} = \frac{f}{g}(\gamma(1)) - \frac{f}{g}(\gamma(0)) = \frac{f}{g}(\bx) - k.
+\]
+But, by hypothesis, $\nabla\frac{f}{g} \equiv 0$; so the integral equals 0.  Thus, $\frac{f}{g}(\bx) - k = 0$, which implies that $\frac{f}{g}(\bx) = k$ for all $\bx$ in $U$.  So, the function $h = f - k g$ is clearly in $\cF$, and is identically zero on $U$.  Lemma \ref{fequalszero} thus implies that $f - k g = 0$ on all of $\Omega$.  Thus, as an element of $\Phi$, $\frac{f}{g} = \frac{k}{1}$.$\ep$
+
+\eex
+
+At this point, we are ready to return to the question that prompted this whole foray into the field of fractions.  We have that, as elements of $\Phi$,
+\[
+\frac{X^{\prime\prime}}{X} = \frac{-Y^{\prime\prime} - \omega^2 Y}{Y}.
+\]
+We wish to conclude that both sides must equal a constant.  Note that
+\[
+\p y \left( \frac{X^{\prime\prime}}{X} \right) \equiv 0,
+\]
+since $X$ is a function of $x$ alone, and
+\[
+\p x \left( \frac{X^{\prime\prime}}{X} \right) = \p x \left( -\frac{Y^{\prime\prime}}{Y} - \omega^2 \right) \equiv 0,
+\]
+since $Y$ is a function of $y$ alone.
+
+By Lemma \ref{equalk}, we conclude that $\frac{X^{\prime\prime}}{X} = k$, for some $k \in \bC$.
+\end{section}
+
+\begin{section}{Separation of Variables in Orthogonal Coordinate Systems}
+In Section $1$ of this chapter, we saw that the Helmholtz equation separates in rectangular coordinates.  It is natural to inquire in what other coordinate systems the Helmholtz equation separates.  We will examine only orthogonal curvilinear coordinates.  Consider a new set of orthogonal coordinates $\{ u,v \}$.  If it is truly a change of coordinates, this means that \pn{i} there are real-analytic functions $u$ and $v: \Omega \longrightarrow \bR$, where $\Omega$ is a non-empty, open, connected subset of $\bR^2$, such that there is a bijection between pairs $(x,y)$ and pairs $(u(x,y), v(x,y))$, and \pn{ii} the Jacobian determinant $v_x u_y - u_x v_y$ never vanishes.
+
+Now, in order to write the Helmholtz equation in another coordinate system $\{ u, v \}$, we must transform the Helmholtz operator into the new coordinate system.  If $\psi$ is a real-analytic function on the plane ($\psi \in \cF$) then the chain rule gives us $\p x \psi = \psi_u u_x + \psi_v v_x$.  Continuing to apply the chain rule, we have
+\begin{eqnarray*}
+\pp xx \psi	& = &	\p x \left( \psi_u u_x \right) + \p x \left( \psi_v v_x \right) \\
+		& = &	\left( \psi_{ux} u_x + \psi_u u_{xx} \right) + \left( \psi_{vx} v_x + \psi_v v_{xx} \right) \\
+		& = &	\left( \psi_{uu} u_x^2 + \psi_{uv} u_x v_x + \psi_u u_{xx} \right) + \left( \psi_{vv} v_x^2 + \psi_{uv} u_x v_x + \psi_v v_{xx} \right) \\
+		& = &	\psi_{uu} u_x^2 + \psi_u u_{xx} + 2 \psi_{uv} u_x v_x + \psi_{vv} v_x^2 + \psi_v v_{xx} \\
+		& = &	\left( u_x^2 \pp uu + u_{xx} \p u + 2 u_x v_x \pp uv + v_x^2 \pp vv + v_{xx} \p v \right) \psi .
+\end{eqnarray*}
+The expression for $\pp yy \psi$ is similar, and so we have that in the $\{ u,v \}$ system,
+\begin{equation}
+\label{laplaciantrans}
+\Delta_2 = \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + 2\left( u_x v_x + u_y v_y \right) \pp uv + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v .
+\end{equation}
+
+The condition that the system is orthogonal means that the unit vectors in the $u$ and $v$ directions ($\vu$ and $\vv$, respectively) are perpendicular at every point, which means that $\vu(x,y) \cdot \vv(x,y) \equiv 0$.  Observe that $\vu$ is a unit vector in the direction of maximum increase of $u$ --- i.e., in the direction of $\nabla (u) = (u_x, u_y)$; and similarly $\vv$ is a unit vector in the direction of $\nabla (v) = (v_x, v_y)$.  Since the dot-product of $\vu$ and $\vv$ is $0$, the dot-product $\nabla (u) \cdot \nabla (v) = u_x v_x + u_y v_y$ must equal $0$ as well.  As a result, in an orthogonal coordinate system, the coefficient of the mixed second partial derivative vanishes:
+\begin{equation}
+\label{laplacorth}
+\Delta_2 = \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v .
+\end{equation}
+And so, since $\omega^2$ is unchanged under the coordinate transformation, (\ref{helmholtz}) is now written
+\begin{equation}
+\label{helmorth}
+\cH \Psi = \left[ \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v + \omega^2 \right] \Psi = 0.
+\end{equation}
+For convenience in viewing, we will write (\ref{helmorth}) as follows:
+\begin{equation}
+\label{helmabbrev}
+\cH \Psi = \left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + \omega^2 \right) \Psi = 0,
+\end{equation}
+where the functions $A_{11}, A_1, A_{22}$, and $A_2$ are equal to the corresponding coefficients in (\ref{helmorth}).
+
+There are certain well-known ``facts'' concerning the form that the coefficient functions must assume if an equation of the form (\ref{helmabbrev}) is to be separable.  For instance, \cite[p.~14]{miller} states that, assuming $\omega^2 \not= 0$, (\ref{helmabbrev}) is separable only if there exist functions $\cU, \cV, \cU_1$, and $\cV_1$ such that
+\begin{equation}
+\label{millerasserts}
+\pn{a} \quad A_{11} = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)}
+\qquad \mbox{and} \qquad
+\pn{b} \quad A_{22} = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\end{equation}
+Also, \cite{robertson} asserts that if (\ref{helmabbrev}) is separable, then there exist functions $B(u)$ and $C(v)$ such that
+\begin{equation}
+\label{otherasserts}
+\pn{c} \quad   \frac{A_1(u,v)}{A_{11}(u,v)} = B(u)
+\qquad \mbox{and} \qquad
+\pn{d} \quad   \frac{A_2(u,v)}{A_{22}(u,v)} = C(v).
+\end{equation}
+These ``facts'' prove very useful when characterizing the separable coordinate systems of (\ref{helmabbrev}), and they hold true in all separable coordinate systems that are commonly used in practice.  But, if one adopts the naive, intuitive definition of separability that we present at the begining of this chapter, (\ref{millerasserts}) and (\ref{otherasserts}) are not always true.\footnote{In \cite[p.~505]{hildebrand}, we encounter another characterization of the coefficients in a separable equation that is useful but not true in general if one adopts the naive definition of separability.}  The following counterexample demonstrates this.
+\ex{counter}
+Let $\Psi_0(u,v) = e^u e^v$, and let the coefficient functions of the operator $(A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + \omega^2)$ be defined by
+\[
+\begin{array}{rclcrcll}
+A_{11}	&=	&u-v	&		&A_1	&= 	&v		&  \\
+A_{22}	&=	&-u-v	&		&A_2	&=	&-\omega^2+v.	&  
+\end{array}
+\]
+One can easily verify that $\Psi_0$ is a solution.  Since $\Psi_0$ is a product of a function only of $u$ and a function only of $v$, it is a separated solution according to the naive definition.  Yet, it is clear that none of (a) --- (d) in (\ref{millerasserts}) and (\ref{otherasserts}) hold for the above coefficients.
+
+\eex
+
+Since (\ref{millerasserts}) and (\ref{otherasserts}) are so useful, we wish to define separation so that they do hold.
+
+\begin{definition}
+\label{sepofvard}
+Consider a second-order partial differential equation that involves two independent variables and has no mixed partial derivatives.  That is, our partial differential equation is of the form
+\[
+\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) \Psi = 0,
+\]
+where $A_{11}, A_1, A_{22}, A_2$, and $A$ are real-analytic functions of $u$ and $v$.  We say that this equation is \emu{weakly solvable by separation of variables} or \emu{weakly separable} if there exists a solution $\Psi_0(u,v)$ that can be written $U_0(u)V_0(v)$, for some functions $U_0$ and $V_0$, and any such solution is said to be \emu{weakly separated}.  We say that this equation is \emu{strongly solvable by separation of variables} or \emu{strongly separable} if $\frac{A_1}{A_{11}}$ is a function only of $u$, $\frac{A_2}{A_{22}}$ is a function only of $v$, and the equation has at least five linearly independent weakly separated solutions.
+\end{definition}
+
+It is not immediately clear that the above definition implies (\ref{millerasserts}) in the case of the Helmholtz equation, but we will show that indeed it does.
+
+\begin{lemma}
+\label{helmstrong}
+Let a partial differential equation of the form
+\begin{equation}
+\label{genpde}
+\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) \Psi = 0
+\end{equation}
+be strongly solvable by separation of variables, and assume that $A_{11}$ and $A_{22}$ are always positive.  Then
+\[
+\frac{A_{11}(u,v)}{A_{22}(u,v)} = \frac{\cU(u)}{\cV(v)},
+\]
+for some $\cU > 0$ that is a function only of $u$ and some $\cV > 0$ that is a function only of $v$.
+\end{lemma}
+
+\proof
+Let us write our differential equation as $\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) UV = 0$, where $\Psi = UV$ represents a weakly separated, nonzero solution.  This implies that
+\begin{equation}
+\label{strongsep}
+A_{11} U^{\prime\prime}V + A_1 U^\prime V + A_{22} UV^{\prime\prime} + A_2 UV^\prime + A UV = 0.
+\end{equation}
+We divide through by $A_{11} V$ and rearrange terms to arrive at
+\begin{equation}
+\label{Ueqn}
+U^{\prime\prime} + \frac{A_1}{A_{11}}U^\prime + \left( \frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}} \right)U = 0.
+\end{equation}
+We also re-group terms to arrive at
+\begin{equation}
+\label{Veqn}
+V^{\prime\prime} + \frac{A_2}{A_{22}}V^\prime + \left( \frac{A_{11}}{A_{22}} \frac{U^{\prime\prime}}{U} + \frac{A_{1}}{A_{22}} \frac{V^\prime}{V} + \frac{A}{A_{22}} \right)V = 0.
+\end{equation}
+The crucial aspect of (\ref{Ueqn}) is that, since $U^{\prime\prime}, \frac{A_1}{A_{11}}, U^\prime$, and $U$ are functions only of $u$, so must be $\frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}}$.  Write
+\begin{equation}
+\label{cU0}
+\cU_0(u) = \frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}},
+\end{equation}
+for some $\cU_0$ that is a function only of $u$.  Similarly, from (\ref{Veqn}), we see that there exists some $\cV_0$ that is a function only of $v$ such that
+\begin{equation}
+\label{cV0}
+\cV_0(v) = \frac{A_{11}}{A_{22}} \frac{U^{\prime\prime}}{U} + \frac{A_{1}}{A_{22}} \frac{V^\prime}{V} + \frac{A}{A_{22}}.
+\end{equation}
+We multiply (\ref{Ueqn}) by $A_{11} V$ and (\ref{Veqn}) by $A_{22} U$, and we add the results:
+\begin{equation}
+\label{Ueqn+Veqn}
+A_{11} U^{\prime\prime} V + A_1 U^\prime V + A_{22} U V^{\prime\prime} + A_2 U V^{\prime} + \left( A_{11} \cU_0 + A_{22} \cV_0 \right) U V = 0.
+\end{equation}
+Comparing this to (\ref{strongsep}), we have $(A - (A_{11}\cU_0 + A_{22}\cV_0))UV = 0$, and so, since $\cF$ is an integral domain and $UV \not\equiv 0$, we see that $A$ must equal $A_{11} \cU_0 + A_{22} \cV_0$:
+\begin{equation}
+\label{Aequals0}
+A \equiv A_{11} \cU_0 + A_{22} \cV_0.
+\end{equation}
+Since, for a particular choice of $\cU_0$ and $\cV_0$, both (\ref{Ueqn}) and (\ref{Veqn}) are linear, homogeneous, second-order ordinary differential equations, each has at most two linearly independent solutions.  We will label these $U_{01}, U_{02}$, and $V_{01}, V_{02}$.  Thus, for a particular choice of $\cU_0$ and $\cV_0$, there are at most four linearly independent solutions to (\ref{strongsep}): $U_{01}V_{01}$, $U_{01}V_{02}$, $U_{02}V_{01}$, and $U_{02}V_{02}$.  Since (\ref{genpde}) is strongly separable, Definition \ref{sepofvard} requires that there be at least five linearly independent weakly separated solutions.  By the preceding argument, the existence of a fifth linearly independent weakly separated solution necessitates the existence of a pair of solutions $(\cU_1,\cV_1) \not= (\cU_0,\cV_0)$ that satisfies (\ref{cU0}) and (\ref{cV0}).  Suppose, without loss of generality, that $\cV_1 \not= \cV_0$.  We claim that $\cU_1 \not= \cU_0$.
+
+Assume for the moment that $\cU_1 = \cU_0$.  If this is so, then by following the same procedure that led to (\ref{Ueqn+Veqn}), we see that
+\begin{equation}
+\label{Aequals1}
+A \equiv A_{11} \cU_0 + A_{22} \cV_1.
+\end{equation}
+Taking the difference between (\ref{Aequals1}) and (\ref{Aequals0}) yields
+\[
+0 = A_{11}\left( \cU_0 - \cU_0 \right) + A_{22}\left( \cV_1 - \cV_0 \right),
+\]
+and hence
+\[
+0 = A_{22}\left( \cV_1 - \cV_0 \right).
+\]
+Since $\Phi$, the field of fractions of $\cF$, is a field, it is clearly an integral domain.  Since we know that $\cV_1 - \cV_0 \not\equiv 0$, this forces $A_{22} \equiv 0$.  \contr  This contradicts the hypothesis that $A_{22}$ is everywhere positive.  Thus, we must have $\cU_1 \not= \cU_0$.  We can therefore correctly rewrite (\ref{Aequals1}) as $A \equiv A_{11} \cU_1 + A_{22}\cV_1$.  Subtracting (\ref{Aequals0}) from this gives us
+\begin{equation}
+\label{1and0}
+0 = A_{11}\left( \cU_1 - \cU_0 \right) + A_{22}\left( \cV_1 - \cV_0 \right).
+\end{equation}
+For no value of $u$ does $\cU_1(u) = \cU_0(u)$; and for no value of $v$ does $\cV_1(v) = \cV_0(v)$.  Why?  Well, suppose for instance that for $v = v_0$, we have $\cV_1(v_0) = \cV_0(v_0)$.  Then, we see from (\ref{1and0}) that for all $u$, $A_{11}\left( u,v_0 \right) \left( \cU_1(u) - \cU_0(u) \right) = 0$, but then, since $\Phi$ is an integral domain and $A_{11} > 0$, this forces $\cU_1 \equiv \cU_0$. \contr  Therefore, we may rearrange the terms in (\ref{1and0}) to get
+\begin{equation}
+\label{ratioA11A22}
+\frac{A_{11}}{A_{22}} = \frac{\cV_1 - \cV_0}{\cU_0 - \cU_1} = \frac{\frac{1}{\cU_0 - \cU_1}}{\frac{1}{\cV_1 - \cV_0}},
+\end{equation}
+which is a quotient of a function only of $u$ and a function only of $v$, as required.  And, note that \pn{i} both $\cU(u) \equiv \frac{1}{\cU_0(u) - \cU_1(u)}$ and $\cV(v) \equiv \frac{1}{\cV_1(v) - \cV_0(v)}$ are defined everywhere, for their denominators never vanish; and \pn{ii} neither $\cU$ nor $\cV$ is ever $0$, since neither $A_{11}$ nor $A_{22}$ ever vanishes.  Since $A_{11}$ and $A_{22}$ are both everywhere positive, their quotient is too.  Thus, if it happens that $\cU < 0$, we will have that $\cV < 0 $ too.  In this case, replace both $\cU$ and $\cV$ with their negatives --- this will make them both positive, and will preserve their quotient.$\ep$
+
+\begin{lemma}
+\label{fracform}
+Let $A_{11}, A_1, A_{22}$, and $A_2$ be real-analytic functions of both $u$ and $v$ that satisfy the following conditions:
+\begin{eqnarray*}
+\pn{i} & \quad   \frac{A_1(u,v)}{A_{11}(u,v)} = B(u) & \mbox{ for some $B$ that is a function only of $u$,} \\
+\pn{ii} & \quad  \frac{A_2(u,v)}{A_{22}(u,v)} = C(v) & \mbox{ for some $C$ that is a function only of $v$,} \\
+\mbox{\raggedleft and} & & \\
+\pn{iii} & \quad \frac{A_{11}(u,v)}{A_{22}(u,v)} = \frac{\cU(u)}{\cV(v)} & \mbox{ for some never-zero $\cU$ that is a function only of $u$} \\
+ 	 &								 & \mbox{ and some never-zero $\cV$ that is a function only of $v$.}
+\end{eqnarray*}
+Consider a differential equation that has the following form:
+\[
+A_{11} \frac{U^{\prime\prime}}{U} + A_1 \frac{U^{\prime}}{U} + A_{22} \frac{V^{\prime\prime}}{V} + A_2 \frac{V^{\prime\prime}}{V} + \omega^2 = 0,
+\]
+where $U$ is a real-analytic function only of $u$ and $V$ is a real-analytic function only of $v$.  Then, if $\omega^2 \not= 0$, there exist functions $\cU_1$ of $u$ alone and $\cV_1$ of $v$ alone such that
+\[
+\pn{a} \quad A_{11} = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)}
+\qquad \mbox{and} \qquad
+\pn{b} \quad A_{22} = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\]
+\end{lemma}
+
+\proof
+From hypotheses \pn{i} and \pn{ii} of the lemma, $A_1 = A_{11} B$ and $A_2 = A_{22} C$.  Thus, we may rewrite the equation as follows:
+\[
+A_{11}\left( \frac{U^{\prime\prime}}{U} + B \frac{U^{\prime}}{U} \right) + A_{22}\left( \frac{V^{\prime\prime}}{V} + C \frac{V^{\prime}}{V} \right) + \omega^2 = 0.
+\]
+Notice that $\frac{U^{\prime\prime}}{U} + B \frac{U^{\prime}}{U}$ is a function only of $u$, so we may write it $b(u)$; and $\frac{V^{\prime\prime}}{V} + C \frac{V^{\prime}}{V}$ is a function only of $v$, so we may write it $c(v)$.  From hypothesis \pn{iii} above, $A_{22} = A_{11} \frac{\cV}{\cU}$.  Thus, we again rewrite the equation as follows:
+\[
+A_{11} b + A_{11} \frac{\cV}{\cU} c + \omega^2 = 0,
+\]
+which implies that
+\[
+A_{11} = \frac{-\omega^2}{b + c \frac{\cV}{\cU}} = \frac{-\omega^2 \cU}{b \cU + c \cV}.
+\]
+Now, since $\omega^2 \not= 0$, we may divide numerator and denominator by $-\omega^2$, to arrive at
+\begin{equation}
+\label{A11}
+A_{11} = \frac{\cV}{\left(-\frac{b \cU}{\omega^2}\right) + \left(-\frac{c \cV}{\omega^2}\right)},
+\end{equation}
+indicating that our choices of $\cU_1$ and $\cV$ ought to be $\cU_1 = -\frac{b \cU}{\omega^2}$ and $\cV_1 = -\frac{c \cV}{\omega^2}$.  Note that $\cU_1$ and $\cV_1$ are clearly functions only of $u$ and only of $v$, respectively, as required.  This verifies result \pn{a} of the lemma, and it is clear that (\ref{A11}) in conjunction with hypothesis \pn{iii} now implies result \pn{b} of the lemma.$\ep$
+\end{section}
+
+\begin{section}{Orthogonal Coordinate Systems In Which the Helmholtz Equation is Strongly Separable}
+We are seeking orthogonal coordinate systems in which (\ref{helmholtz}) is strongly separable, so we will assert (\ref{helmorth}) to be strongly separable and try to characterize $u$ and $v$.\footnote{Both \cite{miller} and \cite{morse} describe how to determine the separable coordinate systems; the line of reasoning here is a combination of those two descriptions.}  First, we note that the condition that the Jacobian determinant never vanishes implies that $u_x^2 + u_y^2 = A_{11}$ and $v_x^2 + v_y^2 = A_{22}$ never vanish either, and hence are everywhere positive.  Now, we see immediately that Lemma \ref{helmstrong} implies that $\frac{A_{11}}{A_{22}}$ is of the form required by hypothesis \pn{iii} of Lemma \ref{fracform}, and, since (\ref{helmabbrev}) is strongly separable, Definition \ref{sepofvard} implies that hypotheses \pn{i} and \pn{ii} of Lemma \ref{fracform} are satisfied as well.  Thus, Lemma \ref{fracform} implies that
+\begin{equation}
+\label{millermad}
+u_x^2 + u_y^2 = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)},
+\quad \mbox{and} \quad
+v_x^2 + v_y^2 = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\end{equation}
+Note: in the above equation we replaced $A_{11}$ and $A_{22}$ in accordance with (\ref{helmorth}).
+
+Recall that we are working with orthogonal coordinate systems, and so $u_x v_x + u_y v_y = 0$.  As a result, $-\frac{v_x}{u_y} = \frac{v_y}{u_x}$.  Define the function $\cR \equiv -\frac{v_x}{u_y} = \frac{v_y}{u_x}$.  Then,
+\begin{equation}
+\label{vye}
+v_y = \cR u_x
+\end{equation}
+and
+\begin{equation}
+\label{vxe}
+v_x = - \cR u_y.
+\end{equation}
+Now, since $v_x^2 + v_y^2 = \cR^2(u_x^2 + u_y^2)$, (\ref{millermad}) implies that
+\begin{equation}
+\label{cR2}
+\cR^2 = \frac{\cV}{\cU}.
+\end{equation}
+
+In order to proceed, we will need to define some new terminology.
+
+\begin{definition}
+\label{coordcurve}
+Let $\{ u,v \}$ be a coordinate system on $\Omega \subseteq \bR^2$.  We will say that the image of a curve is a \emu{coordinate-curve} if it is defined by an equation of the form $u(x,y) = c$ or $v(x,y) = c$, for a number $c \in \bR$.  It is a coordinate-curve of $u$ if it is defined by $u = c$ for some $c \in \bR$, and a coordinate-curve of $v$ if it is defined by $v = c$ for some $c \in \bR$.
+\end{definition}
+
+\begin{definition}
+\label{orthmatr}
+A matrix $M \in GL(n,\bR)$ is said to be \emu{orthogonal} if the linear transformation that it represents preserves lengths and angles.\footnote{One can prove that $M$ is orthogonal iff $M^t = M^{-1}$.}  The set of all orthogonal, real $n \times n$ matrices is denoted $\cO(n)$.
+\end{definition}
+
+\begin{definition}
+\label{affine}
+A map $\cL: \bR^n \longrightarrow \bR^n$ is said to be \emu{affine} if there exist a matrix $M \in GL(n,\bR)$ and a vector $\bv_0 \in \bR^n$ such that for every vector $\bv \in \bR^n$, $\cL(\bv) = \bv_0 + M\bv$.  An affine transformation $\cL(\bv) = \bv_0 + M\bv$ is said to be an \emu{affine similitude} if $M = c M^\prime$, where $c \in \bR$ and $M^\prime \in \cO(n)$.
+\end{definition}
+
+It turns out that an affine similitude is the composition of a dilation, a translation, a rotation, and possibly a reflection.
+
+\begin{definition}
+\label{shapewised}
+We will say that the coordinate system $\{ u,v \}$ is \emu{shapewise equivalent} to the coordinate system $\{ \tilde{u},\tilde{v} \}$ if there exist invertible real-analytic functions $\eta(u)$ and $\phi(v)$, where $\eta^\prime(u)$ and $\phi^\prime(v)$ never vanish, such that $\tilde{u}(x,y) = \eta\Big(u(\cL(x,y))\Big)$ and $\tilde{v}(x,y) = \phi\Big(v(\cL(x,y))\Big)$, where $\cL$ is an affine similitude.
+\end{definition}
+
+\eex
+
+We summarize the relationship that holds among shapewise equivalent coordinate systems in the schematic diagram below.
+\begin{equation}
+\label{diagram}
+\begin{array}{ccc}
+\bR^2_{_{\{ x,y \} }} & \stackrel{_{\cL}}{\displaystyle \longleftarrow} & \bR^2_{_{\{ x,y \} }} \\ [2pt]
+\stackrel{}{\Big\downarrow} \mbox{ } \mbox{ } \mbox{ } & & \stackrel{}{\Big\downarrow} \mbox{ } \mbox{ } \mbox{ } \\ [2pt]
+\bR^2_{_{\{ u,v \} }} & {}_{\stackrel{\displaystyle \longrightarrow}{_{\eta, \phi}}} & \bR^2_{_{\{ \tilde{u},\tilde{v} \} }}
+\end{array}
+\end{equation}
+The vertical maps are given by $(x,y) \mapsto (u(x,y),v(x,y))$ on the left, and $(x,y) \mapsto (\tilde{u}(x,y),\tilde{v}(x,y))$ on the right.  We say that the diagram is schematic because in order to be rigorous, we would need to replace each $\bR^2$ with an appropriate open set.  Still, the diagram makes it clear that one gets the same result going from $\{ x,y \}$ coordinates to $\{ \tilde{u},\tilde{v} \}$ regardless of whether one uses the direct functions $\tilde{u}(x,y)$ and $\tilde{v}(x,y)$ or one follows the path around the other way, using the affine similitude $\cL$, the functions $u(x,y)$ and $v(x,y)$, and the reparametrizations $\eta(u)$ and $\phi(v)$.  The diagram is suggestive of the fact (which we will not prove) that shapewise equivalence is an equivalence relation.
+
+The definition of shapewise equivalence has to do with the analytical, not the geometrical, properties of shapewise equivalent coordinate systems.  We define shapewise equivalence this way because the analytical properties are what are useful for proving that a change of coordinates that preserves shapewise equivalence also preserves strong separability of the Helmholtz equation (i.e., if (\ref{helmholtz}) is strongly separable in one orthogonal coordinate system, it is strongly separable in any shapewise equivalent coordinate system).  It is the geometrical similarities among coordinate systems that are shapewise equivalent, however, that lead to the term ``shapewise equivalent''.  We will therefore prove a lemma about the geometrical relationships among shapewise equivalent coordinate systems.
+
+\begin{lemma}
+\label{geomprops}
+Let two coordinate systems $\{ u,v \}$ and $\{ \tilde{u},\tilde{v} \}$ be shapewise equivalent.  Let $\cL$ be the affine similitude that relates $\{ \tilde{u},\tilde{v} \}$ to $\{ u,v \}$, as in Definition \ref{shapewised}.  Then, every non-empty coordinate-curve $C_u$ of $u$ is equal to $\cL(C_{\tilde{u}})$ for some non-empty coordinate-curve $C_{\tilde{u}}$ of $\tilde{u}$.
+\end{lemma}
+
+\proof
+We can prove this most efficiently with the following chain of equivalences.
+\begin{eqnarray*}
+(x,y) \in \cL(C_{\tilde{u}}) & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+(\tilde{x},\tilde{y}) \in C_{\tilde{u}} \\
+ & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+\tilde{u}(\tilde{x},\tilde{y}) = \tilde{c}, \mbox{ for some $\tilde{c} \in \bR$} \\
+ & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+\eta\Big(u(\cL(\tilde{x},\tilde{y}))\Big) = \tilde{c} \\
+ & \iff & \eta\Big(u(x,y)\Big) = \tilde{c} \\
+ & \iff & u(x,y) = c, \mbox{ where $\eta(c) = \tilde{c}$} \\
+ & \iff & (x,y) \in C_u \ep
+\end{eqnarray*}
+
+\ex{shapewise}
+Frequently, when people graph a data set that includes both some very small and some very large values, they use so-called log graph-paper.  Log graph-paper is based on a coordinate system $\{ \tilde{x} = x, \tilde{y} = \log y \}$ that is, by the above argument, shapewise equivalent to rectangular coordinates $\{ x,y \}$.  The reason it is said to be shapewise equivalent should be clear: a rectangle that is parallel to the coordinate axes in ordinary rectangular coordinates is a rectangle on log graph-paper, as well.
+
+\begin{theorem}
+\label{shaprestrong}
+Let two coordinate systems $\{ u,v \}$ and $\{ \tilde{u},\tilde{v} \}$ be shapewise equivalent.  Then if the Helmholtz equation is strongly separable in $\{ u,v \}$, it is also strongly separable in $\{ \tilde{u}, \tilde{v} \}$, although the transformation of $\cH$ from $\{ u,v \}$ into $\{ \tilde{u}, \tilde{v} \}$ might change $\omega^2$ into $\widetilde{\omega}^2$, a different positive quantity.
+\end{theorem}
+
+\proof
+Suppose, without loss of generality, that the Helmholtz equation is strongly separable in $\{ u,v \}$.  We will first verify that a reparametrization of $u$ and $v$ leaves the equation strongly separable; then, we will verify that under an affine similitude the equation remains strongly separable (although possibly changing $\omega^2$).  It will therefore follow that the composition of a reparametrization and an affine similitude leaves the equation strongly separable.
+
+Let there be reparametrizations $\tilde{u} = \eta(u)$ and $\tilde{v} = \phi(v)$.  Now, $A_{11}(u,v) = u_x^2 +u_y^2$.  Note that
+\[
+\tilde{u}_x = \parr{\tilde{u}}{x} = \frac{d \tilde{u}}{d u} \parr{u}{x} = \eta^\prime(u) u_x.
+\]
+Similarly, $\tilde{u}_y = \eta^\prime(u) u_y$.  Thus, we have that the corresponding coefficient
+\[
+\tilde{A}_{11}(\tilde{u},\tilde{v}) = \tilde{u}_x^2 + \tilde{v}_y^2 = \big(\eta^\prime(u)\big)^2 \left( u_x^2 + u_y^2 \right) = \big(\eta^\prime(u)\big)^2 A_{11}(u,v).
+\]
+Note that $\eta^\prime(u)$ can be expressed as a function of $\tilde{u}$ using the inverse function of $\eta$.  Similarly, one can determine that, if $A_1(u,v) = u_{xx} + u_{yy}$, then
+\[
+\tilde{A}_1(\tilde{u},\tilde{v}) = \eta^{\prime\prime}(u)(u_{xx} + u_{yy}) = \eta^{\prime\prime}(u)A_1(u,v).
+\]
+Note, as above, that $\eta^{\prime\prime}(u)$ can be expressed as a function of $\tilde{u}$ using the inverse function of $\eta$.  Thus, the ratio $\frac{\tilde{A}_1}{\tilde{A}_{11}}$ equals a function of $\tilde{u}$ multiplied by $\frac{A_1}{A_{11}}$.  The latter is a function only of $u$.  Again, we can use the inverse function of $\eta$ to express this as a function of $\tilde{u}$, thus showing that the ratio $\frac{\tilde{A}_1}{\tilde{A}_{11}}$ is a function only of $\tilde{u}$, as required.  Similarly, $\frac{\tilde{A}_2}{\tilde{A}_{22}}$ is a function only of $v$.  We must also show that there are five linearly independent solutions.  If $\Psi(u,v) = U(u)V(v)$ is a solution in $\{ u,v \}$ coordinates, then a straightforward calculation reveals that $\widetilde{\Psi}(\tilde{u},\tilde{v}) = \Psi(\eta^{-1}(\tilde{u}),\phi^{-1}(\tilde{v})) = U(\eta^{-1}(\tilde{u}))V(\phi^{-1}(\tilde{v}))$ is a solution in $\{ \tilde{u},\tilde{v} \}$ coordinates, where $\eta^{-1}$ and $\phi^{-1}$ are the inverse functions of $\eta$ and $\phi$, respectively.  We omit the proof that the transformations of the five linearly independent solutions form a linearly independent set of solutions, but this should seem plausible.\footnote{Each $\widetilde{\Psi}$ takes on the same value at a given $(x,y)$ point as the corresponding $\Psi$, and thus the functions $\tilde{\Psi}$ are essentially the same as the functions $\Psi$.  As a result, the linear independence of one set can be shown to imply the linear independence of the other.}
+
+When we see in Chapter $2$, Section $2$ that $\cH$ is invariant under the one-parameter subgroups of its first-order symmetry operators, this will show that $\cH$ is invariant under rotations and translations.  We first observe that dilations serve only to multiply $\omega^2$ by the square of the dilation factor.  For reflections, we may consider only reflections over the $y$-axis, for all other reflections are the composition of reflections over the $y$-axis and translations and rotations.  If we reflect our space over the $y$-axis, $\p x$ turns into $-\p {\tilde{x}}$, but then taking a second derivative yields $\pp xx = - (-\pp {\tilde{x}}{\tilde{x}}) = \pp {\tilde{x}}{\tilde{x}}$.  That the $\omega^2$ term will remain unchanged follows from the fact that the $\pp xx$ and $\pp yy$ terms maintain the same form (only $\pp xx$ is re-labeled as $\pp {\tilde{x}}{\tilde{x}}$).$\ep$
+
+\eex
+
+We now return to the Helmholtz equation's separable coordinate systems.  If it is not already the case that $\cU \equiv 1$ and $\cV \equiv 1$ in (\ref{millermad}), then there exist real-analytic functions $\tilde{u}(u)$ and $\tilde{v}(v)$ such that
+\[
+\tilde{u}^\prime(u) = \cU^{-\frac{1}{2}}
+\quad \mbox{and} \quad
+\tilde{v}^\prime(v) = \cV^{-\frac{1}{2}}.
+\]
+Since $\cU$ and $\cV$ are both always positive (from Lemma \ref{helmstrong}), $\tilde{u}^\prime(u)$ and $\tilde{v}^\prime(v)$ are everywhere defined.  It is clear that $\tilde{u}^\prime(u)$ and $\tilde{v}^\prime(v)$ are never $0$, for there are no real values of $\cU$ and $\cV$ that would lead to this.  As a result, these functions describe a coordinate system that is shapewise equivalent to $\{ u,v \}$.  We now wish to come up with expressions for $\tilde{u}_x^2 + \tilde{u}_y^2$ and for $\tilde{v}_x^2 + \tilde{v}_y^2$.  Note that
+\[
+\frac{\partial \tilde{u}}{\partial x} = \frac{d \tilde{u}}{d u} \frac{\partial u}{\partial x} = \cU^{-\frac{1}{2}}u_x
+\]
+and so
+\[
+\tilde{u}_x^2 = \frac{1}{\cU}u_x^2.
+\]
+Expressions for $\tilde{u}_y^2, \tilde{v}_x^2$ and $\tilde{v}_y^2$ are analogous, and so, (\ref{millermad}) now implies that
+\begin{equation}
+\label{millermadder}
+\tilde{u}_x^2 + \tilde{u}_y^2 = \frac{1}{\cU} \left( u_x^2 + u_y^2 \right) = \frac{1}{\cU_1 + \cV_1}
+\quad \mbox{and} \quad
+\tilde{v}_x^2 + \tilde{v}_y^2 = \frac{1}{\cV} \left( v_x^2 + v_y^2 \right) = \frac{1}{\cU_1 + \cV_1}.
+\end{equation}
+
+At this point it is important to make sure that we understand what we have just derived.  Our discovery is that if $\{ u,v \}$ is a coordinate system in which (\ref{helmabbrev}) is strongly separable, and thus in which (\ref{millermad}) holds, then there is a shapewise equivalent coordinate system $\{ \tilde{u}, \tilde{v} \}$ in which (\ref{helmabbrev}) is strongly separable such that (\ref{millermadder}) holds.  For the remainder of the discussion, we will consider only coordinate systems $\{ u,v \}$ such that (\ref{millermadder}) holds.
+
+Since, for these coordinate systems, $\cU(u) \equiv 1 \equiv \cV(v)$, this in conjunction with (\ref{cR2}) forces $\cR \equiv \pm 1$.  If we assume $\cR \equiv 1$, then
+\begin{equation}
+\label{cauchyriemann}
+u_x = v_y
+\quad \mbox{and} \quad
+u_y = -v_x.
+\end{equation}
+This means that $u$ and $v$ satisfy the Cauchy-Riemann equations.  Thus, if we let $z = x + iy$ and $w = u + iv$, then the mapping $z \mapsto w$ is conformal.  If $\cR$ in fact equals $-1$, we may achieve the same relation between $w$ and $z$ merely by interchanging $x$ and $y$, and so we assume that $\cR \equiv 1$.  We define
+\begin{equation}
+\label{wedefine}
+\frac{d f}{d z} = \frac{1}{2} \left( \parr{f}{x} - i \parr{f}{y} \right)
+\quad \mbox{and} \quad
+\frac{d f}{d \bar{z}} = \frac{1}{2} \left( \parr{f}{x} + i \parr{f}{y} \right),
+\end{equation}
+in accordance with \cite[pp.~12-17]{greene}.  By the Cauchy-Riemann equations,
+\begin{equation}
+\label{dzbare0}
+f \mbox{ complex-analytic } \iff \frac{d f}{d \bar{z}} = 0
+\end{equation}
+Since $w$ is an analytic function of $z$, we may take its derivative.  This gives
+\[
+\frac{d w}{d z} = \frac{1}{2} \left( u_x + i v_x - i(u_y + i v_y) \right) = \frac{1}{2} \left( u_x + v_y + i(v_x - u_y) \right) =
+\mbox{ (from (\ref{cauchyriemann})) }
+u_x - i u_y,
+\]
+and thus
+\begin{equation}
+\label{dwdz}
+\left|\frac{d w}{d z}\right|^2 = \frac{d w}{d z} \frac{d \bar{w}}{d \bar{z}} = \left( u_x - iu_y \right) \left( u_x + iu_y \right) = u_x^2 + u_y^2 = \frac{1}{\cU_1 + \cV_1}.
+\end{equation}
+Hence,
+\begin{equation}
+\label{dzdw}
+\left|\frac{d z}{d w}\right|^2 = \cU_1 + \cV_1,
+\end{equation}
+which forces
+\begin{equation}
+\label{puv=0}
+\pp uv \left( \left|\frac{d z}{d w}\right|^2 \right) = 0,
+\end{equation}
+since $\cU_1$ is a function only of $u$ and $\cV_1$ is a function only of $v$.
+
+We now wish to express $\pp uv$ in terms of $w = u + iv$ and $\bar{w} = u - iv$.  Notice that $\frac{d}{d w}$ and $\frac{d}{d \bar{w}}$ can be defined in terms of $\p u$ and $\p v$, in analogy with (\ref{wedefine}).  Using this, we obtain that, given a differentiable function $f$,
+\[
+\frac{\partial^2 f}{\partial u \partial v} = i f_{ww} - i f_{\bar{w}\bar{w}}.
+\]
+So, $\pp uv = i \pp ww - i \pp {\bar{w}}{\bar{w}}$.  Thus, (\ref{puv=0}) now implies that $\pp uv \left( \left|\frac{d z}{d w}\right|^2 \right) = (i \pp ww - i \pp {\bar{w}}{\bar{w}}) \left( \frac{d z}{d w} \frac{d \bar{z}}{d \bar{w}} \right) = 0$.  Now, since $\frac{dz}{d \bar{w}} = \frac{d \bar{z}}{d w} = 0$ (from (\ref{wedefine}), performing the indicated differentiation and simplifying yields
+\[
+\left( \frac{d \bar{z}}{d \bar{w}} \right) 
+\frac{d^2}{d w^2} 
+\left( \frac{d z}{d w} \right) -
+ \left( \frac{d z}{d w} \right) 
+  \frac{d^2}{d \bar{w}^2} 
+  \left( \frac{d \bar{z}}{d \bar{w}} \right)
+  = 0,
+\]
+which in turn leads to
+\[
+\left( \frac{d z}{d w} \right)^{-1}
+\frac{d^2}{d w^2}
+\left( \frac{d z}{d w} \right)
+= \left( \frac{d \bar{z}}{d \bar{w}} \right)^{-1}
+  \frac{d^2}{d \bar{w}^2}
+  \left( \frac{d \bar{z}}{d \bar{w}} \right).
+\]
+The left side is the complex conjugate of the right side.  The only way for this to happen is for both sides to be real.  Since the left side is an analytic function of $w$ and is always real, it must be constant.  We conclude that each side is equal to a constant $\lambda \in \bR$.  Some rearranging yields
+\begin{equation}
+\label{sepdiffeqs}
+\frac{d^2}{d w^2} \left( \frac{d z}{d w} \right) = \lambda \left( \frac{d z}{d w} \right)
+\quad \mbox{and} \quad
+\frac{d^2}{d \bar{w}^2} \left( \frac{d \bar{z}}{d \bar{w}} \right) = \lambda \left( \frac{d \bar{z}}{d \bar{w}} \right).
+\end{equation}
+
+Over these past few pages, we have shown in great detail how to arrive at this differential equation.  We will present in some detail how to arrive at the solutions in the case where $\lambda = 0$, but will only state the solutions in the case where $\lambda \not= 0$.  Both \cite{miller} and \cite{morse} show how to arrive at these solutions in greater detail.
+
+\noindent \textbf{Case $\lambda = 0$}: Our differential equation is $\frac{d^2}{d w^2} (\frac{d z}{d w}) = 0$.  Thus $\frac{d z}{d w} = \beta + \gamma w$, for some $\beta, \gamma \in \bC$.
+
+When $\gamma = 0$, we have that $z = \alpha + \beta w$ ($\alpha \in \bC$).  Let $\alpha = a + ib$ and $\beta = c + id$.  Then
+\begin{eqnarray*}
+z &=& (a + ib) + (c + id)(u + iv) \\
+  &=& (a + ib) + \big( (cu - dv) + i(du + cv)\big) \\
+  &=& a cu - dv + i(b + du + cv) \\
+  &=& x + iy.
+\end{eqnarray*}
+Thus, we see that $x = a + c u - d v$ for $a, c, d \in \bR$, and $y = b + d u + c v$, for $b \in \bR$.  This corresponds to a translation, rotation, and dilation of the coordinates, leaving the coordinate axes still rectangular.  The transformed Helmholtz equation (\ref{helmorth}) is now the same as (\ref{helmholtz}) except with $\omega^2$ replaced by $\omega^2(\sqrt{c^2 + d^2})$.  So, if we wish to preserve the value of $\omega^2$ under the change of coordinates, we must choose $c$, $d$ so that $c^2 + d^2 = 1$, which restricts us to translations and rotations.
+
+When $\gamma \not= 0$, we have $z = \alpha + \beta w + \frac{1}{2} \gamma w^2$, for some $\alpha \in \bC$.  The $\alpha$ and $\beta$ terms translate and rotate, and $\beta$ is also a dilation if $| \beta | \not= 1$.  What is the effect of the $\gamma$ term?  Consider, for the moment, when $\alpha$ and $\beta$ both equal $0$ and $\gamma = 1$.  Then
+\[
+z = \frac{1}{2} w^2 = \frac{1}{2}\left( u^2 - v^2 \right) + i u v = x + iy.
+\]
+Thus, $x = \frac{1}{2}\left( u^2 - v^2 \right)$ and $y = u v$.  These $\{ u,v \}$ coordinates are called \emu{parabolic}, because the coordinate-curves are confocal parabolas, with focus at the origin and directrix parallel to the $y$-axis.  The coordinate-curves take the form
+\[
+u = \sqrt{\sqrt{x^2 + y^2} + x} = c
+\quad \mbox{and} \quad
+v = \pm \sqrt{\sqrt{x^2 + y^2} - x} = d
+\quad \mbox{for $c, d \in \bR$}.
+\]
+It is possible to prove (by completing the square) that all coordinate systems that arise from this case are shapewise equivalent to the specific case we worked out, where $\alpha = \beta = 0$ and $\gamma = 1$.
+
+\noindent \textbf{Case $\lambda \not= 0$}: For convenience, we set $\lambda = 1$, because varying $\lambda$ does not change the shapewise equivalence class of coordinate systems, which is what we are primarily interested in.  The transformation is then given by the solution to (\ref{sepdiffeqs}) with $\lambda = 1$.  Since $\frac{d^2}{d w^2}\phi = \phi \Longrightarrow \phi$ is a linear combination of $e^w$ and $e^{-w}$, we have $\frac{d z}{d w} = \beta e^w - \gamma e^{-w}$, where $\beta, \gamma \in \bC$.  We write $\frac{d z}{d w}$ this way, subtracting the $\gamma$-term, because this makes the expression for $z$ a little nicer:
+\[
+z = \alpha + \beta e^w + \gamma e^{-w} \quad \mbox{($\alpha \in \bC$)}.
+\]
+We ignore the $\alpha$ term, for this just moves the origin (thus leaving the coordinate system shapewise equivalent to the one defined by the above equation with $\alpha = 0$).
+
+When $\gamma = 0$, let $\beta = a + ib$ for some $a,b \in \bR$.  We see that
+\[
+z = \beta e^{u + iv} = e^{u + a} e^{i(v + b)} \Longrightarrow x = e^{u+a} \cos (v+b)
+\quad \mbox{and} \quad
+y = e^{u+a} \sin (v+b).
+\]
+If we define $r \equiv e^{u+a} = \sqrt{x^2 + y^2}$ and $\theta \equiv v+b$ (which clearly preserves shapewise equivalence, since we are merely replacing $u$ and $v$ with the reparametrizations $r(u)$ and $\theta(v)$), then we see that we are dealing with polar coordinates, where the coordinate-curves of $r$ are concentric circles and the coordinate-curves of $\theta$ are rays from the origin.
+
+When $\gamma \not= 0$ and $\beta \not= 0$ as well, we will perform a rotation and translation of coordinates to end up with a shapewise equivalent coordinate system that is easier to describe.  First, the rotation: let $\tilde{z} = e^{i\theta}z$, where the choice of $\theta$ will be made clear in a moment.  This leads to
+\[
+\tilde{z} = \tilde{\beta} e^w + \tilde{\gamma} e^{-w},
+\]
+where $\tilde{\beta} = e^{i\theta}\beta$ and $\tilde{\gamma} = e^{i\theta}\gamma$.  We choose $\theta$ so that $\tilde{\beta}\tilde{\gamma} = e^{2i\theta}\beta \gamma = \frac{1}{2}e^R > 0$, where $R = \ln \left( 2\left| \beta \gamma \right| \right)$.  Now the translation: let $\widetilde{w} = w - w_0$, where $w_0$ is chosen so that $e^{-w_0} = 2e^R \tilde{\beta}$.  Replacing $\widetilde{w} + w_0$ for $w$, we have
+\begin{eqnarray*}
+\tilde{z}	&=& \tilde{\beta}e^{\widetilde{w} + w_0} + \tilde{\gamma}e^{-\widetilde{w} - w_0} \\
+		&=& \left( \tilde{\beta}e^{w_0} \right) e^{\widetilde{w}} + \left( \tilde{\gamma}e^{-w_0} \right) e^{-\widetilde{w}} \\
+		&=& \frac{1}{2}e^{-R} e^{\widetilde{w}} + \frac{1}{2}e^R e^{-\widetilde{w}}.
+\end{eqnarray*}
+The coordinate system described by $\tilde{z}$ and $\widetilde{w}$ is shapewise equivalent to the one described by $z$ and $w$, for the former involves just a rotation and a translation of the latter (which is described by an affine similitude).  We therefore drop the tildes in the notation:
+\[
+z = \frac{e^{w-R} + e^{-(w-R)}}{2} = \cosh (w-R).
+\]
+Replacing $u + iv$ for $w$ yields
+\[
+z = \cosh \big( (u - R) + iv \big) = \cosh (u - R) \cos v + i\big( \sinh (u - R) \sin v \big).
+\]
+From this, we see that $x = \cosh (u - R) \cos v$ and $y = \sinh (u - R) \sin v$; and these equations describe \emu{elliptic coordinates}.  In the $x$-$y$ plane, the coordinate-curves of $u$ are confocal ellipses, and the coordinate-curves of $v$ are confocal hyperbolas.
+
+To summarize, we have discovered that every orthogonal separable coordinate system of the Helmholtz equation is shapewise equivalent to rectangular, parabolic, polar, or elliptic coordinates.  For reasons that will become clear in Chapter $2$, we will now briefly give the solution in polar coordinates.
+
+In polar coordinates, $x = r \cos \theta$, $y = r \sin \theta$, and $r^2 = x^2 + y^2$.  As a result, the chain-rule gives us that for a differentiable function $f$, $\p r f = \p x f \p r x + \p y f \p r y$.  Clearly, then,
+\[
+\p r f = \cos \theta \p x f + \sin \theta \p y f = \left( \frac{x}{r} \p x + \frac{y}{r} \p y \right) f = \left( \frac{x}{\sqrt{x^2 + y^2}} \p x + \frac{y}{\sqrt{x^2 + y^2}} \p y \right) f,
+\]
+which indicates that
+\begin{equation}
+\label{p r}
+\p r = \frac{x}{r} \p x + \frac{y}{r} \p y = \frac{x}{\sqrt{x^2 + y^2}} \p x + \frac{y}{\sqrt{x^2 + y^2}} \p y.
+\end{equation}
+We also have that $\p \theta f = \p x f \p \theta x + \p y f \p \theta y$.  Thus,
+\[
+\p \theta = -r \sin \theta \p x f + r \cos \theta \p y f = \left( -y \p x + x \p y \right) f,
+\]
+and this shows that
+\begin{equation}
+\label{p theta}
+\p \theta = -y \p x + x \p y.
+\end{equation}
+Using these two expressions, we can verify that in polar coordinates the Helmholtz equation is written
+\begin{equation}
+\label{helmpolar}
+\cH \Psi = \left( \pp rr + \frac{1}{r} \p r + \frac{1}{r^2} \pp \theta \theta + \omega^2 \right) \Psi(r,\theta) = 0.
+\end{equation}
+
+If we look for solutions of the form $\Psi_0 = R(r)\Theta(\theta)$, then, just as in Section $1$, we find ordinary differential equations for $R$ and $\Theta$ that have solutions of the form $R(r) = J_{\pm k}(\omega r)$ and $\Theta(\theta) = e^{\pm i k \theta}$, where $J_{p}(x)$ is the Bessel function defined by the power series
+\[
+J_{p}(x) = \sum_{n = 0}^\infty \frac{(-1)^n \left(\frac{x}{2}\right)^{2n + p}}{n! (n + p)!}.
+\]
+
+\end{section}

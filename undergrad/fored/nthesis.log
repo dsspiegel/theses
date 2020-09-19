@@ -1,0 +1,111 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2000.9.12)  8 SEP 2003 17:34
+**nthesis
+(nthesis.tex
+LaTeX2e <1999/12/01> patch level 1
+Babel <v3.6Z> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/book.cls
+Document Class: book 1999/09/10 v1.4a Standard LaTeX document class
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 1999/09/10 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\c@theorem=\count88
+\c@lemma=\count89
+\c@example=\count90
+\c@corollary=\count91
+\c@conjecture=\count92
+\c@fact=\count93
+\c@definition=\count94
+ (nthesis.aux)
+\openout1 = `nthesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
+
+
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+ [1
+
+
+] [2
+
+] [3] [4
+
+]
+[5] [6
+
+] (nthesis.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@toc=\write3
+\openout3 = `nthesis.toc'.
+
+ [7] (nlietheory.tex
+Chapter 0.
+
+LaTeX Warning: Reference `bracket' on page 1 undefined on input line 7.
+
+) (nsepofvar.tex [1
+
+] [2
+
+]
+Chapter 1.
+) (nsymop.tex [3] [4
+
+]
+Chapter 2.
+) (nbiblio.tex [5] [6
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 27.
+
+) [7] (nthesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 382 strings out of 10901
+ 3512 string characters out of 72380
+ 46872 words of memory out of 263001
+ 3362 multiletter control sequences out of 10000+0
+ 9502 words of font info for 33 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 23i,5n,19p,374b,205s stack positions out of 300i,100n,500p,50000b,4000s
+
+Output written on nthesis.dvi (14 pages, 3516 bytes).
