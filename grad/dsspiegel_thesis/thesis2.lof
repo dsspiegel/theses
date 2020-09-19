@@ -1,0 +1,54 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Local universe baryon budget.}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Predicted number of transits to be seen in 2002 transit surveys}}{8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Histogram of samples of D--band background brightness.}}{28}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Groups intensities above background in D--band (0.2--1.0 keV).}}{29}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Spectra showing $\mathcal {R}$--values per 10 eV bin.}}{33}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Linear Fits to M03 Group--Data And Empirical Upper Limits On CNOC2 Group--Luminosities.}}{39}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Histogram of the results of the mock--catalog analysis.}}{45}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schematic illustration of the planet--star system in the ``planet--leading'' configuration.}}{64}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of the surface brightness of 3 model planets.}}{67}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Planetary lensing egress light--curves.}}{74}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces S/N vs. phase angle.}}{75}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces G2V spectrum and reflection spectrum off Jupiter.}}{78}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Wavelength-dependent albedos of giant planets.}}{79}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Egress light-curves in MBF band.}}{84}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Viewing Geometry.}}{90}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rotating planet beginning to transit in front of rotating star.}}{104}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Na D line spectra, rot. vs. non-rot; and difference.}}{126}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Centroid--shift of Na D lines due to tidally locked rotation, relative to an identical but non--rotating planet.}}{130}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces S/N for distinguishing rot. vs. non-rot. planet, vs. $t$, across transit.}}{133}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Flux decrement due to neutral Na in planet's atmosphere, across transit.}}{137}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Heating and cooling fluxes, as functions of surface temperature.}}{153}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Model validation based on the mean latitudinal temperature profile of the Earth.}}{163}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Model validation based on seasonality at different latitudes.}}{165}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Space-time diagrams of temperature (in K) for two different pseudo-Earth models.}}{169}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparison between global radiative equilibrium temperatures and average temperatures in the $t$-dependent EBM, for nine pseudo-Earth models.}}{172}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Temporal and regional habitability fractions of the Earth and in fiducial Earth-like model.}}{176}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Temporal habitability fraction, $f_{\rm time}$, as a function of orbital distance and latitude.}}{179}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Regional habitability fraction, $f_{\rm area}$, as function of orbital distance and time of year.}}{182}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Temporal and regional habitability fractions in a pseudo-Earth model with a uniform 10\% ocean fraction.}}{185}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Numerical convergence tests.}}{192}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Dependence on initial conditions (orbital time).}}{196}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Annually averaged cooling and heating fluxes for fiducial model at 1\nobreakspace {}AU and Earth.}}{206}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Monthly cooling, heating, and net fluxes for fiducial model at $23.5\unhbox \voidb@x \hbox {$^\circ $}$ obliquity, at 1\nobreakspace {}AU, and for Earth.}}{207}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Global average cooling, heating, and net radiative flux, as functions of time in fiducial model at $23.5\unhbox \voidb@x \hbox {$^\circ $}$ obliquity.}}{209}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Annually averaged, longitudinally integrated, meridional heat transport at $23.5\unhbox \voidb@x \hbox {$^\circ $}$ and $90\unhbox \voidb@x \hbox {$^\circ $}$ obliquity.}}{212}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Annually averaged cooling and heating fluxes for high and extreme obliquity model planets model and for Earth.}}{215}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Monthly cooling, heating, and net fluxes for fiducial model at $60\unhbox \voidb@x \hbox {$^\circ $}$ obliquity, at 1\nobreakspace {}AU, and for Earth.}}{217}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Monthly cooling, heating, and net fluxes for fiducial model at $90\unhbox \voidb@x \hbox {$^\circ $}$ obliquity, at 1\nobreakspace {}AU, and for Earth.}}{218}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Model temporal habitability fraction under different obliquities, rotation rates, and cooling/heating functions.}}{220}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Annually averaged and space-time plot of temperatures on models with a North Polar continent that takes up 30\% of surface area at 1\nobreakspace {}AU, cooling/heating = $I_2,A_2$, obliquity = $23.5\unhbox \voidb@x \hbox {$^\circ $}$, $60\unhbox \voidb@x \hbox {$^\circ $}$, $90\unhbox \voidb@x \hbox {$^\circ $}$.}}{224}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Model temporal habitability fraction under different obliquities, North Polar continent covering 30\% of surface.}}{226}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Model temporal habitability fraction under different obliquities, 10\% ocean uniformly distributed.}}{227}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Model temporal habitability fraction under different obliquities, North Polar continent covering 90\% of surface (South Polar ocean).}}{228}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Annually averaged and space-time plot of temperatures on fast spinning world at 1.4\nobreakspace {}AU, WK97 cooling function, $p\rm CO_2 = 1\nobreakspace {}bars$, obliquity = $23.5\unhbox \voidb@x \hbox {$^\circ $}$, $60\unhbox \voidb@x \hbox {$^\circ $}$, $90\unhbox \voidb@x \hbox {$^\circ $}$.}}{233}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Annually averaged and space-time plot of temperatures on fast spinning world at 1.4\nobreakspace {}AU, WK97 cooling function, $p\rm CO_2 = 2\nobreakspace {}bars$, obliquity = $23.5\unhbox \voidb@x \hbox {$^\circ $}$, $60\unhbox \voidb@x \hbox {$^\circ $}$, $90\unhbox \voidb@x \hbox {$^\circ $}$.}}{234}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Annually averaged and space-time plot of temperatures on models with Antarctica analogs, at 1\nobreakspace {}AU, cooling/heating = $I_2,A_2$, obliquity = $23.5\unhbox \voidb@x \hbox {$^\circ $}$.}}{237}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Global average cooling, heating, and net radiative flux, as functions of time in model with North Polar continent at $60\unhbox \voidb@x \hbox {$^\circ $}$ and $90\unhbox \voidb@x \hbox {$^\circ $}$ obliquity.}}{238}
+\addvspace {10\p@ }

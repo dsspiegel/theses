@@ -1,0 +1,86 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Part I: \nobreakspace {}Seeking Hidden Baryons}{1}
+\contentsline {subsection}{\numberline {1.1.1}Background and Motivation}{1}
+\contentsline {subsection}{\numberline {1.1.2}The Baryonic Content of Groups at Moderate Redshift?}{4}
+\contentsline {section}{\numberline {1.2}Part II: \nobreakspace {}Extrasolar Planets}{5}
+\contentsline {subsection}{\numberline {1.2.1}Background and Motivation}{5}
+\contentsline {subsection}{\numberline {1.2.2}The Composition of a Microlensed Planet?}{10}
+\contentsline {subsection}{\numberline {1.2.3}A Transiting Planet's Rotation Rate?}{11}
+\contentsline {subsection}{\numberline {1.2.4}Climatic Habitability}{12}
+\contentsline {subsection}{\numberline {1.2.5}Habitability and Planetary Obliquity}{13}
+\contentsline {subsection}{\numberline {1.2.6}Conclusions: Looking Forward}{14}
+\contentsline {part}{I\hspace {1em}Seeking Hidden Baryons}{16}
+\contentsline {chapter}{\numberline {2}A Possible Dearth of Hot Gas in Galaxy Groups at Intermediate Redshift}{17}
+\contentsline {section}{\numberline {2.1}Introduction}{17}
+\contentsline {section}{\numberline {2.2}Observations and Data Reduction}{20}
+\contentsline {section}{\numberline {2.3}Spatial Analysis}{22}
+\contentsline {section}{\numberline {2.4}Spectral Analysis}{31}
+\contentsline {section}{\numberline {2.5}Discussion}{32}
+\contentsline {subsection}{\numberline {2.5.1}Fits to $L_X$--$\sigma _v$ Data}{34}
+\contentsline {subsection}{\numberline {2.5.2}Limits on Group Luminosities}{36}
+\contentsline {subsection}{\numberline {2.5.3}Quantifying Surprise}{38}
+\contentsline {subsection}{\numberline {2.5.4}Redshifted Mulchaey Groups}{44}
+\contentsline {section}{\numberline {2.6}Conclusion}{47}
+\contentsline {part}{II\hspace {1em}Constraining Properties of Exoplanets}{58}
+\contentsline {chapter}{\numberline {3}Can We Probe the Atmospheric Composition of an Extrasolar Planet from its Reflection Spectrum in a High--Magnification Microlensing Event?}{59}
+\contentsline {section}{\numberline {3.1}Introduction}{59}
+\contentsline {section}{\numberline {3.2}Modeling Planetary Caustic--Crossing Events}{63}
+\contentsline {subsection}{\numberline {3.2.1}The Planet--Star System}{63}
+\contentsline {subsection}{\numberline {3.2.2}Modeling the Caustic--Crossing Event}{66}
+\contentsline {subsection}{\numberline {3.2.3}Preview of Results}{68}
+\contentsline {section}{\numberline {3.3}Detectability}{71}
+\contentsline {section}{\numberline {3.4}Planetary Reflection Spectra}{73}
+\contentsline {section}{\numberline {3.5}Modeling Spectra During Caustic--Crossing}{80}
+\contentsline {section}{\numberline {3.6}Discussion}{83}
+\contentsline {section}{\numberline {3.7}Conclusions}{87}
+\contentsline {chapter}{\numberline {4}On Constraining A Transiting Exoplanet's Rotation Rate With Its Transit Spectrum}{94}
+\contentsline {section}{\numberline {4.1}Introduction}{94}
+\contentsline {section}{\numberline {4.2}Overview of the Problem}{103}
+\contentsline {subsection}{\numberline {4.2.1}Relevant Processes}{103}
+\contentsline {subsection}{\numberline {4.2.2}Preview of Results}{111}
+\contentsline {subsection}{\numberline {4.2.3}Available Technology}{115}
+\contentsline {section}{\numberline {4.3}A Model of a Planetary Transit}{117}
+\contentsline {subsection}{\numberline {4.3.1}Parameters of the Star}{120}
+\contentsline {subsection}{\numberline {4.3.2}Parameters of the Planet}{120}
+\contentsline {subsection}{\numberline {4.3.3}Spectral Parameters}{121}
+\contentsline {subsection}{\numberline {4.3.4}Parameters of Observing and Computing}{122}
+\contentsline {section}{\numberline {4.4}Model Transit Spectra}{124}
+\contentsline {section}{\numberline {4.5}Discussion}{132}
+\contentsline {section}{\numberline {4.6}Conclusion}{135}
+\contentsline {chapter}{\numberline {5}Habitable Climates}{141}
+\contentsline {section}{\numberline {5.1}Introduction}{141}
+\contentsline {section}{\numberline {5.2}Climate Modeling Hierarchy}{145}
+\contentsline {subsection}{\numberline {5.2.1}Global Radiative Balance}{149}
+\contentsline {subsection}{\numberline {5.2.2}1--D Energy Balance Model}{156}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Model Limitations}{160}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Model Validation}{162}
+\contentsline {section}{\numberline {5.3}Study of Habitability}{166}
+\contentsline {subsection}{\numberline {5.3.1}Climate Dynamics and Seasonality}{167}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Climate Stability}{167}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Comparison to Global Radiative Balance Results}{171}
+\contentsline {subsection}{\numberline {5.3.2}Fractional Habitability}{174}
+\contentsline {subsubsection}{\numberline {5.3.2.1}The Case of Earth}{177}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Temporal Habitability of Pseudo-Earths}{178}
+\contentsline {subsubsection}{\numberline {5.3.2.3}Regional Habitability of Pseudo-Earths}{181}
+\contentsline {subsubsection}{\numberline {5.3.2.4}Pseudo-Earth with a Small Ocean Fraction}{183}
+\contentsline {section}{\numberline {5.4}On the Definition of Habitability}{186}
+\contentsline {section}{\numberline {5.5}Conclusion}{190}
+\contentsline {chapter}{\numberline {6}Habitable Climates: The Influence of Obliquity}{197}
+\contentsline {section}{\numberline {6.1}Introduction}{197}
+\contentsline {section}{\numberline {6.2}Model}{200}
+\contentsline {section}{\numberline {6.3}Model Validation}{204}
+\contentsline {section}{\numberline {6.4}Study of Habitability}{211}
+\contentsline {subsection}{\numberline {6.4.1}Efficiency of Heat Transport}{213}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Direction of Heat Flow}{213}
+\contentsline {subsubsection}{\numberline {6.4.1.2}Implications for Habitability}{216}
+\contentsline {subsection}{\numberline {6.4.2}Land/Ocean Distribution}{221}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Nonuniform Ocean Coverage}{222}
+\contentsline {subsubsection}{\numberline {6.4.2.2}Desert Worlds}{225}
+\contentsline {subsection}{\numberline {6.4.3}Modeling the Far Reaches of the Habitable Zone}{230}
+\contentsline {section}{\numberline {6.5}Discussion and Conclusions}{232}
+\contentsline {subsection}{\numberline {6.5.1}Whence Antarctica's Extreme Cold?}{232}
+\contentsline {subsection}{\numberline {6.5.2}Applicability of Global Radiative Balance Calculations}{236}
+\contentsline {subsection}{\numberline {6.5.3}Summary}{239}
+\contentsline {chapter}{\numberline {7}Conclusion: Looking Forward}{241}
+\contentsline {section}{\numberline {7.1}Magnetic Planets and Moons?}{241}
+\contentsline {section}{\numberline {7.2}Predicting Spectra with EBMs}{246}

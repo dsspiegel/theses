@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% David Spiegel
+%
+% PhD Dissertation
+%
+% January 2008
+%
+% Adapted largely from the theses of Maurice Leutenegger and Ben Sugerman
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[oneside,openright,letterpaper,12pt]{report}
+%\documentclass[oneside,openright,letterpaper,12pt]{thesis}
+%%% change to openright,oneside for FINAL draft
+%%% (or twoside for soft cover?)
+
+\input{packages.tex}
+
+\bibliographystyle{apj}
+\bibpunct{(}{)}{;}{a}{}{,} % sets the punctuation style of references
+
+\input{textstylemacros} % sets the spacing, margins, etc.
+%\input{Ostarmacro}
+
+\begin{document}
+
+% Columbia wants no page numbers for the title, copyright, and abstract ...
+
+\pagestyle{empty}
+\input{title}
+\input{copyright}
+\input{abstract}
+
+% ... and lower case roman numerals centered in the bottom of the page
+% for the table of contents, list of figures, and list of tables ...
+\cleardoublepage
+% cleardoublepage causes the next page to have an odd number 
+% when twoside is enabled.
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\setlength{\baselineskip}{0.625 \baselineskip}
+
+{\parskip=0.15cm
+  \tableofcontents
+  \cleardoublepage
+  \listoffigures
+  \cleardoublepage
+  \listoftables
+}
+
+\setlength{\baselineskip}{1.6 \baselineskip}
+
+{
+  \cleardoublepage
+  \input{acknow}
+  \cleardoublepage
+}
+
+% ... and arabic numerals at the top right corner for the rest of the
+% dissertation. Setting the "twoside" option in documentclass will put the
+% arabic numerals in the top outside corner.
+
+\pagestyle{myheadings}
+\markright{}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{chapter1_intro}
+% Part I
+\part[Seeking Hidden Baryons]{Seeking Hidden Baryons}
+\label{part:IGM}
+\input{chapter2_groups}
+% Part II
+\part[Constraining Properties of Exoplanets]{Constraining Properties of Exoplanets}
+\label{part:planets}
+\input{chapter3_micro}
+\input{chapter4_rot}
+\input{chapter5_hab}
+\input{chapter6_obl2}
+\input{chapter7_conc}
+
+\cleardoublepage
+
+\setlength{\baselineskip}{0.625 \baselineskip}
+
+\bibliography{biblio.bib}
+\cleardoublepage
+
+\end{document}

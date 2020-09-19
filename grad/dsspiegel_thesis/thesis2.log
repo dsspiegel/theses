@@ -1,0 +1,1732 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2008.12.28)  12 MAR 2011 18:06
+entering extended mode
+ %&-line parsing enabled.
+**thesis2
+(./thesis2.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
+omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
+sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/base/report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/base/size12.clo
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./packages.tex
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/natbib/natbib.sty
+Package: natbib 2009/02/02 8.3 (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf/tex/l
+atex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (./deluxetable52.sty
+Package: deluxetable52 
+\tnotemarkskip=\skip45
+\@abovenoteskip=\dimen105
+\pt@box=\box26
+\pt@width=\dimen106
+\pt@line=\count89
+\pt@column=\count90
+\pt@nlines=\count91
+\pt@ncol=\count92
+\pt@page=\count93
+\tabbaseskip=\dimen107
+\pt@tmpcapwidth=\dimen108
+\spew@tblnotesbox=\box27
+\restof@tblnotesbox=\box28
+\noteheight=\dimen109
+\pt@tabnoteminht=\dimen110
+\firsttabskip=\dimen111
+\captionbox=\box29
+\pt@reduceline=\dimen112
+\extra@vspace=\dimen113
+\c@plate=\count94
+) (./aasmacro.sty)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/tools/afterpage.sty
+Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
+\AP@output=\toks15
+\AP@partial=\box30
+\AP@footins=\box31
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/pxfonts.sty
+Package: pxfonts 2008/01/22 v1.1.1
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/pxr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/pxr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/pxr/m/n --> OT1/pxr/bx/n on input line 22.
+\symitalic=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `italic' in version `bold'
+(Font)                  OT1/pxr/m/it --> OT1/pxr/bx/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/pxr/bx/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/pxr/bx/n on input line 29.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/pxr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/pxr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/pxr/m/it --> OT1/pxr/bx/it on input line 31.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/pxss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/pxss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/pxss/m/n --> OT1/pxss/b/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/pxtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/pxtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/pxtt/m/n --> OT1/pxtt/b/n on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/pxmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/pxmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/pxmi/m/it --> OML/pxmi/bx/it on input line 59.
+\symlettersA=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/pxmia/m/it --> U/pxmia/bx/it on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pxsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pxsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/pxsy/m/n --> OMS/pxsy/bx/n on input line 78.
+\symAMSa=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/pxsya/m/n --> U/pxsya/bx/n on input line 94.
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/pxsyb/m/n --> U/pxsyb/bx/n on input line 103.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/pxsyc/m/n --> U/pxsyc/bx/n on input line 113.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/pxex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/pxex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/pxex/m/n --> OMX/pxex/bx/n on input line 121.
+\symlargesymbolsA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
+(Font)                  U/pxexa/m/n --> U/pxexa/bx/n on input line 129.
+LaTeX Info: Redefining \not on input line 997.
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+)
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count95
+\float@exts=\toks16
+\float@box=\box32
+\@float@everytoks=\toks17
+\@floatcapt=\box33
+)) (./textstylemacros.tex
+\grsign=\box34
+LaTeX Font Info:    Try loading font information for OT1+pxr on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/ot1pxr.fd
+File: ot1pxr.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for OML+pxmi on input line 67.
+
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/omlpxmi.fd
+File: omlpxmi.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for OMS+pxsy on input line 67.
+
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/omspxsy.fd
+File: omspxsy.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for OMX+pxex on input line 67.
+
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/omxpxex.fd
+File: omxpxex.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxmia on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/upxmia.fd
+File: upxmia.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxsya on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/upxsya.fd
+File: upxsya.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxsyb on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/upxsyb.fd
+File: utxsyb.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxsyc on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/upxsyc.fd
+File: upxsyc.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxexa on input line 67.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/upxexa.fd
+File: upxexa.fd 2000/12/14 v1.0
+)
+\grdimen=\dimen114
+\laxbox=\box35
+\gaxbox=\box36
+) (./thesis2.aux)
+\openout1 = `thesis2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/pxmi/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/pxsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/pxex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/pxexa/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+ (./title.tex [1
+
+
+])
+(./copyright.tex
+LaTeX Font Info:    Try loading font information for OMS+pxr on input line 6.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/omspxr.fd
+File: omspxr.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Font shape `OMS/pxr/m/n' in size <12> not available
+(Font)              Font shape `OMS/pxsy/m/n' tried instead on input line 6.
+ [2
+
+]) (./abstract.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 62--34
+
+ []
+
+[3
+
+] [4] (./thesis2.toc [1
+
+
+] [2] [3])
+\tf@toc=\write3
+\openout3 = `thesis2.toc'.
+
+ [4] (./thesis2.lof
+Overfull \hbox (10.62733pt too wide) in paragraph at lines 11--11
+ [][] []\OT1/pxr/m/n/12 Schematic il-lus-tra-tion of the planet--star sys-tem i
+n the ``planet--leading'' 
+ []
+
+[5
+
+
+]
+Overfull \hbox (0.4879pt too wide) in paragraph at lines 34--34
+ [][] []\OT1/pxr/m/n/12 Temporal and re-gional hab-it-abil-ity frac-tions in a 
+pseudo-Earth model 
+ []
+
+
+Overfull \hbox (1.20758pt too wide) in paragraph at lines 41--41
+ [][] []\OT1/pxr/m/n/12 Annually av-er-aged, lon-gi-tu-di-nally in-te-grated, m
+erid-ional heat trans- 
+ []
+
+[6]
+Overfull \hbox (7.96306pt too wide) in paragraph at lines 47--47
+ [][] []\OT1/pxr/m/n/12 Model tem-po-ral hab-it-abil-ity frac-tion un-der dif-f
+er-ent obliq-ui-ties, North 
+ []
+
+
+Overfull \hbox (7.96306pt too wide) in paragraph at lines 49--49
+ [][] []\OT1/pxr/m/n/12 Model tem-po-ral hab-it-abil-ity frac-tion un-der dif-f
+er-ent obliq-ui-ties, North 
+ []
+
+)
+\tf@lof=\write4
+\openout4 = `thesis2.lof'.
+
+ [7] (./thesis2.lot)
+\tf@lot=\write5
+\openout5 = `thesis2.lot'.
+
+ [8
+
+
+] (./acknow.tex [9
+
+] [10]) [11] (./chapter1_intro.tex
+Chapter 1.
+[1
+
+
+]
+File: figures/chapter1_intro/piechart.eps Graphic file (type eps)
+ <figures/chapter1_intro/piechart.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[2]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[3]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[4
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[5]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[6]
+File: figures/chapter1_intro/horne_num_transits.eps Graphic file (type eps)
+ <figures/chapter1_intro/horne_num_transits.eps>
+Overfull \hbox (10.6674pt too wide) in paragraph at lines 206--218
+[]\OT1/pxr/m/n/12 With a pair of space-based transit-detecting ob-ser-va-to-rie
+s set to mon-i-tor $\OMS/pxsy/m/n/12 ^^X$\OT1/pxr/m/n/12 200,000
+ []
+
+
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[7]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[8]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[9
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[10]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[12]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[15]) [16
+
+
+] (./chapter2_groups.tex
+Chapter 2.
+[17
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[18]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[19]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[20]
+LaTeX Font Info:    Try loading font information for OT1+pxtt on input line 120
+.
+
+(/Previous_Systems.localized/2010-07-22_1548/usr/local/texlive/2008/texmf-dist/
+tex/latex/pxfonts/ot1pxtt.fd
+File: ot1pxtt.fd 2000/12/14 v1.0
+)
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[21]
+Overfull \hbox (8.04225pt too wide) in paragraph at lines 154--192
+ [] 
+ []
+
+
+Overfull \hbox (28.42969pt too wide) in paragraph at lines 214--221
+\OT1/pxr/m/n/12 where $\OML/pxmi/m/it/12 k$ \OT1/pxr/m/n/12 is the num-ber of s
+quare arc-sec-onds per pixel (in our im-ages, $\OML/pxmi/m/it/12 k \OT1/pxr/m/n
+/12 = 4[]$),
+ []
+
+
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[22]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[23]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[24]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[25]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[26]
+File: figures/chapter2_groups/f1.eps Graphic file (type eps)
+ <figures/chapter2_groups/f1.eps>
+File: figures/chapter2_groups/f2.eps Graphic file (type eps)
+ <figures/chapter2_groups/f2.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[27]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[28]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[29]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[30
+
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[31]
+File: figures/chapter2_groups/f3.eps Graphic file (type eps)
+ <figures/chapter2_groups/f3.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[32]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[33]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[34
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[35]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[36]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[37]
+File: figures/chapter2_groups/f4.eps Graphic file (type eps)
+ <figures/chapter2_groups/f4.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[38]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[39]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[40
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[41]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[42]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[43]
+File: figures/chapter2_groups/f5.eps Graphic file (type eps)
+ <figures/chapter2_groups/f5.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[44]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[45]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[46
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[47]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[48]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[49]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[50]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[51]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[52]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[53]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[54]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[55]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[56])
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[57] [58
+
+] (./chapter3_micro.tex
+Chapter 3.
+[59
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[60]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[61]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[62]
+File: figures/chapter3_micro/fig1.eps Graphic file (type eps)
+ <figures/chapter3_micro/fig1.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[63]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[64]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[65
+
+]
+File: figures/chapter3_micro/fig2a.epsf Graphic file (type eps)
+ <figures/chapter3_micro/fig2a.epsf>
+File: figures/chapter3_micro/fig2b.epsf Graphic file (type eps)
+ <figures/chapter3_micro/fig2b.epsf>
+File: figures/chapter3_micro/fig2c.epsf Graphic file (type eps)
+
+<figures/chapter3_micro/fig2c.epsf>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[66]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[67]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[68
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[69]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[70]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[71]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[72]
+File: figures/chapter3_micro/fig3a.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig3a.ps>
+File: figures/chapter3_micro/fig3b.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig3b.ps>
+
+LaTeX Warning: Float too large for page by 4.52356pt on input line 411.
+
+File: figures/chapter3_micro/fig4.ps Graphic file (type eps)
+<figures/chapter3_micro/fig4.ps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[73]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[74]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[75]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[76
+
+
+]
+File: figures/chapter3_micro/fig5.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig5.ps>
+File: figures/chapter3_micro/fig6.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig6.ps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[77]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[78]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[79]
+Overfull \hbox (3.88329pt too wide) in paragraph at lines 553--557
+\OT1/pxr/m/n/12 If the (un-lensed) flux from the star has spec-trum $\OML/pxmi/
+m/it/12 F[]\OT1/pxr/m/n/12 (\OML/pxmi/m/it/12 ^^U\OT1/pxr/m/n/12 )$ and the pla
+net has wavelength-
+ []
+
+
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[80
+
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[81]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[82]
+File: figures/chapter3_micro/fig7a.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig7a.ps>
+File: figures/chapter3_micro/fig7b.ps Graphic file (type eps)
+ <figures/chapter3_micro/fig7b.ps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[83]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[84]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[85
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[86]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[87]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[88]
+File: figures/chapter3_micro/fig8a.eps Graphic file (type eps)
+ <figures/chapter3_micro/fig8a.eps>
+File: figures/chapter3_micro/fig8b.eps Graphic file (type eps)
+ <figures/chapter3_micro/fig8b.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[89]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[90]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[91
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[92]) (./chapter4_rot.tex
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[93]
+Chapter 4.
+[94
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[95]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[96]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[97]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[98]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[99]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[100]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[101]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[102]
+File: figures/chapter4_rot/fig1.eps Graphic file (type eps)
+ <figures/chapter4_rot/fig1.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[103]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[104]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[105
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[106]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[107]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[108]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[109]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[110]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[111]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[112]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[113]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[114]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[115]
+Overfull \hbox (2.20761pt too wide) in paragraph at lines 627--647
+[]\OT1/pxr/m/n/12 By the mid--1990s, the time-less quest for high--resolution s
+pec-tro-graphs reached
+ []
+
+
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[116]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[117]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[118]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[119]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[120]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[121]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[122]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[123]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[124]
+File: figures/chapter4_rot/fig2.eps Graphic file (type eps)
+ <figures/chapter4_rot/fig2.eps>
+File: figures/chapter4_rot/fig3.eps Graphic file (type eps)
+ <figures/chapter4_rot/fig3.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[125]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[126]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[127]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[128]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[129]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[130]
+File: figures/chapter4_rot/fig4.eps Graphic file (type eps)
+ <figures/chapter4_rot/fig4.eps>
+
+LaTeX Warning: Float too large for page by 4.26282pt on input line 1164.
+
+
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[131
+
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[132]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[133]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[134]
+File: figures/chapter4_rot/fig5.eps Graphic file (type eps)
+ <figures/chapter4_rot/fig5.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[135]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[136]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[137]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[138
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[139]) (./chapter5_hab.tex
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[140]
+Chapter 5.
+[141
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[142]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[143]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[144]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[145]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[146]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[147]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[148]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[149]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[150]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[151]
+File: figures/chapter5_hab/f1.eps Graphic file (type eps)
+ <figures/chapter5_hab/f1.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[152
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[153]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[154
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[155]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[156]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[157]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[158]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[159]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[160]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[161]
+File: figures/chapter5_hab/f2.eps Graphic file (type eps)
+ <figures/chapter5_hab/f2.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[162]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[163]
+File: figures/chapter5_hab/f3.eps Graphic file (type eps)
+ <figures/chapter5_hab/f3.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[164
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[165]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[166
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[167]
+File: figures/chapter5_hab/f4a.eps Graphic file (type eps)
+ <figures/chapter5_hab/f4a.eps>
+File: figures/chapter5_hab/f4b.eps Graphic file (type eps)
+ <figures/chapter5_hab/f4b.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[168]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[169]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[170
+
+]
+File: figures/chapter5_hab/f5a.eps Graphic file (type eps)
+ <figures/chapter5_hab/f5a.eps>
+File: figures/chapter5_hab/f5b.eps Graphic file (type eps)
+ <figures/chapter5_hab/f5b.eps>
+File: figures/chapter5_hab/f5c.eps Graphic file (type eps)
+
+<figures/chapter5_hab/f5c.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[171]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[172]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[173
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[174]
+File: figures/chapter5_hab/f6.eps Graphic file (type eps)
+ <figures/chapter5_hab/f6.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[175]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[176]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[177
+
+]
+File: figures/chapter5_hab/f7a.eps Graphic file (type eps)
+ <figures/chapter5_hab/f7a.eps>
+File: figures/chapter5_hab/f7b.eps Graphic file (type eps)
+ <figures/chapter5_hab/f7b.eps>
+File: figures/chapter5_hab/f7c.eps Graphic file (type eps)
+
+<figures/chapter5_hab/f7c.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[178]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[179]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[180
+
+]
+File: figures/chapter5_hab/f8a.eps Graphic file (type eps)
+ <figures/chapter5_hab/f8a.eps>
+File: figures/chapter5_hab/f8b.eps Graphic file (type eps)
+ <figures/chapter5_hab/f8b.eps>
+File: figures/chapter5_hab/f8c.eps Graphic file (type eps)
+
+<figures/chapter5_hab/f8c.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[181]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[182]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[183
+
+]
+File: figures/chapter5_hab/f9.eps Graphic file (type eps)
+ <figures/chapter5_hab/f9.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[184]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[185]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[186
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[187]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[188
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[189]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[190]
+File: figures/chapter5_hab/f10.eps Graphic file (type eps)
+ <figures/chapter5_hab/f10.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[191]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[192]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[193
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[194]
+File: figures/chapter5_hab/f11.eps Graphic file (type eps)
+ <figures/chapter5_hab/f11.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[195]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[196]) (./chapter6_obl2.tex
+Chapter 6.
+[197
+
+
+
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[198]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[199]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[200]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[201]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[202]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[203
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[204]
+File: figures/chapter6_obl/fig1.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig1.eps>
+File: figures/chapter6_obl/fig2.ps Graphic file (type eps)
+ <figures/chapter6_obl/fig2.ps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[205]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[206]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[207]
+File: figures/chapter6_obl/fig3.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig3.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[208
+
+
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[209]
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 364--367
+\OT1/pxr/m/n/12 The to-tal dif-fu-sive flux $\OMS/pxsy/m/n/12 F[]$ \OT1/pxr/m/n
+/12 (tak-ing into ac-count path-length), there-fore, is $2\OML/pxmi/m/it/12 ^^Y
+R [] ^^UF[]$\OT1/pxr/m/n/12 : 
+ []
+
+
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[210
+
+]
+File: figures/chapter6_obl/fig4.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig4.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[211]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[212]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[213
+
+]
+File: figures/chapter6_obl/fig5a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig5a.eps>
+File: figures/chapter6_obl/fig5b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig5b.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[214]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[215]
+File: figures/chapter6_obl/fig6.ps Graphic file (type eps)
+ <figures/chapter6_obl/fig6.ps>
+File: figures/chapter6_obl/fig7.ps Graphic file (type eps)
+ <figures/chapter6_obl/fig7.ps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[216
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[217]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[218]
+File: figures/chapter6_obl/fig8a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig8a.eps>
+File: figures/chapter6_obl/fig8b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig8b.eps>
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[219
+
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[220]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[221
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[222]
+File: figures/chapter6_obl/fig9a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig9a.eps>
+File: figures/chapter6_obl/fig9b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig9b.eps>
+File: figures/chapter6_obl/fig9c.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig9c.eps>
+File: figures/chapter6_obl/fig9d.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig9d.eps>
+File: figures/chapter6_obl/fig9e.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig9e.eps>
+File: figures/chapter6_obl/fig9f.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig9f.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[223]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[224]
+File: figures/chapter6_obl/fig10.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig10.eps>
+File: figures/chapter6_obl/fig11.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig11.eps>
+File: figures/chapter6_obl/fig12.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig12.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[225
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[226]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[227]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[228]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[229
+
+
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[230]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[231]
+File: figures/chapter6_obl/fig13a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig13a.eps>
+File: figures/chapter6_obl/fig13b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig13b.eps>
+File: figures/chapter6_obl/fig13c.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig13c.eps>
+File: figures/chapter6_obl/fig13d.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig13d.eps>
+File: figures/chapter6_obl/fig13e.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig13e.eps>
+File: figures/chapter6_obl/fig13f.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig13f.eps>
+File: figures/chapter6_obl/fig14a.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig14a.eps>
+File: figures/chapter6_obl/fig14b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig14b.eps>
+File: figures/chapter6_obl/fig14c.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig14c.eps>
+File: figures/chapter6_obl/fig14d.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig14d.eps>
+File: figures/chapter6_obl/fig14e.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig14e.eps>
+File: figures/chapter6_obl/fig14f.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig14f.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[232]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[233]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[234]
+File: figures/chapter6_obl/fig15a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig15a.eps>
+File: figures/chapter6_obl/fig15b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig15b.eps>
+File: figures/chapter6_obl/fig15c.eps Graphic file (type eps)
+
+<figures/chapter6_obl/fig15c.eps>
+File: figures/chapter6_obl/fig15d.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig15d.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[235
+
+
+]
+File: figures/chapter6_obl/fig16a.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig16a.eps>
+File: figures/chapter6_obl/fig16b.eps Graphic file (type eps)
+ <figures/chapter6_obl/fig16b.eps>
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[236]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[237]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[238]) (./chapter7_conc.tex
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[239
+
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[240]
+Chapter 7.
+[241
+
+]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[242]
+Overfull \hbox (2.22787pt too wide) in paragraph at lines 83--117
+[]\OT1/pxr/m/n/12 Because AKR is well be-low the plasma fre-quency of the iono-
+sphere ($\OMS/pxsy/m/n/12 ^^X \OT1/pxr/m/n/12 10[]$),
+ []
+
+
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[243]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[244]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[245]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[246]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[247]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[248]) (./thesis2.bbl [249
+
+
+
+]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[250]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[251]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[252]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[253]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[254]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[255]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[256]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[257]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[258]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[259]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[260]
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[261]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[262]
+Overfull \vbox (8.23495pt too high) has occurred while \output is active []
+
+
+[263])
+Overfull \vbox (8.43599pt too high) has occurred while \output is active []
+
+
+[264] (./thesis2.aux) ) 
+Here is how much of TeX's memory you used:
+ 3231 strings out of 493877
+ 52193 string characters out of 1150590
+ 106735 words of memory out of 3000000
+ 6373 multiletter control sequences out of 10000+50000
+ 31950 words of font info for 100 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 27i,12n,26p,946b,675s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on thesis2.dvi (279 pages, 563756 bytes).
