@@ -1,0 +1,345 @@
+\begin{center}
+\LARGE Shapewise Equivalence and the Helmholtz Equation \
+
+\end{center}
+
+\normalsize
+
+\begin{section}{Separation of Variables in Orthogonal Coordinate Systems}
+When a solution to a partial differential equation is the product of several functions, each of which is a function of just one of the independent variables, most people say that the solution \emph{separates}, and we may find this solution to the differential equation through the method of \emph{separation of variables}.  We will call this the naive notion of separation of variables, and we will revise this description later in the paper.  One of the simplest equations that is solvable via this method is the Helmholtz equation:
+\begin{equation}
+\label{helmholtz}
+\cH \Psi(x, y) = (\Delta_2 + \omega^2)\Psi(x, y) = 0,
+\end{equation}
+where $\cH = \Delta_2 + \omega^2$, with $\omega \in \bR - \{ 0 \}$, is the so-called \emu{Helmholtz operator}.  Note: for the remainder of this paper, $\cF$ will denote the set of all $\bC$-valued real-analytic functions on $\Omega$, a non-empty open, connected subset of $\bR^2$.
+
+The Helmholtz equation separates in rectangular coordinates.  It is natural to inquire in what other coordinate systems the Helmholtz equation separates.  We will examine only orthogonal curvilinear coordinates.  Consider a new set of orthogonal coordinates $\{ u,v \}$ so that \pn{i} there are real-analytic functions $u$ and $v: \Omega \longrightarrow \bR$, where $\Omega$ is a non-empty, open, connected subset of $\bR^2$, such that there is a bijection between pairs $(x,y)$ and pairs $(u(x,y), v(x,y))$, and \pn{ii} the Jacobian determinant $v_x u_y - u_x v_y$ never vanishes.
+
+In order to write the Helmholtz equation in another coordinate system $\{ u, v \}$, we must transform the Helmholtz operator into the new coordinate system.  If $\psi$ is a real-analytic function on the plane ($\psi \in \cF$) then the chain rule gives us
+\[
+\pp xx \psi	=	\left( u_x^2 \pp uu + u_{xx} \p u + 2 u_x v_x \pp uv + v_x^2 \pp vv + v_{xx} \p v \right) \psi .
+\]
+The expression for $\pp yy \psi$ is similar, and so we have that in the $\{ u,v \}$ system,
+\begin{equation}
+\label{laplaciantrans}
+\Delta_2 = \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + 2\left( u_x v_x + u_y v_y \right) \pp uv + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v .
+\end{equation}
+
+The condition that the system is orthogonal means that the unit vectors in the $u$ and $v$ directions ($\vu$ and $\vv$, respectively) are perpendicular at every point, which means that $\vu(x,y) \cdot \vv(x,y) \equiv 0$.  Observe that $\vu$ is a unit vector in the direction of maximum increase of $u$ --- i.e., in the direction of $\nabla (u) = (u_x, u_y)$; and similarly $\vv$ is a unit vector in the direction of $\nabla (v) = (v_x, v_y)$.  Since the dot-product of $\vu$ and $\vv$ is $0$, the dot-product $\nabla (u) \cdot \nabla (v) = u_x v_x + u_y v_y$ must equal $0$ as well.  As a result, in an orthogonal coordinate system, the coefficient of the mixed second partial derivative vanishes:
+\begin{equation}
+\label{laplacorth}
+\Delta_2 = \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v .
+\end{equation}
+And so, since $\omega^2$ is unchanged under the coordinate transformation, (\ref{helmholtz}) is now written
+\begin{equation}
+\label{helmorth}
+\cH \Psi = \left[ \left( u_x^2 + u_y^2 \right) \pp uu + \left( u_{xx} + u_{yy} \right) \p u + \left( v_x^2 + v_y^2 \right) \pp vv + \left( v_{xx} + v_{yy} \right) \p v + \omega^2 \right] \Psi = 0.
+\end{equation}
+For convenience in viewing, we will write (\ref{helmorth}) as follows:
+\begin{equation}
+\label{helmabbrev}
+\cH \Psi = \left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + \omega^2 \right) \Psi = 0,
+\end{equation}
+where the functions $A_{11}, A_1, A_{22}$, and $A_2$ are equal to the corresponding coefficients in (\ref{helmorth}).
+
+There are certain well-known ``facts'' concerning the form that the coefficient functions must assume if an equation of the form (\ref{helmabbrev}) is to be separable.  For instance, \cite[p.~14]{miller} states that, assuming $\omega^2 \not= 0$, (\ref{helmabbrev}) is separable only if there exist functions $\cU, \cV, \cU_1$, and $\cV_1$ such that
+\begin{equation}
+\label{millerasserts}
+\pn{a} \quad A_{11} = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)}
+\qquad \mbox{and} \qquad
+\pn{b} \quad A_{22} = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\end{equation}
+Also, \cite{robertson} asserts that if (\ref{helmabbrev}) is separable, then there exist functions $B(u)$ and $C(v)$ such that
+\begin{equation}
+\label{otherasserts}
+\pn{c} \quad   \frac{A_1(u,v)}{A_{11}(u,v)} = B(u)
+\qquad \mbox{and} \qquad
+\pn{d} \quad   \frac{A_2(u,v)}{A_{22}(u,v)} = C(v).
+\end{equation}
+These ``facts'' prove very useful when characterizing the separable coordinate systems of (\ref{helmabbrev}), and they hold true in all separable coordinate systems that are commonly used in practice.  But, if one adopts the naive notion of separability that we present at the begining of this paper, (\ref{millerasserts}) and (\ref{otherasserts}) are not always true.\footnote{In \cite[p.~505]{hildebrand}, we encounter another characterization of the coefficients in a separable equation that is useful but not true in general if one adopts the naive definition of separability.}  The following counterexample demonstrates this.
+\ex{counter}
+Let $\Psi_0(u,v) = e^u e^v$, and let the coefficient functions of the operator $(A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + \omega^2)$ be defined by
+\[
+\begin{array}{rclcrcll}
+A_{11}	&=	&u-v	&		&A_1	&= 	&v		&  \\
+A_{22}	&=	&-u-v	&		&A_2	&=	&-\omega^2+v.	&  
+\end{array}
+\]
+One can easily verify that $\Psi_0$ is a solution.  Since $\Psi_0$ is a product of a function only of $u$ and a function only of $v$, it is a separated solution according to the naive definition.  Yet, it is clear that none of (a) --- (d) in (\ref{millerasserts}) and (\ref{otherasserts}) hold for the above coefficients.
+
+\eex
+
+Since (\ref{millerasserts}) and (\ref{otherasserts}) are so useful, we wish to define separation so that they do hold.
+
+\begin{definition}
+\label{sepofvard}
+Consider a second-order partial differential equation that involves two independent variables and has no mixed partial derivatives.  That is, our partial differential equation is of the form
+\[
+\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) \Psi = 0,
+\]
+where $A_{11}, A_1, A_{22}, A_2$, and $A$ are real-analytic functions of $u$ and $v$.  We say that this equation is \emu{weakly solvable} \emu{by separation of variables} or \emu{weakly separable} if there exists a solution $\Psi_0(u,v)$ that can be written $U_0(u)V_0(v)$, for some functions $U_0$ and $V_0$, and any such solution is said to be \emu{weakly separated}.  We say that this equation is \emu{strongly solvable by separation of variables} or \emu{strongly separable} if $\frac{A_1}{A_{11}}$ is a function only of $u$, $\frac{A_2}{A_{22}}$ is a function only of $v$, and the equation has at least five linearly independent weakly separated solutions.
+\end{definition}
+
+It is not immediately clear that the above definition implies (\ref{millerasserts}) in the case of the Helmholtz equation, but we will show that indeed it does.
+
+\begin{lemma}
+\label{helmstrong}
+Let a partial differential equation of the form
+\begin{equation}
+\label{genpde}
+\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) \Psi = 0
+\end{equation}
+be strongly solvable by separation of variables, and assume that $A_{11}$ and $A_{22}$ are always positive.  Then
+\[
+\frac{A_{11}(u,v)}{A_{22}(u,v)} = \frac{\cU(u)}{\cV(v)},
+\]
+for some $\cU > 0$ that is a function only of $u$ and some $\cV > 0$ that is a function only of $v$.
+\end{lemma}
+
+\proof
+Let us write our differential equation as $\left( A_{11} \pp uu + A_1 \p u + A_{22} \pp vv + A_2 \p v + A \right) UV = 0$, where $\Psi = UV$ represents a weakly separated, nonzero solution.  This implies that
+\begin{equation}
+\label{strongsep}
+A_{11} U^{\prime\prime}V + A_1 U^\prime V + A_{22} UV^{\prime\prime} + A_2 UV^\prime + A UV = 0.
+\end{equation}
+We divide through by $A_{11} V$ and rearrange terms to arrive at
+\begin{equation}
+\label{Ueqn}
+U^{\prime\prime} + \frac{A_1}{A_{11}}U^\prime + \left( \frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}} \right)U = 0.
+\end{equation}
+We also re-group terms to arrive at
+\begin{equation}
+\label{Veqn}
+V^{\prime\prime} + \frac{A_2}{A_{22}}V^\prime + \left( \frac{A_{11}}{A_{22}} \frac{U^{\prime\prime}}{U} + \frac{A_{1}}{A_{22}} \frac{V^\prime}{V} + \frac{A}{A_{22}} \right)V = 0.
+\end{equation}
+The crucial aspect of (\ref{Ueqn}) is that, since $U^{\prime\prime}, \frac{A_1}{A_{11}}, U^\prime$, and $U$ are functions only of $u$, so must be $\frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}}$.  Write
+\begin{equation}
+\label{cU0}
+\cU_0(u) = \frac{A_{22}}{A_{11}} \frac{V^{\prime\prime}}{V} + \frac{A_{2}}{A_{11}} \frac{V^\prime}{V} + \frac{A}{A_{11}},
+\end{equation}
+for some $\cU_0$ that is a function only of $u$.  Similarly, from (\ref{Veqn}), we see that there exists some $\cV_0$ that is a function only of $v$ such that
+\begin{equation}
+\label{cV0}
+\cV_0(v) = \frac{A_{11}}{A_{22}} \frac{U^{\prime\prime}}{U} + \frac{A_{1}}{A_{22}} \frac{V^\prime}{V} + \frac{A}{A_{22}}.
+\end{equation}
+We multiply (\ref{Ueqn}) by $A_{11} V$ and (\ref{Veqn}) by $A_{22} U$, and we add the results:
+\begin{equation}
+\label{Ueqn+Veqn}
+A_{11} U^{\prime\prime} V + A_1 U^\prime V + A_{22} U V^{\prime\prime} + A_2 U V^{\prime} + \left( A_{11} \cU_0 + A_{22} \cV_0 \right) U V = 0.
+\end{equation}
+Comparing this to (\ref{strongsep}), we have $(A - (A_{11}\cU_0 + A_{22}\cV_0))UV = 0$, and so, since $\cF$ is an integral domain and $UV \not\equiv 0$, we see that $A$ must equal $A_{11} \cU_0 + A_{22} \cV_0$:
+\begin{equation}
+\label{Aequals0}
+A \equiv A_{11} \cU_0 + A_{22} \cV_0.
+\end{equation}
+Since, for a particular choice of $\cU_0$ and $\cV_0$, both (\ref{Ueqn}) and (\ref{Veqn}) are linear, homogeneous, second-order ordinary differential equations, each has at most two linearly independent solutions.  We will label these $U_{01}, U_{02}$, and $V_{01}, V_{02}$.  Thus, for a particular choice of $\cU_0$ and $\cV_0$, there are at most four linearly independent solutions to (\ref{strongsep}): $U_{01}V_{01}$, $U_{01}V_{02}$, $U_{02}V_{01}$, and $U_{02}V_{02}$.  Since (\ref{genpde}) is strongly separable, Definition \ref{sepofvard} requires that there be at least five linearly independent weakly separated solutions.  By the preceding argument, the existence of a fifth linearly independent weakly separated solution necessitates the existence of a pair of solutions $(\cU_1,\cV_1) \not= (\cU_0,\cV_0)$ that satisfies (\ref{cU0}) and (\ref{cV0}).  Suppose, without loss of generality, that $\cV_1 \not= \cV_0$.  We claim that $\cU_1 \not= \cU_0$.
+
+Assume for the moment that $\cU_1 = \cU_0$.  If this is so, then by following the same procedure that led to (\ref{Ueqn+Veqn}), we see that
+\begin{equation}
+\label{Aequals1}
+A \equiv A_{11} \cU_0 + A_{22} \cV_1.
+\end{equation}
+Taking the difference between (\ref{Aequals1}) and (\ref{Aequals0}) yields
+\[
+0 = A_{11}\left( \cU_0 - \cU_0 \right) + A_{22}\left( \cV_1 - \cV_0 \right),
+\]
+and hence
+\[
+0 = A_{22}\left( \cV_1 - \cV_0 \right).
+\]
+Since, by supposition, $\cV_1 - \cV_0 \not\equiv 0$, this forces $A_{22} \equiv 0$.  \contr  This contradicts the hypothesis that $A_{22}$ is everywhere positive.  Thus, we must have $\cU_1 \not= \cU_0$.  We can therefore correctly rewrite (\ref{Aequals1}) as $A \equiv A_{11} \cU_1 + A_{22}\cV_1$.  Subtracting (\ref{Aequals0}) from this gives us
+\begin{equation}
+\label{1and0}
+0 = A_{11}\left( \cU_1 - \cU_0 \right) + A_{22}\left( \cV_1 - \cV_0 \right).
+\end{equation}
+For no value of $u$ does $\cU_1(u) = \cU_0(u)$; and for no value of $v$ does $\cV_1(v) = \cV_0(v)$.  Why?  Well, suppose for instance that for $v = v_0$, we have $\cV_1(v_0) = \cV_0(v_0)$.  Then, we see from (\ref{1and0}) that for all $u$, $A_{11}\left( u,v_0 \right) \left( \cU_1(u) - \cU_0(u) \right) = 0$, but then, since $\cF$ is an integral domain and $A_{11} > 0$, this forces $\cU_1 \equiv \cU_0$. \contr  Therefore, we may rearrange the terms in (\ref{1and0}) to get
+\begin{equation}
+\label{ratioA11A22}
+\frac{A_{11}}{A_{22}} = \frac{\cV_1 - \cV_0}{\cU_0 - \cU_1} = \frac{\frac{1}{\cU_0 - \cU_1}}{\frac{1}{\cV_1 - \cV_0}},
+\end{equation}
+which is a quotient of a function only of $u$ and a function only of $v$, as required.  And, note that \pn{i} both $\cU(u) \equiv \frac{1}{\cU_0(u) - \cU_1(u)}$ and $\cV(v) \equiv \frac{1}{\cV_1(v) - \cV_0(v)}$ are defined everywhere, for their denominators never vanish; and \pn{ii} neither $\cU$ nor $\cV$ is ever $0$, since neither $A_{11}$ nor $A_{22}$ ever vanishes.  Since $A_{11}$ and $A_{22}$ are both everywhere positive, their quotient is too.  Thus, if it happens that $\cU < 0$, we will have that $\cV < 0 $ too.  In this case, replace both $\cU$ and $\cV$ with their negatives --- this will make them both positive, and will preserve their quotient.$\ep$
+
+\begin{lemma}
+\label{fracform}
+Let $A_{11}, A_1, A_{22}$, and $A_2$ be real-analytic functions of both $u$ and $v$ that satisfy the following conditions:
+\begin{eqnarray*}
+\pn{i} & \quad   \frac{A_1(u,v)}{A_{11}(u,v)} = B(u) & \mbox{ for some $B$ that is a function only of $u$,} \\
+\pn{ii} & \quad  \frac{A_2(u,v)}{A_{22}(u,v)} = C(v) & \mbox{ for some $C$ that is a function only of $v$,} \\
+\mbox{\raggedleft and} & & \\
+\pn{iii} & \quad \frac{A_{11}(u,v)}{A_{22}(u,v)} = \frac{\cU(u)}{\cV(v)} & \mbox{ for some never-zero $\cU$ that is a function only of $u$} \\
+ 	 &								 & \mbox{ and some never-zero $\cV$ that is a function only of $v$.}
+\end{eqnarray*}
+Consider a differential equation that has the following form:
+\[
+A_{11} \frac{U^{\prime\prime}}{U} + A_1 \frac{U^{\prime}}{U} + A_{22} \frac{V^{\prime\prime}}{V} + A_2 \frac{V^{\prime\prime}}{V} + \omega^2 = 0,
+\]
+where $U$ is a real-analytic function only of $u$ and $V$ is a real-analytic function only of $v$.  Then, if $\omega^2 \not= 0$, there exist functions $\cU_1$ of $u$ alone and $\cV_1$ of $v$ alone such that
+\[
+\pn{a} \quad A_{11} = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)}
+\qquad \mbox{and} \qquad
+\pn{b} \quad A_{22} = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\]
+\end{lemma}
+
+\proof
+From hypotheses \pn{i} and \pn{ii} of the lemma, $A_1 = A_{11} B$ and $A_2 = A_{22} C$.  Thus, we may rewrite the equation as follows:
+\[
+A_{11}\left( \frac{U^{\prime\prime}}{U} + B \frac{U^{\prime}}{U} \right) + A_{22}\left( \frac{V^{\prime\prime}}{V} + C \frac{V^{\prime}}{V} \right) + \omega^2 = 0.
+\]
+Notice that $\frac{U^{\prime\prime}}{U} + B \frac{U^{\prime}}{U}$ is a function only of $u$, so we may write it $b(u)$; and $\frac{V^{\prime\prime}}{V} + C \frac{V^{\prime}}{V}$ is a function only of $v$, so we may write it $c(v)$.  From hypothesis \pn{iii} above, $A_{22} = A_{11} \frac{\cV}{\cU}$.  Thus, we again rewrite the equation as follows:
+\[
+A_{11} b + A_{11} \frac{\cV}{\cU} c + \omega^2 = 0,
+\]
+which implies that
+\[
+A_{11} = \frac{-\omega^2}{b + c \frac{\cV}{\cU}} = \frac{-\omega^2 \cU}{b \cU + c \cV}.
+\]
+Now, since $\omega^2 \not= 0$, we may divide numerator and denominator by $-\omega^2$, to arrive at
+\begin{equation}
+\label{A11}
+A_{11} = \frac{\cV}{\left(-\frac{b \cU}{\omega^2}\right) + \left(-\frac{c \cV}{\omega^2}\right)},
+\end{equation}
+indicating that our choices of $\cU_1$ and $\cV$ ought to be $\cU_1 = -\frac{b \cU}{\omega^2}$ and $\cV_1 = -\frac{c \cV}{\omega^2}$.  Note that $\cU_1$ and $\cV_1$ are clearly functions only of $u$ and only of $v$, respectively, as required.  This verifies result \pn{a} of the lemma, and it is clear that (\ref{A11}) in conjunction with hypothesis \pn{iii} now implies result \pn{b} of the lemma.$\ep$
+\end{section}
+
+\begin{section}{Orthogonal Coordinate Systems In Which the Helmholtz Equation is Strongly Separable}
+We are seeking orthogonal coordinate systems in which (\ref{helmholtz}) is strongly separable, so we will assert (\ref{helmorth}) to be strongly separable and try to characterize $u$ and $v$.  First, we note that the condition that the Jacobian determinant never vanishes implies that $u_x^2 + u_y^2 = A_{11}$ and $v_x^2 + v_y^2 = A_{22}$ never vanish either, and hence are everywhere positive.  Now, we see immediately that Lemma \ref{helmstrong} implies that $\frac{A_{11}}{A_{22}}$ is of the form required by hypothesis \pn{iii} of Lemma \ref{fracform}, and, since (\ref{helmabbrev}) is strongly separable, Definition \ref{sepofvard} implies that hypotheses \pn{i} and \pn{ii} of Lemma \ref{fracform} are satisfied as well.  Thus, Lemma \ref{fracform} implies that
+\begin{equation}
+\label{millermad}
+u_x^2 + u_y^2 = \frac{\cU(u)}{\cU_1(u) + \cV_1(v)},
+\quad \mbox{and} \quad
+v_x^2 + v_y^2 = \frac{\cV(v)}{\cU_1(u) + \cV_1(v)}.
+\end{equation}
+Note: in the above equation we replaced $A_{11}$ and $A_{22}$ in accordance with (\ref{helmorth}).
+
+Recall that we are working with orthogonal coordinate systems, and so $u_x v_x + u_y v_y = 0$.  As a result, $-\frac{v_x}{u_y} = \frac{v_y}{u_x}$.  Define the function $\cR \equiv -\frac{v_x}{u_y} = \frac{v_y}{u_x}$.  Then,
+\begin{equation}
+\label{vye}
+v_y = \cR u_x
+\end{equation}
+and
+\begin{equation}
+\label{vxe}
+v_x = - \cR u_y.
+\end{equation}
+Now, since $v_x^2 + v_y^2 = \cR^2(u_x^2 + u_y^2)$, (\ref{millermad}) implies that
+\begin{equation}
+\label{cR2}
+\cR^2 = \frac{\cV}{\cU}.
+\end{equation}
+
+In order to proceed, we will need to define some new terminology.
+
+\begin{definition}
+\label{coordcurve}
+Let $\{ u,v \}$ be a coordinate system on $\Omega \subseteq \bR^2$.  We will say that the image of a curve is a \emu{coordinate-curve} if it is defined by an equation of the form $u(x,y) = c$ or $v(x,y) = c$, for a number $c \in \bR$.  It is a coordinate-curve of $u$ if it is defined by $u = c$ for some $c \in \bR$, and a coordinate-curve of $v$ if it is defined by $v = c$ for some $c \in \bR$.
+\end{definition}
+
+\begin{definition}
+\label{orthmatr}
+A matrix $M \in GL(n,\bR)$ is said to be \emu{orthogonal} if the linear transformation that it represents preserves lengths and angles.\footnote{One can prove that $M$ is orthogonal iff $M^t = M^{-1}$.}  The set of all orthogonal, real $n \times n$ matrices is denoted $\cO(n)$.
+\end{definition}
+
+\begin{definition}
+\label{affine}
+A map $\cL: \bR^n \longrightarrow \bR^n$ is said to be \emu{affine} if there exist a matrix $M \in GL(n,\bR)$ and a vector $\bv_0 \in \bR^n$ such that for every vector $\bv \in \bR^n$, $\cL(\bv) = \bv_0 + M\bv$.  An affine transformation $\cL(\bv) = \bv_0 + M\bv$ is said to be an \emu{affine similitude} if $M = c M^\prime$, where $c \in \bR$ and $M^\prime \in \cO(n)$.
+\end{definition}
+
+It turns out that an affine similitude is the composition of a dilation, a translation, a rotation, and possibly a reflection.
+
+\begin{definition}
+\label{shapewised}
+We will say that the coordinate system $\{ u,v \}$ is \emu{shapewise equivalent} to the coordinate system $\{ \tilde{u},\tilde{v} \}$ if there exist invertible real-analytic functions $\eta(u)$ and $\phi(v)$, where $\eta^\prime(u)$ and $\phi^\prime(v)$ never vanish, such that $\tilde{u}(x,y) = \eta\Big(u(\cL(x,y))\Big)$ and $\tilde{v}(x,y) = \phi\Big(v(\cL(x,y))\Big)$, where $\cL$ is an affine similitude.
+\end{definition}
+
+\eex
+
+We summarize the relationship that holds among shapewise equivalent coordinate systems in the schematic diagram below.
+\begin{equation}
+\label{diagram}
+\begin{array}{ccc}
+\bR^2_{_{\{ x,y \} }} & \stackrel{_{\cL}}{\displaystyle \longleftarrow} & \bR^2_{_{\{ x,y \} }} \\ [2pt]
+\stackrel{}{\Big\downarrow} \mbox{ } \mbox{ } \mbox{ } & & \stackrel{}{\Big\downarrow} \mbox{ } \mbox{ } \mbox{ } \\ [2pt]
+\bR^2_{_{\{ u,v \} }} & {}_{\stackrel{\displaystyle \longrightarrow}{_{\eta, \phi}}} & \bR^2_{_{\{ \tilde{u},\tilde{v} \} }}
+\end{array}
+\end{equation}
+The vertical maps are given by $(x,y) \mapsto (u(x,y),v(x,y))$ on the left, and $(x,y) \mapsto (\tilde{u}(x,y),\tilde{v}(x,y))$ on the right.  We say that the diagram is schematic because in order to be rigorous, we would need to replace each $\bR^2$ with an appropriate open set.  Still, the diagram makes it clear that one gets the same result going from $\{ x,y \}$ coordinates to $\{ \tilde{u},\tilde{v} \}$ regardless of whether one uses the direct functions $\tilde{u}(x,y)$ and $\tilde{v}(x,y)$ or one follows the path around the other way, using the affine similitude $\cL$, the functions $u(x,y)$ and $v(x,y)$, and the reparametrizations $\eta(u)$ and $\phi(v)$.  The diagram is suggestive of the fact (which we will not prove) that shapewise equivalence is an equivalence relation.
+
+The definition of shapewise equivalence has to do with the analytical, not the geometrical, properties of shapewise equivalent coordinate systems.  We define shapewise equivalence this way because the analytical properties are what are useful for proving that a change of coordinates that preserves shapewise equivalence also preserves strong separability of the Helmholtz equation (i.e., if (\ref{helmholtz}) is strongly separable in one orthogonal coordinate system, it is strongly separable in any shapewise equivalent coordinate system).  It is the geometrical similarities among coordinate systems that are shapewise equivalent, however, that lead to the term ``shapewise equivalent''.  We will therefore prove a lemma about the geometrical relationships among shapewise equivalent coordinate systems.
+
+\begin{lemma}
+\label{geomprops}
+Let two coordinate systems $\{ u,v \}$ and $\{ \tilde{u},\tilde{v} \}$ be shapewise equivalent.  Let $\cL$ be the affine similitude that relates $\{ \tilde{u},\tilde{v} \}$ to $\{ u,v \}$, as in Definition \ref{shapewised}.  Then, every non-empty coordinate-curve $C_u$ of $u$ is equal to $\cL(C_{\tilde{u}})$ for some non-empty coordinate-curve $C_{\tilde{u}}$ of $\tilde{u}$.
+\end{lemma}
+
+\proof
+We can prove this most efficiently with the following chain of equivalences.
+\begin{eqnarray*}
+(x,y) \in \cL(C_{\tilde{u}}) & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+(\tilde{x},\tilde{y}) \in C_{\tilde{u}} \\
+ & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+\tilde{u}(\tilde{x},\tilde{y}) = \tilde{c}, \mbox{ for some $\tilde{c} \in \bR$} \\
+ & \iff & (x,y) = \cL(\tilde{x},\tilde{y})
+\quad \mbox{and} \quad
+\eta\Big(u(\cL(\tilde{x},\tilde{y}))\Big) = \tilde{c} \\
+ & \iff & \eta\Big(u(x,y)\Big) = \tilde{c} \\
+ & \iff & u(x,y) = c, \mbox{ where $\eta(c) = \tilde{c}$} \\
+ & \iff & (x,y) \in C_u \ep
+\end{eqnarray*}
+
+\ex{shapewise}
+Frequently, when people graph a data set that includes both some very small and some very large values, they use so-called log graph-paper.  Log graph-paper is based on a coordinate system $\{ \tilde{x} = x, \tilde{y} = \log y \}$ that is, by the above argument, shapewise equivalent to rectangular coordinates $\{ x,y \}$.  The reason it is said to be shapewise equivalent should be clear: a rectangle that is parallel to the coordinate axes in ordinary rectangular coordinates is a rectangle on log graph-paper, as well.
+
+\begin{theorem}
+\label{shaprestrong}
+Let two coordinate systems $\{ u,v \}$ and $\{ \tilde{u},\tilde{v} \}$ be shapewise equivalent.  Then if the Helmholtz equation is strongly separable in $\{ u,v \}$, it is also strongly separable in $\{ \tilde{u}, \tilde{v} \}$, although the transformation of $\cH$ from $\{ u,v \}$ into $\{ \tilde{u}, \tilde{v} \}$ might change $\omega^2$ into $\widetilde{\omega}^2$, a different positive quantity.
+\end{theorem}
+
+\proof
+Suppose, without loss of generality, that the Helmholtz equation is strongly separable in $\{ u,v \}$.  We will first verify that a reparametrization of $u$ and $v$ leaves the equation strongly separable; then, we will verify that under an affine similitude the equation remains strongly separable (although possibly changing $\omega^2$).  It will therefore follow that the composition of a reparametrization and an affine similitude leaves the equation strongly separable.
+
+Let there be reparametrizations $\tilde{u} = \eta(u)$ and $\tilde{v} = \phi(v)$.  Now, $A_{11}(u,v) = u_x^2 +u_y^2$.  Note that
+\[
+\tilde{u}_x = \parr{\tilde{u}}{x} = \frac{d \tilde{u}}{d u} \parr{u}{x} = \eta^\prime(u) u_x.
+\]
+Similarly, $\tilde{u}_y = \eta^\prime(u) u_y$.  Thus, we have that the corresponding coefficient
+\[
+\tilde{A}_{11}(\tilde{u},\tilde{v}) = \tilde{u}_x^2 + \tilde{v}_y^2 = \big(\eta^\prime(u)\big)^2 \left( u_x^2 + u_y^2 \right) = \big(\eta^\prime(u)\big)^2 A_{11}(u,v).
+\]
+Note that $\eta^\prime(u)$ can be expressed as a function of $\tilde{u}$ using the inverse function of $\eta$.  Similarly, one can determine that, if $A_1(u,v) = u_{xx} + u_{yy}$, then
+\[
+\tilde{A}_1(\tilde{u},\tilde{v}) = \eta^{\prime\prime}(u)(u_{xx} + u_{yy}) = \eta^{\prime\prime}(u)A_1(u,v).
+\]
+Note, as above, that $\eta^{\prime\prime}(u)$ can be expressed as a function of $\tilde{u}$ using the inverse function of $\eta$.  Thus, the ratio $\frac{\tilde{A}_1}{\tilde{A}_{11}}$ equals a function of $\tilde{u}$ multiplied by $\frac{A_1}{A_{11}}$.  The latter is a function only of $u$.  Again, we can use the inverse function of $\eta$ to express this as a function of $\tilde{u}$, thus showing that the ratio $\frac{\tilde{A}_1}{\tilde{A}_{11}}$ is a function only of $\tilde{u}$, as required.  Similarly, $\frac{\tilde{A}_2}{\tilde{A}_{22}}$ is a function only of $v$.  We must also show that there are five linearly independent solutions.  If $\Psi(u,v) = U(u)V(v)$ is a solution in $\{ u,v \}$ coordinates, then a straightforward calculation reveals that $\widetilde{\Psi}(\tilde{u},\tilde{v}) = \Psi(\eta^{-1}(\tilde{u}),\phi^{-1}(\tilde{v})) = U(\eta^{-1}(\tilde{u}))V(\phi^{-1}(\tilde{v}))$ is a solution in $\{ \tilde{u},\tilde{v} \}$ coordinates, where $\eta^{-1}$ and $\phi^{-1}$ are the inverse functions of $\eta$ and $\phi$, respectively.  And since each $\widetilde{\Psi}$ takes on the same value at a given $(x,y)$ point as the corresponding $\Psi$, and thus the functions $\tilde{\Psi}$ are essentially the same as the functions $\Psi$, it is clear that the transformations of the five linearly independent solutions form a linearly independent set of solutions.
+
+Since $\cH$ is invariant under the one-parameter subgroups of its first-order symmetry operators (proof omitted --- see, for instance \cite[pp.~41-43]{spiegel}), $\cH$ is invariant under rotations and translations.  We first observe that dilations serve only to multiply $\omega^2$ by the square of the dilation factor.  For reflections, we may consider only reflections over the $y$-axis, for all other reflections are the composition of reflections over the $y$-axis and translations and rotations.  If we reflect our space over the $y$-axis, $\p x$ turns into $-\p {\tilde{x}}$, but then taking a second derivative yields $\pp xx = - (-\pp {\tilde{x}}{\tilde{x}}) = \pp {\tilde{x}}{\tilde{x}}$.  That the $\omega^2$ term will remain unchanged follows from the fact that the $\pp xx$ and $\pp yy$ terms maintain the same form (only $\pp xx$ is re-labeled as $\pp {\tilde{x}}{\tilde{x}}$).$\ep$
+
+\eex
+
+We now return to the Helmholtz equation's separable coordinate systems.  If it is not already the case that $\cU \equiv 1$ and $\cV \equiv 1$ in (\ref{millermad}), then there exist real-analytic functions $\tilde{u}(u)$ and $\tilde{v}(v)$ such that
+\[
+\tilde{u}^\prime(u) = \cU^{-\frac{1}{2}}
+\quad \mbox{and} \quad
+\tilde{v}^\prime(v) = \cV^{-\frac{1}{2}}.
+\]
+Since $\cU$ and $\cV$ are both always positive (from Lemma \ref{helmstrong}), $\tilde{u}^\prime(u)$ and $\tilde{v}^\prime(v)$ are everywhere defined.  It is clear that $\tilde{u}^\prime(u)$ and $\tilde{v}^\prime(v)$ are never $0$, for there are no real values of $\cU$ and $\cV$ that would lead to this.  As a result, these functions describe a coordinate system that is shapewise equivalent to $\{ u,v \}$.  We now wish to come up with expressions for $\tilde{u}_x^2 + \tilde{u}_y^2$ and for $\tilde{v}_x^2 + \tilde{v}_y^2$.  Note that
+\[
+\frac{\partial \tilde{u}}{\partial x} = \frac{d \tilde{u}}{d u} \frac{\partial u}{\partial x} = \cU^{-\frac{1}{2}}u_x
+\]
+and so
+\[
+\tilde{u}_x^2 = \frac{1}{\cU}u_x^2.
+\]
+Expressions for $\tilde{u}_y^2, \tilde{v}_x^2$ and $\tilde{v}_y^2$ are analogous, and so, (\ref{millermad}) now implies that
+\begin{equation}
+\label{millermadder}
+\tilde{u}_x^2 + \tilde{u}_y^2 = \frac{1}{\cU} \left( u_x^2 + u_y^2 \right) = \frac{1}{\cU_1 + \cV_1}
+\quad \mbox{and} \quad
+\tilde{v}_x^2 + \tilde{v}_y^2 = \frac{1}{\cV} \left( v_x^2 + v_y^2 \right) = \frac{1}{\cU_1 + \cV_1}.
+\end{equation}
+
+At this point it is important to make sure that we understand what we have just derived.  Our discovery is that if $\{ u,v \}$ is a coordinate system in which (\ref{helmabbrev}) is strongly separable, and thus in which (\ref{millermad}) holds, then there is a shapewise equivalent coordinate system $\{ \tilde{u}, \tilde{v} \}$ in which (\ref{helmabbrev}) is strongly separable such that (\ref{millermadder}) holds.  At this point, it is a straightforward (but tedious) matter to show that every coordinate system (choices of $\{ u,v \}$) in which (\ref{helmabbrev}) is strongly separable is shapewise equivalent to rectangular coordinates, to parabolic coordinates, to polar coordiantes, or to elliptic coordinates.  This analysis is done in \cite{miller} and \cite{morse}, albeit without the language of shapewise equivalence, and in \cite{spiegel}.
+
+\end{section}

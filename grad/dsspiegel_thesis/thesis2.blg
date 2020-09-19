@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
+The top-level auxiliary file: thesis2.aux
+The style file: apj.bst
+Reallocated field_info (elt_size=4) to 10589 items from 5000.
+Database file #1: biblio.bib.bib
+You've used 243 entries,
+            2947 wiz_defined-function locations,
+            1874 strings with 52271 characters,
+and the built_in function-call counts, 130877 in all, are:
+= -- 10380
+> -- 10821
+< -- 119
++ -- 3981
+- -- 3727
+* -- 11998
+:= -- 25006
+add.period$ -- 243
+call.type$ -- 243
+change.case$ -- 2213
+chr.to.int$ -- 240
+cite$ -- 243
+duplicate$ -- 4589
+empty$ -- 6704
+format.name$ -- 4484
+if$ -- 24761
+int.to.chr$ -- 10
+int.to.str$ -- 1
+missing$ -- 234
+newline$ -- 733
+num.names$ -- 977
+pop$ -- 2396
+preamble$ -- 1
+purify$ -- 2211
+quote$ -- 0
+skip$ -- 3892
+stack$ -- 0
+substring$ -- 5026
+swap$ -- 93
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2163
+warning$ -- 0
+while$ -- 960
+width$ -- 0
+write$ -- 2423

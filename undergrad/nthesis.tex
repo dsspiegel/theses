@@ -1,0 +1,150 @@
+\documentclass[11 pt]{report}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{fact}{Fact}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+
+%commands
+\newcommand{\ep}[0]{\qquad \diamondsuit}
+\newcommand{\wtl}[0]{\widetilde{L}}
+\newcommand{\ex}[1]{\begin{example} \label{#1} \end{example} \vspace{-12pt}}
+\newcommand{\eex}[1]{\vspace{12pt}}
+\newcommand{\emu}[1]{\emph{\underline{#1}}}
+\newcommand{\tr}[0]{\mathrm{tr}}
+\newcommand{\Ad}[0]{\mathrm{Ad}}
+\newcommand{\trd}[0]{\mathrm{tr}}
+\newcommand{\gl}[0]{g_{_L}}
+\newcommand{\glp}[0]{g_{_{L^\prime}}}
+\newcommand{\gla}[0]{g_{_{aL}}}
+\newcommand{\contr}[0]{$\Longrightarrow \Longleftarrow$!$\mbox{ }$}
+
+%Emph, Paren
+\newcommand{\pn}[1]{\mbox{$(#1)$}}
+\newcommand{\pns}[1]{\mbox{$(#1)$}}
+\newcommand{\pes}[1]{\mbox{$(#1)$}}
+\newcommand{\pc}[1]{\mbox{$(#1):$}}
+
+%partial derivatives
+\newcommand{\parr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ppp}[3]{\partial_{#1 #2 #3}}
+\newcommand{\pp}[2]{\partial_{#1 #2}}
+\newcommand{\p}[1]{\partial_{#1}}
+
+%boldface shortcuts
+\newcommand{\bx}[0]{\mathbf{x}}
+\newcommand{\by}[0]{\mathbf{y}}
+\newcommand{\bz}[0]{\mathbf{z}}
+\newcommand{\bu}[0]{\mathbf{u}}
+\newcommand{\bv}[0]{\mathbf{v}}
+\newcommand{\br}[0]{\mathbf{r}}
+\newcommand{\bi}[0]{\mathbf{\imath}}
+\newcommand{\bj}[0]{\mathbf{\jmath}}
+\newcommand{\vu}[0]{\mathbf{\hat{u}}}
+\newcommand{\vv}[0]{\mathbf{\hat{v}}}
+\newcommand{\bX}[0]{\mathbf{X}}
+\newcommand{\bZ}[0]{\mathbf{Z}}
+\newcommand{\bZe}[0]{\mathbf{0}}
+\newcommand{\bN}[0]{\mathbf{N}}
+\newcommand{\bR}[0]{\mathbf{R}}
+\newcommand{\bC}[0]{\mathbf{C}}
+\newcommand{\bA}[0]{\mathbf{A}}
+\newcommand{\bM}[0]{\mathbf{M}}
+\newcommand{\bPo}[0]{\mathbf{P_1}}
+\newcommand{\bPt}[0]{\mathbf{P_2}}
+
+%calligraphic shortcuts
+\newcommand{\cA}[0]{\mathcal{A}}
+\newcommand{\cAt}[0]{\mathcal{A}^\times}
+\newcommand{\cF}[0]{\mathcal{F}}
+\newcommand{\cS}[0]{\mathcal{S}}
+\newcommand{\cK}[0]{\mathcal{K}}
+\newcommand{\cG}[0]{\mathcal{G}}
+\newcommand{\cH}[0]{\mathcal{H}}
+\newcommand{\cU}[0]{\mathcal{U}}
+\newcommand{\cV}[0]{\mathcal{V}}
+\newcommand{\cR}[0]{\mathcal{R}}
+\newcommand{\cO}[0]{\mathcal{O}}
+\newcommand{\cE}[0]{\mathcal{E}}
+\newcommand{\cZ}[0]{\mathcal{Z}}
+\newcommand{\cL}[0]{\mathcal{L}}
+
+%large shortcuts
+\newcommand{\lmO}[0]{\mbox{\LARGE $0$}}
+\newcommand{\lO}[0]{\LARGE $0$}
+
+\def\sl{\it}
+\def\csc{\it}
+
+\def\th{^{th}}
+\def\st{^{st}}
+\def\md{\mbox{---}}
+
+\def\proof{\noindent{\it Proof: $\mbox{ }$}\ }
+
+\evensidemargin 0in
+\oddsidemargin 0in
+\textwidth 6.51in
+\topmargin 0in
+\textheight 8in
+
+\begin{document}
+\baselineskip 21pt
+\pagenumbering{roman}
+\evensidemargin 0.25in
+\footnotesep 14pt
+
+\begin{titlepage}
+\mbox{}
+\vspace{1in}
+\begin{center}
+\LARGE Symmetries of the \\
+Helmholtz Equation \\[0.2in]
+\normalsize And Its Separable Coordinate Systems \\[2in]
+\normalsize David Solomon Spiegel \\[\medskipamount]
+12 April 1999 \\[1in]
+Submitted to the \\
+Department of Mathematics and Computer Science \\
+of Amherst College \\
+in partial fulfillment of the requirements \\
+for the degree of \\
+Bachelor of Arts with Honors
+\end{center}
+\vfill
+\begin{center}
+Copyright \copyright\ 1999 David Solomon Spiegel
+\end{center}
+\end{titlepage}
+
+\evensidemargin 0in
+
+\chapter*{Abstract}
+
+Separation of variables is by far the most widely used method of solving linear partial differential equations.  The Helmholtz equation ($\parr{^2\Psi}{x^2} + \parr{^2\Psi}{y^2} + \omega^2\Psi = 0$) is one of the simplest equations that can be solved by this method.  This equation is widely used in physics, and so it has been studied for many years.  It is a well-known fact that there are four orthogonal coordinate systems (up to a certain kind of equivalence) in which this equation separates.  Recently, group-theoretical methods have been applied to differential equations to provide an explanation of their separable coordinate systems.  One of the main references for this paper (\cite{miller}) computes the first-order and second-order symmetry algebras for this equation, and shows how these give its four orthogonal separable coordinate systems.  This reference, however, never defines what it means for a partial differential equation to separate in a coordinate system.  In this paper, we provide some background Lie theory that is necessary for the symmetry analysis, we provide a definition of separation of variables that is applicable in a small but important set of types of equations\footnote{If we had been aware of the work of \cite{koornwinder} earlier, we would not have needed to come up with our own definition; but we became aware of that too late to change the course of the thesis.} (a set that, of course, includes the Helmholtz equation in orthogonal coordinates), and we perform the first-order symmetry analysis, which explains two of the Helmholtz equation's separable coordinate systems.
+
+\chapter*{Acknowledgements}
+
+First and foremost, I thank Professor Cox, without whose tireless efforts, and uncanny intuition for a subject in which he is not an expert, I would never have been able to plow through the abundant-in-quantity yet lacking-in-rigor literature of partial differential equations.  In short, without him, I could not have written this paper.  I also thank all the math professors I have had here, every one of whom has been consistently interested in talking with me in the office whenever I have wanted to.  Your willingness to provide extra material, when I have wanted to explore a subject in greater depth --- and to go over class-work as many times as it takes, when I have been confused --- has added to my educational experience immeasurably.  I want to thank my family, roommates, and other friends, who have borne with me through the many discouraging times during this process, and have been understanding when I have had to break commitments that I have made.  Finally, I would like to express my appreciation for the time I was able to spend with Professor Bailey.  When I do research in the Math Library, it seems that every other book I pull off the shelf has Professor Bailey's name written in the upper right corner of the first page.  His contributions to the library will ensure that his legacy will live on with many future generations of Amherst students.  To me, though, the most important part of his legacy are the many conversations I had with him during the year that he was my academic advisor.  I will always be grateful for these.
+
+\tableofcontents
+% \listoffigures
+\newpage
+
+
+
+\pagenumbering{arabic}
+\setcounter{chapter}{-1}
+
+
+\input nlietheory.tex
+
+\input nsepofvar.tex
+
+\input nsymop.tex
+
+\input nbiblio.tex
+
+\end{document}

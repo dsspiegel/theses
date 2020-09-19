@@ -1,0 +1,5 @@
+\contentsline {chapter}{\numberline {0}Preliminary Lie Theory}{1}
+\contentsline {section}{\numberline {0.1}Lie Algebras}{1}
+\contentsline {chapter}{\numberline {1}Separation of Variables}{3}
+\contentsline {section}{\numberline {1.1}Solving the Helmholtz Equation by Separating the Variables}{3}
+\contentsline {chapter}{\numberline {2}Symmetry Operators}{5}

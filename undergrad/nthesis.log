@@ -1,0 +1,127 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2000.9.12)  30 MAR 2002 23:01
+**nthesis.tex
+(nthesis.tex
+LaTeX2e <1999/12/01> patch level 1
+Babel <v3.6Z> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/report.cls
+Document Class: report 1999/09/10 v1.4a Standard LaTeX document class
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 1999/09/10 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\c@theorem=\count88
+\c@lemma=\count89
+\c@example=\count90
+\c@corollary=\count91
+\c@conjecture=\count92
+\c@fact=\count93
+\c@definition=\count94
+ (nthesis.aux)
+\openout1 = `nthesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+
+
+(/nfs/pkg/teTeX105/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
+ [1
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 126.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 126.
+ [1
+
+] [2
+
+]
+(nthesis.toc)
+\tf@toc=\write3
+\openout3 = `nthesis.toc'.
+
+ [3
+
+] (nlietheory.tex
+Chapter 0.
+[1
+
+] [2] [3] [4] [5] [6] [7] [8]) (nsepofvar.tex [9]
+Chapter 1.
+
+Overfull \hbox (5.1673pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/n/10.95 with this equa-tion; and $\OML/cmm/m/it/10.95 Q$ \OT1/cmr/m/
+n/10.95 acts on a func-tion $\OML/cmm/m/it/10.95 f$ \OT1/cmr/m/n/10.95 just as 
+one would ex-pect: $\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 f\OT1/cmr/m/n/10.95 ) = [][] [][] \OML/cmm/m/it/10.95 C[]@[]@[]f$\OT1/cmr/m/n
+/10.95 .
+ []
+
+[10
+
+] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
+Overfull \hbox (6.26053pt too wide) in paragraph at lines 411--411
+[]\OT1/cmr/bx/n/14.4 Orthogonal Co-or-di-nate Sys-tems In Which the Helmholtz E
+qua-
+ []
+
+[23] [24] [25] [26] [27] [28] [29] [30] [31] [32]) (nsymop.tex [33]
+Chapter 2.
+[34
+
+] [35] [36] [37] [38] [39] [40]
+Overfull \hbox (2.80212pt too wide) in paragraph at lines 209--210
+[] $\OML/cmm/m/it/10.95 Q$ \OT1/cmr/m/it/10.95 is in-vari-ant un-der $\OML/cmm/
+m/it/10.95 T[]$\OT1/cmr/m/it/10.95 , the one-parameter sub-group as-so-ci-ated 
+with $\OML/cmm/m/it/10.95 L$\OT1/cmr/m/it/10.95 , mean-ing that $\OML/cmm/m/it/
+10.95 QT[]f \OT1/cmr/m/n/10.95 =
+ []
+
+[41] [42] [43] [44] [45] [46] [47] [48] [49]) (nbiblio.tex [50] [51
+
+]) [52]
+(nthesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 517 strings out of 10901
+ 4753 string characters out of 72380
+ 54210 words of memory out of 263001
+ 3489 multiletter control sequences out of 10000+0
+ 12004 words of font info for 41 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 24i,13n,19p,1693b,287s stack positions out of 300i,100n,500p,50000b,4000s
+
+Output written on nthesis.dvi (56 pages, 189064 bytes).

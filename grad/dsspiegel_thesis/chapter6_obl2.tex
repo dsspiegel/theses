@@ -1,0 +1,1155 @@
+\chapter[Habitable Climates: The Influence of Obliquity]{Habitable Climates: The Influence of Obliquity}
+\label{ch:obl}
+\markright{}
+
+
+
+\section{Introduction}
+\label{obl_sec:intro}
+
+The Earth's obliquity is remarkably stable: the angle between the
+spin--axis and the normal to the orbital plane varies by no more than
+a few degrees from its present value of $\sim 23.5\degr$.  This
+stability is maintained by torque from the Moon
+\citep{laskar_et_al1993,nerondesurgy+laskar1997}.  Even within our own
+Solar System, though, the obliquity of other terrestrial planets has
+varied significantly more; the analysis of \citet{laskar+robutel1993}
+indicates that Mars' obliquity exhibits chaotic variations between
+$\sim 0\degr$ and $\sim 60\degr$.
+
+How does climate depend on obliquity?  How does the range of orbital
+radii around a star at which a planet could support water-based life
+depend on the planet's obliquity?  Has the stability of Earth's
+obliquity made it a more climatically hospitable home?  The answers to
+these questions will be crucial to evaluate the fraction of stars that
+have potentially habitable planets.  There are now more than 280
+extrasolar planets known, several of which are less than 10 times the
+mass of the Earth.\footnote{See http://exoplanet.eu/.}  {\it Corot},
+which has already launched, and {\it Kepler}, scheduled to launch in
+less than one year, are dedicated space-based transit-detecting
+observatories that will monitor a large number of stars to detect the
+small decreases in stellar flux that occur when terrestrial planets
+cross in front of their host stars
+\citep{baglin2003,borucki_et_al2003,borucki_et_al2007}.  These
+missions are expected to multiply by perhaps a thousandfold or more
+the number of known terrestrial planets, depending on the distribution
+of such planets around solar-type stars (\citealt{borucki_et_al2007,
+borucki_et_al2003, basri_et_al2005}; although see revised predictions
+in \citealt{beatty+gaudi2008}).  NASA and ESA have plans for ambitious
+future missions to obtain spectra of nearby Earth-like planets in the
+hope that they would reveal the first unambiguous signatures of life
+on a remote world: NASA's {\it Terrestrial Planet Finder} and ESA's
+{\it Darwin} \citep{leger+herbst2007}.  The design of such
+observatories, and the urgency with which they will be built and
+deployed, will depend on the habitability analysis of terrestrial
+planets that will be found in the next 5-10 years.
+
+Over the last 50 years, various authors have addressed how to predict
+the way in which terrestrial planet habitability depends on
+star-planet distance.  Several of the important initial calculations
+predated the first discoveries of extrasolar planets, including
+\citet{dole1964}, \citet{hart1979}, and the seminal work of
+\citet{kasting_et_al1993}.  More recently, \citet[hereafter
+WK97]{williams+kasting1997} and \citet{williams+pollard2003} have
+tackled precisely the questions posed above, and have concluded that
+obliquity variations do not necessarily render a planet non-habitable.
+Here we seek to generalize these analyses to model planets that are
+less close analogs to Earth than have been considered previously.
+Chapter~\ref{ch:hab} \citep[hereafter SMS08]{spiegel_et_al2008}
+examines how regionally and temporally habitable climates are affected
+by variations in the efficiency with which heat redistribes on a
+planet, and by variations in the ocean fraction.  Following in the
+footsteps of that analysis, here we again consider the influence on
+habitability of several unobservable planetary attributes: we
+simultanously vary with obliquity both the efficiency of latitudinal
+heat transport, and the distribution of land and ocean.
+
+The remainder of this chapter is structured as follow: In
+\S~\ref{obl_sec:model} we describe the energy balance model we use; in
+\S~\ref{obl_sec:valid} discuss several validation tests in which our
+model performs well enough to give us some confidence in its behavior
+for conditions that differ from those found on Earth; in
+\S~\ref{obl_sec:results} we examine the influence on regional and
+seasonal habitability of various excursions from Earth-like
+conditions; and in \S~\ref{obl_sec:disc+conc} we conclude by
+considering why the Earth's South Pole is so cold and by examining the
+suitability of global radiative balance models for habitable zone
+analysis.
+
+
+\section{Model}
+\label{obl_sec:model}
+
+In order to describe the temperature structure and evolution on a
+planet, we use a 1-dimensional time-dependent energy balance model
+based on a diffusion equation.  This type of model has been used in
+previous investigations of habitable climates (WK97, SMS08), in
+modeling Martian climate under changes in forcing
+\citep{nakamura+tajika2002,nakamura+tajika2003}, and in studies of the
+Earth's climate (\citealt{north_et_al1981} and references therein).
+
+Our model is based on the following prognostic equation for the
+planetary surface temperature (as described in SMS08):
+\begin{equation}
+\label{obl_eq:diffu eq1}
+C \frac{\partial T[x,t]}{\partial t} - \frac{\partial}{\partial x}
+\left( D(1 - x^2) \frac{\partial T[x,t]}{\partial x} \right) + I = S
+(1 - A).
+\end{equation}
+In this equation, $x \equiv \sin \lambda$ is the sine of latitude
+$\lambda$, $T$ is the temperature, $C$ is the effective heat capacity
+of the surface layer, $D$ is the diffusion coefficient that determines
+the efficiency of latitudinal redistribution of heat, $I$ is the
+infrared emission function (energy sink), $S$ is the diurnally
+averaged insolation function (energy source) and $A$ is the albedo. In
+the above equation, $C$, $D$, $I$, and $A$ may be functions of $T$,
+$x$, $t$, and possibly other relevant parameters.
+
+Our prescriptions for the functions $C$, $D$, $I$, and $A$ follow
+SMS08 and are largely borrowed from WK97 or the existing geophysical
+literature on 1D EBMs. For simplicity and flexibility, many of our
+models use very simple, physically motivated prescriptions. As
+described in SMS08, we find that an infrared cooling function of the
+form
+\begin{equation}
+I[T] = \sigma T^4 / (1 + (3/4)\tau_{\rm IR}[T])
+\label{obl_eq:I}
+\end{equation}
+(i.e., a one-zone model combined with a simple Eddington transfer
+approximation; e.g., \citealt{shu1982}), reproduces the greenhouse
+effect on Earth reasonably well.  Here, $\tau_{\rm IR}$ represents the
+opacity of the atmosphere to long wavelength infrared radiation.
+SMS08 describes three pairs of infrared radiation functions and albedo
+functions.  In this analysis, we will use two of the three:
+$(I_2,A_2)$, which gives the closest match to the Earth's temperature
+distribution, and $(I_3,A_3)$, which uses the standard linearized
+cooling function of \citet{north+coakley1979}.  The albedo functions
+$A_2$ and $A_3$ are constant and low ($\sim 0.3$) for high
+temperatures, constant and high ($\sim 0.7$) for low temperatures (to
+represent the high albedo of snow and ice), and vary smoothly in
+between.  The $(I,A)$ functions are presented in
+Table~\ref{obl_tab:one}.  One other $I$ function that we use is the
+one proposed in WK97, derived from full radiative-convective
+calculations, here denoted $I_{\rm WK97}$.  This function includes the
+influence of $\rm CO_2$ on radiative cooling.  For $C$, we assume
+various configurations of land and ocean, in each configuration using
+the same land, ocean, and ice partial $C$ values as WK97.  Finally, we
+adopt $D_{\rm fid} = 5.394\times 10^2 {\rm
+~erg~cm^{-2}~s^{-1}~K^{-1}}\times (\Omega_p/\Omega_\Earth)^{-2}$, as
+described in SMS08, where $\Omega_p$ is the angular spin frequency of
+the model planet and $\Omega_\Earth$ is that of the Earth.
+
+%\begin{deluxetable}{cll}
+\begin{table}[p]
+\begin{center}
+%\tablewidth{0pt}
+\caption[Atmospheric Models]{~~Atmospheric Models.}
+%\tablehead{
+%\colhead{Model}  & \colhead{IR Cooling Function}  & \colhead{Albedo Function} 
+%}
+%\startdata
+\vspace{0.2in}
+\begin{tabular}{cll}
+  \tableline
+  \tableline
+  Model             & IR Cooling Function      & Albedo Function\\[0.1in]
+  \tableline
+2\tablenotemark{a}  &  $I_2[T]  =  \frac{\sigma T^4}{1 + (3/4)\tau_{\rm IR}[T]}$   &  $A_2[T] =  0.525 - 0.245 \tanh[\frac{(T-268{\rm K})}{5{\rm K}}]$   \\
+3\tablenotemark{b}  &   $I_3[T]  =  A + B T$   &  $A_3[T] =  0.475 - 0.225 \tanh[\frac{(T-268{\rm K})}{5{\rm K}}]$  \\
+3\tablenotemark{c}  &   $I_{\rm WK97}[T,p\rm{CO_2}]$   &  $A_2[T]$  \\
+\label{obl_tab:one}
+\end{tabular}
+\vspace{-0.4cm}
+\tablenotetext{a}{\,Model with $T$--dependent optical thickness: $\tau_{\rm IR}[T] = 0.79(T/273{\rm K})^3$.}
+\tablenotetext{b}{\,Linearized model: $A = 2.033\times 10^5{\rm~erg~cm^{-2}~s^{-1}}$, $B = 2.094\times 10^3 {\rm~erg~cm^{-2}~s^{-1}~K^{-1}}$.}
+\tablenotetext{c}{\,WK97 cooling function; $A_2$ albedo: The functional form is quite complicated and is presented in the appendix of WK97.}
+\tablecomments{$\sigma$ is the Stefan-Boltzmann constant.}
+\end{center}
+\end{table}
+%\end{deluxetable}
+\afterpage{\clearpage}
+
+Equation~(\ref{obl_eq:diffu eq1}) is solved as described in SMS08, on
+a grid uniformly spaced in latitude ($1.25\degr$ resolution, found to
+be sufficient from convergence tests).  We again choose ``hot start''
+($T\geq 350\rm~K$) initial conditions, to minimize the likelihood that
+models will undergo a dynamical transition to a fully ice-covered
+(snowball) states from which they cannot recover because of ice-albedo
+feedback.
+
+To summarize, we make the following assumptions in the models
+presented below:
+\begin{enumerate}
+ \item {\it Heating/Cooling} -- The heating and cooling functions are
+    given by the diurnally averaged insolation from a sun--like
+    (1~$M_\sun$, 1~$L_\sun$) star, with albedo and insolation
+    functions described above and in Table~\ref{obl_tab:one}.
+ \item {\it Latitudinal Heat Transport} -- We test the influence on
+    climate of three different efficiencies of latitudinal heat
+    transport, within the diffusion equation approximation: an
+    Earth-like diffusion coefficient, and diffusion coefficients
+    scaled down and up by a factor of 9 (which correspond to 8-hour
+    and 72-hour rotation according to the $D\propto {\Omega_p}^{-2}$
+    scaling).
+ \item {\it Ocean Coverage} -- We vary both the fraction and the
+    distribution of ocean coverage.  For ocean fraction, we present a
+    series of models with Earth--like 30\%:70\% land:ocean ratio, and
+    another series of models that represent a desert-world, with a
+    90\%:10\% land:ocean ratio.  For ocean distribution, we present
+    models in which there is a uniform distribution (in every latitude
+    band) of land and ocean, and others in which the land-mass is a
+    single continent centered on the North Pole, while the rest of the
+    planet is covered with ocean.
+ \item {\it Initial Conditions} -- As described in SMS08, the models
+    all have a hot-start initial condition, with the planet's
+    temperature uniform and at least 350~K, to minimize the chances of
+    ending up in a global snowball state owing solely to the choice of
+    initial conditions.  Time begins at the Northern winter solstice.
+\end{enumerate}
+
+
+\section{Model Validation}
+\label{obl_sec:valid}
+
+In SMS08, we verified that our ``fiducial'' model at 1~AU -- 70\%
+ocean, $I_2,A_2$ cooling/heating -- predicts temperatures that match
+the Earth's actual temperature distribution at all latitudes that are
+not significantly affected by Antarctica (north of $60\degr$~S or so).
+This indicates that the model accounts for the overall planetary
+energy balance reasonably well.  Another obvious test is whether the
+model correctly predicts the individual energy fluxes that together go
+into the overall balance.
+
+The diffusion equation model is essentially a statement of
+conservation of energy.  By definition,
+\begin{equation}
+C \frac{\partial T}{\partial t} \equiv \frac{\partial \sigma}{\partial t},
+\label{eq:def hc}
+\end{equation}
+where $\sigma$ is the energy surface density (internal energy per unit
+surface area on the globe).  The diffusion equation, therefore, says
+that the rate of change of internal energy at a given point equals the
+sources of energy (insolation), minus the sinks (infrared radiation),
+minus whatever energy flows away from the point under consideration.
+
+Figure~\ref{obl_fig:set30heat_cool_23p5} presents a comparison between
+the annually averaged fluxes of incoming and outgoing radiative energy
+in the fiducial model with the corresponding fluxes on Earth, taken
+from NASA's Earth Radiation Budget Experiment (ERBE) in the mid-1980s
+\citep{barkstrom_et_al1990}.  While our model does not capture the
+full shape of the Earth's cooling and heating functions -- in
+particular, the annually averaged model heating function is a bit
+below the Earth's at the poles -- still, both cooling and heating
+fluxes are within 10\% of the Earth's over most of the planet's
+surface.
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig1.eps}
+\caption[Annually averaged cooling and heating fluxes for fiducial
+model at 1~AU and Earth.]{Annually averaged cooling and heating fluxes
+for fiducial model at 1~AU and Earth. The thick red line is infrared
+cooling in our fiducial model (70\% ocean, $I_2,A_2$); the thick blue
+line is absorbed solar flux in our fiducial model. The thin dashed
+magenta line is the Earth's annually averaged long wavelength infrared
+radiation, and the thin dashed cyan line is the annually averaged
+absorbed solar flux on Earth.}
+\label{obl_fig:set30heat_cool_23p5}
+\end{figure}
+
+\afterpage{\clearpage}
+
+Figure~\ref{obl_fig:set30heat_cool_monthly23} offers an even more
+compelling validation.  In this figure, each of the 12 panels shows
+solar (i.e., heating), terrestrial (i.e., cooling), and net (solar
+minus terrestrial) radiative fluxes as functions of latitude for one
+month.  We were heartened to see that not only are our annually
+averaged cooling and heating functions in reasonable gross agreement
+with Earth's, as per Figure~\ref{obl_fig:set30heat_cool_23p5}, but
+furthermore the temporal variability of radiative fluxes in our model
+is similar to that of Earth.
+
+
+\afterpage{\clearpage}
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig2.ps}
+\caption[Monthly cooling, heating, and net fluxes for fiducial model
+at $23.5\degr$ obliquity, at 1~AU, and for Earth.]{Monthly cooling,
+heating, and net fluxes for fiducial model at $23.5\degr$ obliquity,
+at 1~AU, and for Earth.  Each panel presents the average cooling,
+heating, and net (heating minus cooling) radiative fluxes, as
+functions of latitude, for one month of the year, starting at the
+Northern winter solstice (upper left panel), and incrementing by one
+month with each panel to the right.  These fluxes are presented for
+both the model (thick solid lines) and the Earth (thin dashed lines).
+Model heating is blue; model cooling is red; model net heating is
+green.  Earth heating is cyan; Earth cooling is deep magenta; Earth net
+heating is black.}
+\label{obl_fig:set30heat_cool_monthly23}
+\end{figure}
+
+%\clearpage
+\afterpage{\clearpage}
+
+Another way to consider the time variability of heating and cooling
+fluxes is to look at the global average of each with respect to time.
+Figure~\ref{obl_fig:set30_heat_cool_vs_time} presents precisely this
+comparison, for both our fiducial model and for actual Earth data.
+The bottom panel of this figure shows the net heating flux as a
+function of time of year, measured in fraction of a year from the
+Northern winter solstice.  Earth's heating flux varies by about 5\%
+with respect to the heating flux, while our model's varies somewhat
+less.  The heating function for the Earth exceeds the cooling function
+during Northern winter for two main reasons: First, the nonzero
+eccentricity ($e\approx 0.0167$) of the Earth's orbit places its
+perihelion -- which occurs during Northern winter -- approximately
+3.4\% closer to the Sun than its aphelion.  This is responsible for
+$\sim 7\%$ of the annual $\sim 10\%$ annual variation in net heating
+flux.  Another contributing factor is that the Earth's oceans on
+average absorb somewhat more insolation than the land, and the
+Southern hemisphere -- which faces the Sun during Northern winter --
+has greater ocean coverage than the Northern hemisphere.
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig3.eps}
+\caption[Global average cooling, heating, and net radiative flux, as
+functions of time in fiducial model at $23.5\degr$ obliquity.]{Global
+average cooling, heating, and net radiative flux, as functions of time
+in fiducial model at $23.5\degr$ obliquity.  Model fluxes are solid
+lines; ERBE data are stars. {\it Top Panel:} Global average cooling
+(red curves and magenta stars) and heating (blue curves and cyan
+stars) fluxes as a function of time of year, measured in fraction of a
+year from the Northern winter solstice.  {\it Bottom Panel:} Net
+heating flux (heating minus cooling) for the model (green curve) and
+ERBE data (black stars), plotted as percent of the cooling flux.}
+\label{obl_fig:set30_heat_cool_vs_time}
+\end{figure}
+
+\afterpage{\clearpage}
+
+
+So far we have considered the radiative fluxes, but what about
+diffusive energy flux?  We may combine equation~(\ref{obl_eq:diffu
+eq1}) with equation~(\ref{eq:def hc}) to produce:
+\begin{equation}
+\frac{\partial \sigma}{\partial t} - \frac{\partial}{\partial x} \left\{ D\cos^2\lambda \frac{\partial}{\partial x}T \right\} = \left({\rm sources - sinks}\right)_{\rm energy~per~area},
+\label{eq:act. eq. sig}
+\end{equation}
+where we have substituted $\cos^2 \lambda$ for $(1-x^2)$.  The
+$\lambda$ part of the divergence in spherical coordinates is
+\begin{equation}
+{\rm Div}\left[\vec{F}\right]_\lambda = \left(\frac{1}{R \cos \lambda}\right) \frac{\partial}{\partial \lambda} \left\{ \cos \lambda F_\lambda \right\},
+\label{eq:sph div}
+\end{equation}
+where $F_\lambda$ is the flux of some quantity in the $+\lambda$
+direction.  Since $x\equiv \sin \lambda$, $dx = \cos\lambda d\lambda$.
+Therefore, we may rewrite equation~(\ref{eq:sph div}) as follows:
+\begin{equation}
+{\rm Div}\left[\vec{F}\right]_\lambda = \left(\frac{1}{R}\right) \frac{\partial}{\partial x} \left\{ \cos \lambda F_\lambda \right\} = \frac{\partial}{\partial x} \left\{ \frac{\cos \lambda F_\lambda}{R} \right\}
+\label{eq:sph div in x}
+\end{equation}
+
+By the form of the diffusion equation (eq~\ref{eq:act. eq. sig}), the
+term whose divergence is being taken is the rate of energy transport
+(per unit length).  Referring back to equation~(\ref{eq:sph div in
+x}), the term inside the curly braces equals $(\cos\lambda/R)
+F_\lambda$, where $F_\lambda$ is the rate of energy transport per unit
+length.  As a result,
+\begin{equation}
+F_\lambda = R D \cos\lambda \frac{\partial T}{\partial x}.
+\label{eq:flux}
+\end{equation}
+The total diffusive flux $\mathcal{F}_\lambda$ (taking into account
+pathlength), therefore, is $2\pi R \cos\lambda F_\lambda$:
+\begin{equation}
+\mathcal{F}_\lambda = 2\pi R \cos\lambda F_\lambda = 2 \pi R^2 D \cos^2\lambda \frac{\partial T}{\partial x}
+\label{eq:total flux}
+\end{equation}
+
+Figure~\ref{obl_fig:set80merid_heat_flux} shows the meridional
+diffusive heat flux in our fiducial model, at Earth-like $23.5\degr$
+obliquity and at extreme $90\degr$ obliquity.  In the Earth-like
+configuration, heat flows from the equator toward the poles.  In the
+highly oblique configuration, heat flows in the other direction, from
+the poles to the equator (in an annually averaged sense).
+\citet{williams+pollard2003} present a full general circulation model
+(GCM) of an Earth-like planet at Earth-like and higher obliquity.
+Figure~2 of that paper shows the meridional heat flux within their
+models for $23.5\degr$ obliquity and $85\degr$ obliquity, and the
+results are strikingly similar to
+ours.\footnote{\citet{trenberth+solomon1994} present the oceanic
+poleward heat transport for the Earth, which is roughly 50\% the flux
+in the GCM.  This is sensible, because the job of carrying heat to the
+poles is shared roughly evenly between the atmosphere and the oceans.}
+At $23.5\degr$ obliquity, our model's diffusive flux is very close to
+that of the GCM.  At higher obliquity, the flux of our model still
+appears to be within 30\% of the GCM's at all latitudes.\footnote{We
+say ``appears'' because we are gauging the degree of correspondance
+from visual inspection of their figure, since we do not have access to
+the GCM data.}  This reasonable concordance indicates that the
+treatment of heat transport within our model, despite being very
+simple, is still likely to make plausible predictions of heat
+transport in less-Earth-like conditions.  We emphasize that it is a
+nontrivial point that this entirely different regime of transport
+should remain well-captured by a diffusion approximation.
+
+%%%%%%%%%%%%%% Merid Heat Flux
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig4.eps}
+\caption[Annually averaged, longitudinally integrated, meridional heat
+transport at $23.5\degr$ and $90\degr$ obliquity.]{Annually averaged,
+longitudinally integrated, meridional heat transport at $23.5\degr$
+and $90\degr$ obliquity.  The curves indicate the longitudinally
+integrated, annually averaged, northward diffusive heat transport.  In
+the Earth-like case (blue curve), heat flows from the equator to the
+poles; in the highly oblique case (green curve), the annually averaged
+heat flows in the opposite direction.}
+\label{obl_fig:set80merid_heat_flux}
+\end{figure}
+
+
+\afterpage{\clearpage}
+
+
+
+\section{Study of Habitability}
+\label{obl_sec:results}
+
+For model planets with $23.5\degr$ obliquity at 1~AU, both pairs of
+infrared cooling functions and albedo functions that we present in
+this paper are reasonably good matches for the Earth's current climate
+as measured by latitudinally averaged temperature, with $(I_2,A2)$
+being the somewhat closer fit.  This gives us some confidence that
+these functions are reliable guides to how the climate might respond
+under different forcing conditions.  In this investigation, we
+consider how variations in intrinsic planetary characteristics combine
+with the changes in insolation and year-length that would result from
+moving changing a model planet's orbital radius from 1~AU, in an
+effort to map the zone of regionally habitable climates.
+
+We follow SMS08 and say that, at a given time, a part of a planet is
+habitable if its surface temperature is between 273~K and 373~K,
+corresponding to the freezing and boiling points of pure water at
+1~Atm pressure.  This criterion may be criticized for reasons
+discussed in SMS08 and references therein, but it provides a
+reasonable starting point for making investigations concrete.  We will
+frequently quantify habitability of pseudo-Earths with the temporal
+habitability fraction, $f_{\rm time}[a,\lambda]$, defined in SMS08,
+where $a$ is orbital semimajor axis, $\lambda$ is latitude, and
+$f_{\rm time}$ is the fraction of the year that the point in parameter
+space specified by $(a,\lambda)$ spends in the habitable temperature
+range.
+
+
+\subsection{Efficiency of Heat Transport}
+\label{obl_ssec:efficiency}
+
+Terrestrial planets with different rotation rates will redistribute
+heat from the substellar point (or, in a 1D model, the substellar
+latitude) differently.  According to the scaling described above,
+wherein the effective diffusion coefficient varies with the inverse
+square of the planetary rotation rate, slower spinning planets will
+redistribute heat more efficiently, while faster spinning planets will
+do so less efficiently.  But from where, and to where, is heat
+redistributed?  How does this depend on obliquity and rotation rate?
+And what influence does this have on climatic habitability?
+
+\subsubsection{Direction of Heat Flow}
+\label{obl_sssec:direction}
+
+For an Earth-like $23.5\degr$ obliquity, the substellar latitude does
+not vary very much over the course of the year: the tropics are fairly
+close to the equator (the tropical region is less than one third of
+the Earth's surface area).  As a result, it is a reasonable
+approximation that heat is always being transported from the equator
+to the poles.  In contrast, on a planet with significantly larger
+obliquity, the direction of heat flow changes over the course of the
+annual cycle.  At the equinoxes, the equator is the most strongly
+insolated part of the planet (regardless of the obliquity), and so at
+the equinoxes heat builds up at the equator, eventually to be
+partially redistributed by atmospheric motions (including weather
+systems).  But on a highly oblique planet, polar summers are extremely
+intense, as measured by diurnally averaged insolation.  As a result,
+heat builds up at the poles during their summers, and the flow of heat
+reverses direction.
+
+Figure~\ref{obl_fig:set30heat_cool_6090} demonstrates the effect of
+such strong polar summers on the global radiation budget of a model
+planet.  In Figure~\ref{obl_fig:set30heat_cool_23p5} we see the
+annually averaged cooling and heating, as functions of latitude, for
+an Earth-like $23.5\degr$ model.  As one would expect, over the annual
+cycle, the equator receives significantly more solar radiation than do
+the poles, and accordingly the annually averaged heating exceeds the
+cooling at the equator.  This indicates that atmospheric motions
+transport heat poleward from the equator.  In
+Figure~\ref{obl_fig:set30heat_cool_6090}, we present the analogous
+functions, in the case of high and extreme obliquity models. The left
+panel shows the heating and cooling functions for a model at $60\degr$
+obliquity; the right panel shows the same functions for a model at
+$90\degr$ obliquity. In these models, the polar summers are so intense
+that, averaged over the year, the most strongly insolated parts of the
+planet are the North and South Poles!  In an annually averaged sense,
+then, heat flows from the poles to the equator, although clearly the
+direction of flow changes with the seasons, as described above.  The
+import of these plots is that our notion that the poles are the cold
+parts might have to be revised in the case of highly oblique worlds.
+
+\begin{figure}[p]
+\plottwo
+{figures/chapter6_obl/fig5a.eps}
+{figures/chapter6_obl/fig5b.eps}
+\caption[Annually averaged cooling and heating fluxes for high and
+extreme obliquity model planets model and for Earth.]{Annually
+averaged cooling and heating fluxes for high and extreme obliquity
+model planets model and for Earth.  Analogous to
+Fig.~\ref{obl_fig:set30heat_cool_6090}, which shows the annually
+averaged heating and cooling as functions of latitude for $23.5\degr$
+obliquity, here we present the same functions for Earth-like models at
+$60\degr$ obliquity (left panel) and at $90\degr$ obliquity (right
+panel). Thick lines are model results; thin dashed lines are ERBE
+data.  For both high obliquity cases, unlike on Earth, there is net
+annually averaged heating at the poles (i.e., heating exceeds
+cooling), and, especially for the extreme obliquity case, net annually
+averaged cooling at the equator.}
+\label{obl_fig:set30heat_cool_6090}
+\end{figure}
+
+
+\afterpage{\clearpage}
+
+Figures~\ref{obl_fig:set30heat_cool_monthly60} and
+\ref{obl_fig:set30heat_cool_monthly90} show in greater detail the
+extreme way that the insolation varies over the annual cycle in highly
+oblique models.  Notice that the cooling remains much more consistent
+than the heating in these models.  This is because of the high
+effective heat capacity of the atmosphere above ocean (recall that in
+these models, 70\% of the surface area in every latitude band is
+ocean).  In models with less ocean coverage, or oceans that are
+nonuniformly distributed, the cooling too can vary dramatically over
+the annual cycle.
+
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig6.ps}
+\caption[Monthly cooling, heating, and net fluxes for fiducial model
+at $60\degr$ obliquity, at 1~AU, and for Earth.]{Monthly cooling,
+heating, and net fluxes for fiducial model at $60\degr$ obliquity, at
+1~AU, and for Earth.  Each panel presents the average cooling,
+heating, and net (heating minus cooling) radiative fluxes, as
+functions of latitude, for one month of the year, starting at the
+Northern winter solstice (upper left panel), and incrementing by one
+month with each panel to the right.  These fluxes are presented for
+both the model (thick solid lines) and the Earth (thin dashed lines).
+Model heating is blue; model cooling is red; model net heating is
+green.  Earth heating is cyan; Earth cooling is deep magenta; Earth
+net heating is black.}
+\label{obl_fig:set30heat_cool_monthly60}
+\end{figure}
+
+\afterpage{\clearpage}
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig7.ps}
+\caption[Monthly cooling, heating, and net fluxes for fiducial model
+at $90\degr$ obliquity, at 1~AU, and for Earth.]{Monthly cooling,
+heating, and net fluxes for fiducial model at $90\degr$ obliquity, at
+1~AU, and for Earth.  Each panel presents the average cooling,
+heating, and net (heating minus cooling) radiative fluxes, as
+functions of latitude, for one month of the year, starting at the
+Northern winter solstice (upper left panel), and incrementing by one
+month with each panel to the right.  These fluxes are presented for
+both the model (thick solid lines) and the Earth (thin dashed lines).
+Model heating is blue; model cooling is red; model net heating is
+green.  Earth heating is cyan; Earth cooling is deep magenta; Earth
+net heating is black.}
+\label{obl_fig:set30heat_cool_monthly90}
+\end{figure}
+
+\afterpage{\clearpage}
+
+\subsubsection{Implications for Habitability}
+\label{obl_sssec:hab}
+
+As SMS08 demonstrates, model planets with efficient heat transport
+(slowly spinning planets) are more nearly isothermal than models with
+Earth-like rotation, which themselves exhibit less latitudinal
+variation of temperature than those with inefficient heat transport
+(fast spinning planets).  As a result, models corresponding to
+slow-spinning worlds tend to be either entirely habitable or entirely
+non-habitable at any given time.  In contrast, Earth-like and faster
+spinning models may be only partially habitable at a particular time.
+They may, for instance, be frozen at the poles and temperate at the
+equator, or vice versa in the case of a highly oblique world.
+
+Figure~\ref{obl_fig:obliq_rotI2A2I3A3} demonstrates the kind of
+complicated interplay that can go on between obliquity and efficiency
+of heat transport, in determining a planet's habitability.  This
+figure shows the temporal habitability fraction, as a function of
+orbital semimajor axis and latitude, for each of 12 different
+combinations of obliquity ($0\degr$, $30\degr$, $60\degr$, $90\degr$)
+and diffusion coefficient ($D_{\rm fid}/9$, $D_{\rm fid}$, and
+$9D_{\rm fid}$, corresponding respectively to 72-hour, 24-hour, 8-hour
+rotation).  The top panel shows these plots for the ($I_2,A_2$) pair,
+and the bottom panel depicts the ($I_3,A_3$) pair.  In both panels,
+the left column of plots represents efficient transport; the middle
+column represents Earth-like transport; and the right column
+represents inefficient transport.  Each of the 24 plots in this figure
+shows the results of model runs from $0.45$~AU to 1.25~AU in
+increments of $0.025$~AU, with the color of each point indicating the
+fraction of the year that the latitude at that point spends in the
+habitable temperature range (273~K - 373~K) on a model planet at the
+specified orbital semimajor axis.  In each plot, the white vertical
+dashed lines indicate the radiative equilibrium habitable zone,
+calculated (as discussed in SMS08) for a 0-dimensional model planet
+with annually averaged, globally averaged insolation.
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig8a.eps}\\
+\plotone
+{figures/chapter6_obl/fig8b.eps}
+\caption[Model temporal habitability fraction under different
+obliquities, rotation rates, and cooling/heating functions.]{Model
+temporal habitability fraction under different obliquities, rotation
+rates, and cooling/heating functions. In both panels, obliquity varies
+from $0\degr$ (top row) to $90\degr$ (bottom row) and diffusion
+coefficient varies from $(1/9)D_0$ (left column) to $9D_0$ (right
+column).  The $x$-axis of each cell is orbital radius, in AU, and the
+$y$-axis is latitude.  The color of each point indicates the fraction
+of the year that that part of parameter space spends in the habitable
+temperature range (273~K - 373~K).  {\it Top Panel:} $I_3,A_3$
+combination. {\it Bottom Panel:} $I_2,A_2$ combination.}
+\label{obl_fig:obliq_rotI2A2I3A3}
+\end{figure}
+\afterpage{\clearpage}
+
+There are a number of intriguing features of this figure.  The most
+obvious is that, as expected, at every obliquity, less efficient
+transport results in more strongly latitudinally differentiated
+temporal habitability.  In addition, at each transport-efficiency
+value, the {\tt $>$}~sign shape of the seasonally habitable ribbon at
+low obliquity reverses to something more like a {\tt $<$}~sign at high
+obliquity.  In other words, at low obliquity, the relatively cold
+poles are habitable closer to the star and the relatively warm equator
+is habitable farther from the star, and at high obliquity, this
+reverses and the poles are relatively warm, while the equator is
+relatively colder.
+
+Furthermore, notice that, in both panels, the plots in most cells show
+a very abrupt outer boundary to the seasonally habitable zone.  This
+is because, as discussed in SMS08, the ice-albedo feedback renders
+these models quite sensitive to changes in forcing.  Small reductions
+in insolation can become amplified, because the ice-coverage
+increases, which increases the global albedo and leads to further
+reduction in insolation.  This feedback mechanism renders these models
+susceptible to succombing to a global snowball state, from which they
+cannot recover within our model framework.  The main exceptions to
+this trend are the low obliquity, fast-spinning models in the upper
+right corners of both panels (although even these models drop to 0\%
+habitability at orbital radii that are small relative to the outer
+boundary of the radiative equilibrium habitable zone, indicated by the
+white dashed lines).  Interestingly, the fairly small change in
+cooling/heating functions from $I_2,A_2$ to $I_3,A_3$ allows the cell
+in the lower right corner of the bottom panel -- extreme obliquity,
+inefficient transport -- to avoid snapping to a snowball in a single
+step in orbital radius.  In that model, the intense summer insolation
+at the poles, combined with the relative thermal isolation of
+different latitudes, allows the poles to heat up above the freezing
+point of water during their summers, even at orbital distances where
+other models would be entirely frozen.  In sum, the susceptibility to
+snowball conditions is sensitive to details of parameterizations.
+
+
+\subsection{Land/Ocean Distribution}
+\label{obl_ssec:ocean distribution}
+
+As described in SMS08, the large covering fraction of oceans on the
+Earth (roughly 70\%) stabilizes our climate over an annual cycle, by
+virtue of the large effective heat capacity of atmosphere over ocean:
+over land, the thermal relaxation timescale is several months; over
+the 50~m mixing layer of the ocean, the thermal relaxation timescale
+is more than a decade.  As a result, in a 1D model (such as ours) that
+does not resolve continents in longitude, any latitude band with
+significant ocean fraction will have strongly suppressed annual
+temperature fluctuations relative to a latitude band with low ocean
+fraction.  Because we do not know of any way to predict the
+distribution of continents and oceans on an extrasolar planet, it is
+important to consider the influence on climatic habitability of other
+possible distributions.
+
+\subsubsection{Nonuniform Ocean Coverage}
+\label{obl_sssec:nonuniform}
+
+We consider several planet models with distributions of land and ocean
+that are not uniform across different latitudes: one with 30\% land
+coverage, with the land-mass centered on the North Pole (extending
+down to $\sim 24\degr$ North latitude), and the other (discussed in
+\S~\ref{obl_sssec:desert}) with 90\% land, again centered on the North
+Pole.\footnote{It is more natural to conceive of this model as having
+an ocean centered at the South Pole.}  Because of the relatively low
+thermal inertia of atmosphere over land, parts of a model planet that
+are dominated by land can freeze or boil during the course of the year
+and still return to temperate conditions at other times.  In fact, at
+some orbital distances, and at high obliquity, the polar regions of
+some models freeze {\it and} boil within an annual cycle.
+
+Figure~\ref{obl_fig:set31_23p5_60_90} displays the tremendous swings
+of temperature that can occur over latitude bands that lack ocean, and
+also indicates that annually averaged calculations may miss a lot of
+the story of what conditions are like on planets.  This figure shows
+the annually averaged temperature, and the temperature evolution, on a
+model planet with a North Polar continent that is 30\% of the total
+surface area, at 1~AU.  This model uses $I_2,A_2$ cooling/heating, and
+shows results with obliquity $23.5\degr$, $60\degr$, and $90\degr$.
+At all three obliquities, the left column -- the annually averaged
+temperature profile -- provides an impoverished view of the actual
+climatic conditions.  Looking at just the left panels: the $23.5\degr$
+obliquity model appears slightly asymmetrical in temperature
+distribution, with the continental North Pole 8~K warmer than the
+oceanic South Pole; the $60\degr$ obliquity model appears cooler at
+the continent pole; and the $90\degr$ obliquity model again appears
+warmer at the continent pole, but appears frozen over the whole globe.
+In truth, all three models reach significantly higher temperatures at
+the continent pole during its summer than at the other pole.  At both
+$60\degr$ and $90\degr$ obliquity, North Pole summer temperatures
+exceed 410~K, as the Sun shines nearly straight down on the pole for
+months.  An obvious puzzle is implicit in this figure: Although we may
+not have much intuition for what the polar summers should be like on
+high obliquity planets, it is surprising to see a prediction of summer
+polar continent temperatures in excess of 310~K in the $23.5\degr$
+obliquity model, given that Antarctica -- Earth's continental pole --
+is significantly {\it colder} than the non-continental pole, and for
+the most part neither pole ever reaches temperatures above freezing.
+Accounting for Antarctica in our model framework is not easy, and we
+address this issue in greater detail in \S~\ref{obl_ssec:cold_SP?},
+but our sense is that the resolution of this issue may have to do with
+model initial conditions, or, in the case of the Earth, with the
+longterm history of temperature evolution.
+
+\begin{figure}[p]
+\plottwo
+{figures/chapter6_obl/fig9a.eps}
+{figures/chapter6_obl/fig9b.eps}\\
+\plottwo
+{figures/chapter6_obl/fig9c.eps}
+{figures/chapter6_obl/fig9d.eps}\\
+\plottwo
+{figures/chapter6_obl/fig9e.eps}
+{figures/chapter6_obl/fig9f.eps}\\
+\caption[Annually averaged and space-time plot of temperatures on
+models with a North Polar continent that takes up 30\% of surface area
+at 1~AU, cooling/heating = $I_2,A_2$, obliquity = $23.5\degr$,
+$60\degr$, $90\degr$.]{Annually averaged and space-time plot of
+temperatures on models with a North Polar continent that takes up 30\%
+of surface area (the other 70\% is ocean) at 1~AU, cooling/heating =
+$I_2,A_2$, obliquity = $23.5\degr$, $60\degr$, $90\degr$. {\it Left:}
+The magenta curve shows the annually averaged temperature profile for
+models with North Polar continents that extend down to $\sim 24\degr$
+North latitude.  The blue and dashed green curves are for reference --
+blue: the fiducial model (identical to this one, except the 70\% ocean
+is uniformly distributed in every latitude band); dashed green: the
+Earth's actual temperature profile, measured by NCEP/NCAR in 2004
+\citep{kistler_et_al1999, kalnay_et_al1996}.  {\it Right:}
+Latitude/time plot of temperature evolution, from model-years 8
+through 50, for the polar continent models. {\it Top Row:
+$23.5\degr$.}  {\it Middle Row: $60\degr$.}  {\it Bottom Row: $90\degr$.}}
+\label{obl_fig:set31_23p5_60_90}
+\end{figure}
+
+\afterpage{\clearpage}
+
+Figure~\ref{obl_fig:set26_obliq} presents plots of the temporal
+habitability fraction for the world just considered, at obliquities
+$0\degr$, $30\degr$, $60\degr$, $90\degr$.  We see in
+Fig.~\ref{obl_fig:set31_23p5_60_90} that the presence of land at the
+North Pole causes tremendous swings in temperature there; we see in
+Fig.~\ref{obl_fig:set26_obliq} that at nonzero obliquity this is the
+case at other values of semimajor axis, too.  These large seasonal
+variations lead to exotic shapes in plots of temporal habitability.
+Compared with uniformly ocean-dominated worlds, much more of the
+parameter space at each obliquity except $0\degr$ is habitable neither
+0\% nor 100\% of the year, but somewhere in between.
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig10.eps}
+\caption[Model temporal habitability fraction under different
+obliquities, North Polar continent covering 30\% of surface.]{Model
+temporal habitability fraction under different obliquities, North
+Polar continent covering 30\% of surface.  The diffusion coefficient
+is $D=D_0$.  Similar to Figure~\ref{obl_fig:set25_obliq}.}
+\label{obl_fig:set26_obliq}
+\end{figure}
+
+\afterpage{\clearpage}
+
+\subsubsection{Desert Worlds}
+\label{obl_sssec:desert}
+
+We now consider two model planets with just 10\% ocean fraction.  We
+examine the cases of both uniformly distributed ocean (10\% in every
+latitude band) and ocean concentrated at the South Pole (extending
+northward to $\sim 53\degr$ South latitude).
+Figure~\ref{obl_fig:set25_obliq} presents the temporal habitability
+for the uniform desert world, and Figure~\ref{obl_fig:set28_obliq}
+presents the analogous plot for the South Polar ocean world.  We again
+see regions of some model planets that swing from freezing to boiling
+temperatures over the course of the year.  This is responsible for the
+butterfly shape of the temporal habitability plots in the $60\degr$
+and $90\degr$ cells of Fig.~\ref{obl_fig:set25_obliq}: at $a\sim
+0.9\rm~AU$, the poles are habitable for less of the year than both the
+more equatorial regions at that orbital distance and than the poles at
+closer and more distant orbits.
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig11.eps}
+\caption[Model temporal habitability fraction under different
+obliquities, 10\% ocean uniformly distributed.]{Model temporal
+habitability fraction under different obliquities, 10\% ocean
+uniformly distributed.  The diffusion coefficient is $D=D_0$.  Similar
+to Figure~\ref{obl_fig:obliq_rotI2A2I3A3}.  The color of each point
+indicates the fraction of the year that that part of parameter space
+spends in the habitable temperature range (273~K - 373~K).}
+\label{obl_fig:set25_obliq}
+\end{figure}
+
+\afterpage{\clearpage}
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig12.eps}
+\caption[Model temporal habitability fraction under different
+obliquities, North Polar continent covering 90\% of surface (South
+Polar ocean).]{Model temporal habitability fraction under different
+obliquities, North Polar continent covering 90\% of surface (South
+Polar ocean).  The diffusion coefficient is $D=D_0$.  Similar to
+Figure~\ref{obl_fig:set25_obliq}.}
+\label{obl_fig:set28_obliq}
+\end{figure}
+
+\afterpage{\clearpage}
+
+These models, and those presented in \S~\ref{obl_sssec:nonuniform},
+suggest that at extreme obliquity the inner edge of the zone of
+regionally and seasonally habitable climates is extended dramatically
+inward, while the outer boundary is extended only mildly outward.  A
+caveat that should accompany this observation is that assuming a
+cooling function that is constant with orbital radius probably leads
+to a flawed treatment of both the high and low insolation limits of
+these models.  At the inner edge of the habitable zone, large
+increases in atmospheric water content can cause a reduction in the
+cooling function that causes a runaway greenhouse effect; the eventual
+catastrophic water loss can result in Venus-like outcomes, as
+described by \citet{kasting_et_al1993} and references therein
+(although this type of outcome might be mitigated by a reduction of
+the heating function due to increased cloud-albedo, as mentioned in
+SMS08).  At the outer edge, reduced efficiency of the
+carbonate-silicate weathering cycle is likely to lead to a significant
+increase the partial pressure of CO$_2$ \citep{kasting_et_al1993},
+which could extend the habitable zone from $\sim 1\rm~AU$ in our
+models to $\sim 1.4\rm~AU$ or more in some cases.  We discuss in
+greater detail the effect of a cooling function that varies with
+orbital distance in \S~\ref{obl_ssec:IWK97}.
+
+Still, for most plausible cooling functions, the low thermal inertia
+of atmosphere over land might lead to severe polar climates in highly
+oblique models.  What are we to make of partial ``habitability'' by
+our criterion in the case of a region of a planet that actually boils
+and freezes every year?  There are some microbes on Earth that can
+reproduce at freezing temperatures, and others that can reproduce at
+boiling temperatures, although none of which we are aware that can do
+both.  If a part of a planet regularly swings through these wild
+extremes of climate, is it fair to call it habitable?  This is an open
+question, but it is worthwhile to keep in mind that microbes on Earth
+appear to be as hardy as they need to be: nearly everywhere that
+biologists have searched, they have found some microbes thriving.
+Perhaps most significant from the perspective of habitability, the
+reduced thermal inertia of these models appears to render them less
+susceptible to global snowball events.
+
+
+\subsection{Modeling the Far Reaches of the Habitable Zone}
+\label{obl_ssec:IWK97}
+
+\citet{walker_et_al1981} propose that a planet's temperature is
+regulated on long timescales by a feedback mechanism involving
+weathering of silicate rocks through carbonic acid from CO$_2$
+disolved in water.  They argue that since the rate of weathering (and
+hence of removal of CO$_2$ from the atmosphere) increases with
+temperature, this process is an important negative feedback on climate
+that acts to keep temperatures near the freezing point of water.
+\citet{kasting_et_al1993} point out that this negative feedback can
+significantly offset the extreme sensitivity of climate to changes in
+orbital distance away from 1~AU seen in models such as those of
+\citet{hart1979} and the models presented in SMS08 and thus far in
+this paper.  These models are so sensitive because they contain a
+significant positive feedback of the Earth-climate -- the ice-albedo
+feedback whereby at lower temperatures the absorbed insolation is
+dramatically reduced because of the high albedo of ice -- but they
+ignore the counterbalancing negative feedback of the
+carbonate-silicate weathering cycle.
+
+In order to probe the combined influence on climate of rotation rate
+and obliquity in the context of the expected CO$_2$-rich atmosphere
+that a pseudo Earth would have at 1.4~AU, we switch to the cooling
+function $I_{\rm WK97}$ used in WK97, with CO$_2$ partial pressure
+($p$CO$_2$) set to 1~bar and 2~bars; we maintain the simple albedo
+function $A_2$.  We find that at both levels of CO$_2$, model planets
+maintain globally temperate conditions at all obliquities for both
+$D=9D_0$ and $D=D_0$ -- corresponding to slow and Earth-like rotation.
+Perhaps counterintuitively, at reduced transport efficiency,
+corresponding to fast rotation, these models are more susceptible to
+global glaciation.  One might expect that the thermal isolation of
+different latitudes in these models, relative to slower spinning
+models, might allow parts of the models that receive less insolation
+to cool off without having much effect on other latitudes.  Indeed, in
+the limit as $D\rightarrow 0$ this must happen.  But with a small but
+nonvanishing diffusion coefficient, it turns out that the thermal
+near-isolation allows cold regions to become very cold, but this
+information is still communicated to other regions, dragging down
+their temperatures.  Sometimes, this process can drag down global
+temperatures enough to plunge the models into global snowball state.
+
+Figure~\ref{obl_fig:set45_23p5_60_90} shows the global average
+temperature and the climate evolution for fast-spinning model planets
+at 1.4~AU with 1~bar atmospheric CO$_2$, with $I_{\rm WK97},A_2$
+cooling/heating.  At $23.5\degr$ obliquity, the cold temperatures at
+the poles drag the model into a snowball state; at $90\degr$
+obliquity, the cold equator drags the model to the same fate; and at
+$60\degr$ obliquity, no part of the planet receives consistently low
+enough insolation to end up in this trap.  Note that the snowball
+effect seen in the $23.5\degr$ and $90\degr$ obliquity models might be
+particularly calamitous because of the possibility of atmospheric
+collapse on a much shorter timescale than the vulcanism can replenish
+CO$_2$.  At 1~bar, the freezing point of CO$_2$ is $\sim 195 \rm~K$.
+Both the $23.5\degr$ and $90\degr$ obliquity models reach temperatures
+below this threshold over large enough regions of their surfaces that
+significant amounts of the atmospheric CO$_2$ might condense out as
+dry ice, thereby reducing the greenhouse effect.  The risk of
+atmospheric collapse would be somewhat lessened because of the latent
+heat of condensation, which would tend to prevent too much CO$_2$ from
+freezing out during any winter.  Realistically treating this
+possibility would require incorporating a latent heat term in the
+energy balance equation, as \citet{nakamura+tajika2002} do in their
+Mars EBM.
+
+
+
+
+%%%%%%%%%%%%%% Set45
+\begin{figure}[p]
+\plottwo
+{figures/chapter6_obl/fig13a.eps}
+{figures/chapter6_obl/fig13b.eps}\\
+\plottwo
+{figures/chapter6_obl/fig13c.eps}
+{figures/chapter6_obl/fig13d.eps}\\
+\plottwo
+{figures/chapter6_obl/fig13e.eps}
+{figures/chapter6_obl/fig13f.eps}
+\caption[Annually averaged and space-time plot of temperatures on fast
+spinning world at 1.4~AU, WK97 cooling function, $p\rm CO_2 = 1~bars$,
+obliquity = $23.5\degr$, $60\degr$, $90\degr$.]{Annually averaged and
+space-time plot of temperatures on fast spinning world at 1.4~AU, WK97
+cooling function, $p\rm CO_2 = 1~bars$, obliquity = $23.5\degr$,
+$60\degr$, $90\degr$.
+%
+Same as Figure~\ref{obl_fig:set31_23p5_60_90} except cooling function
+is $I_{\rm WK97}$ with $p\rm CO_2 = 1~bars$, and $D=(1/9)D_0$.}
+\label{obl_fig:set45_23p5_60_90}
+\end{figure}
+
+\afterpage{\clearpage}
+
+Figure~\ref{obl_fig:set42_23p5_60_90} shows similar plots, but for a
+thicker atmosphere, with $p$CO$_2=2\rm~bars$.  In this case, all three
+obliquities avoid a snowball fate.  Still, poles in the $23.5\degr$
+model are below the freezing point of CO$_2$ at 2~bars ($\sim 203
+\rm~K$) for more than a third of the year, indicating that it is
+conceivable that this model might also risk losing its CO$_2$
+greenhouse on a shorter timescale than it can be replenished.
+
+%%%%%%%%%%%%%% Set42
+\begin{figure}[p]
+\plottwo
+{figures/chapter6_obl/fig14a.eps}
+{figures/chapter6_obl/fig14b.eps}\\
+\plottwo
+{figures/chapter6_obl/fig14c.eps}
+{figures/chapter6_obl/fig14d.eps}\\
+\plottwo
+{figures/chapter6_obl/fig14e.eps}
+{figures/chapter6_obl/fig14f.eps}
+\caption[Annually averaged and space-time plot of temperatures on fast
+spinning world at 1.4~AU, WK97 cooling function, $p\rm CO_2 = 2~bars$,
+obliquity = $23.5\degr$, $60\degr$, $90\degr$.]{Annually averaged and
+    space-time plot of temperatures on fast spinning world at 1.4~AU,
+    WK97 cooling function, $p\rm CO_2 = 2~bars$, obliquity =
+    $23.5\degr$, $60\degr$, $90\degr$.  Same as
+    Figure~\ref{obl_fig:set42_23p5_60_90} except $p\rm CO_2 =
+    2~bars$.}
+\label{obl_fig:set42_23p5_60_90}
+\end{figure}
+
+\afterpage{\clearpage}
+
+
+\section{Discussion and Conclusions}
+\label{obl_sec:disc+conc}
+
+\subsection{Whence Antarctica's Extreme Cold?}
+\label{obl_ssec:cold_SP?}
+
+As discussed in \S~\ref{obl_ssec:IWK97}, many of the models presented
+here suffer from several limitations, including overly simplified
+treatments of both the inner and outer edges of the habitable zone.
+An additional puzzle, suggested in \S~\ref{obl_sssec:nonuniform}, is
+to figure out why our Earth-like obliquity models with polar
+continents have such different climate from the Earth's Solar Polar
+continent of Antarctica.  There are various reasons why Antarctica is
+so cold.  One obvious and important factor is that it is covered with
+over a mile of ice.  This guarantees that on short timescales anyway,
+regardless of the temperature the albedo is always high.  In
+actuality, the enforced high albedo of course helps to prevent the
+temperature from exceeding the freezing point of water.  In an attempt
+to simulate the Earth's sharply colder temperatures at the South Pole,
+we therefore set up several models in which we impose ice at the South
+Pole, regardless of temperature.  This prescription affects the
+albedo, forcing it to be constanly high, and the heat capacity,
+increasing it above the heat capacity for atmosphere above pure land
+by a factor of 2.
+
+Figure~\ref{obl_fig:set32_34_23p5} shows the results of two attempts
+to duplicate the temperature at Antarctica within our models.  In both
+models, there is a South Polar ice continent that extendes to
+$70\degr$ South latitude ($\sim 3\%$ the total surface area), and the
+rest of the planet is $\approx 72.2\%$ covered with ocean, which
+combine to make an overall ocean fraction of 70\%.  The top panels of
+this figure use the standard $A_2$ albedo function everywhere.
+Clearly, the high albedo (constantly 0.77) at the ice-continent has
+only a very mild effect on that continent's temperature.  The bottom
+panels use a modified albedo function: $A_2[T]$ everywhere except the
+simulated Antarctica, and ``shiny ice''($A=0.88$) on the South Polar
+continent.  This prescription forces the temperature at the ice
+continent somewhat colder than the other continent, but
+through the diffusion term the cooler South Polar temperature is
+communicated to the rest of the planet, too, eventually supressing the
+North Polar temperature by more than 10~K.  Using even shinier ice at
+the South Pole can, when using the $I_2$ function, drive the planet to
+a snowball state.
+
+%\clearpage
+
+%%%%%%%%%%%%%% Set32/34
+\begin{figure}[p]
+\plottwo
+{figures/chapter6_obl/fig15a.eps}
+{figures/chapter6_obl/fig15b.eps}\\
+\plottwo
+{figures/chapter6_obl/fig15c.eps}
+{figures/chapter6_obl/fig15d.eps}
+\caption[Annually averaged and space-time plot of temperatures on
+models with Antarctica analogs, at 1~AU, cooling/heating = $I_2,A_2$,
+obliquity = $23.5\degr$.]{Annually averaged and space-time plot of
+temperatures on models with Antarctica analogs, at 1~AU,
+cooling/heating = $I_2,A_2$, obliquity = $23.5\degr$.  These models
+have 70\% ocean coverage overall, with a South Polar ice continent
+extending up to $70\degr$ South latitude, and $\approx 72.2\%$ ocean
+fraction over the rest of the planet. {\it Top Row:} Normal ice
+($A=0.77$) at South Pole.  {\it Bottom Row:} ``Shiny ice'' ($A=0.88$)
+at South Pole.
+%
+Similar to Figure~\ref{obl_fig:set31_23p5_60_90}.}
+\label{obl_fig:set32_34_23p5}
+\end{figure}
+
+\afterpage{\clearpage}
+
+\subsection{Applicability of Global Radiative Balance Calculations}
+\label{obl_sssec:global_balance}
+
+Historically, calculations of habitable zones have often assumed
+global radiative balance conditions.  Although these calculations by
+definition cannot account for the regional character of habitability,
+one might hope that they would still provide a decent proxy for the
+global average of actual conditions.  Indeed, as seen in
+Fig.~\ref{obl_fig:set30_heat_cool_vs_time}, the Earth itself is within
+$\sim 5\%$ of radiative equilibrium throughout the year.  Accordingly,
+global radiative balance models have provided a very useful starting
+point for considerations of how habitability depends on orbital
+radius.
+
+Figure~\ref{obl_fig:set31_heat_cool_vs_time} presents the globally
+averaged cooling, heating, and net radiative fluxes for a model with a
+North Polar continent that covers 30\% of the planet's surface, at
+$60\degr$ and $90\degr$ obliquity.  The $60\degr$ obliquity model gets
+up to nearly 40\% out of global radiative balance at some times during
+the year, and the $90\degr$ obliquity model reaches nearly 60\% out of
+global radiative balance!  It has always been recognized that planets
+on highly eccentric orbits experience forcings that are significantly
+different from annually and globally averaged conditions, but our here
+results show that, even on circular orbits, planets can experience
+conditions that are far from radiative equilibrium.  This further
+underscores the importance of regional, time-dependent models for
+addressing the habitability of extrasolar terrestrial planets.
+
+%\clearpage
+
+\begin{figure}[p]
+\plotone
+{figures/chapter6_obl/fig16a.eps} \\
+\plotone
+{figures/chapter6_obl/fig16b.eps}
+\caption[Global average cooling, heating, and net radiative flux, as
+functions of time in model with North Polar continent at $60\degr$ and
+$90\degr$ obliquity.]{Global average cooling, heating, and net
+radiative flux, as functions of time in model with North Polar
+continent at $60\degr$ and $90\degr$ obliquity.
+%
+Similar to Figure~\ref{obl_fig:set30_heat_cool_vs_time}.  {\it Top two
+panels:} $60\degr$ obliquity; {\it Bottom two panels:} $90\degr$
+obliquity.}
+\label{obl_fig:set31_heat_cool_vs_time}
+\end{figure}
+
+\clearpage
+
+\subsection{Summary}
+\label{obl_sssec:summary}
+
+We have presented a series of 1D EBMs to address the variety of
+possible climatic conditions that might result on extrasolar
+terrestrial planets.  We considered forcings determined by a variety
+of unobservable planetary attributes, including obliquity, rotation
+rate, the distribution of land/ocean coverage, and the detailed nature
+of the radiative cooling and heating functions.  Previous
+investigations have found that high obliquity does not necessarily
+render planets more susceptible to global glatiation.  Our results
+provide preliminary indications of an even more promising result:
+models at high obliquity often appear to be less prone to snowball
+states, which is a result that appears to hold for a wide variety of
+other properties.  Counterintuitively, faster rotating Earth-like
+planets may fall victim to snowball glaciation events at closer
+orbital radii than slower rotating planets; this result appears to
+hold for various cooling functions, including both Earth-like infrared
+cooling and the expected radiative cooling for the kind of massive
+CO$_2$ atmosphere that \citet{kasting_et_al1993} predict to obtain in
+the outer parts of habitable zones.  We find that planets with small
+ocean fractions or polar continents can experience very severe
+seasonal climatic variations, but that these planets also might
+maintain seasonally and regionally habitable conditions over a larger
+range of orbital radii than more Earth-like planets.  We furthermore
+find that high obliquity models with nonuniform distributions of land
+and ocean experience forcing conditions that are very far from global
+radiative balance relative to what the Earth experiences.  This last
+finding provides a substantial justification of the present
+time-dependent, regional model.
+
+

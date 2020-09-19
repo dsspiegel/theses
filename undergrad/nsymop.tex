@@ -1,0 +1,475 @@
+\chapter{Symmetry Operators}
+
+\begin{section}{The First-Order Symmetry Algebra for the Helmholtz Equation}
+As in Chapter $1$, let $\cF$ denote the set of all $\bC$-valued real-analytic functions on $\Omega$, an open, connected subset of $\bR^2$.  When we are referring to some specific differential operator $Q$, we refer to its solution set as $\cF_0$.  That is, $\cF_0 = \{ f \in \cF: Q(f) = 0 \}$.  We define the order of a differential operator to be the order of the highest-order derivative in the operator, where $\p x^i \p y^j$ has order $i + j$.  Let $L$ be a first-order differential operator: $L = A(x,y) \p x + B(x,y) \p y + C(x,y)$ (with $A, B, C \in \cF$).  We can make sense of the composition of two diffferential operators (for instance, $L$ and $Q$) as follows: $L \circ Q$ (often written $LQ$) acts on $f$ by $LQ(f) = L(Q(f))$.  It is possible to show (via a tedious computation) that the composition of two differential operators is itself a differential operator, although we will omit the proof.  Notice that composition of differential operators is clearly associative.  Given two differential operators $Q_1$ and $Q_2$, and a function $f \in \cF$, we have $\left( Q_1 Q_2 \right) (f)$ unambiguously means $Q_1 \left( Q_2 (f) \right)$ and so, given three differential operators $Q_1, Q_2$, and $Q_3$, we see that $\left( \left( Q_1 Q_2 \right) Q_3 \right) (f) =$ $\left( Q_1 \left( Q_2 Q_3 \right) \right) (f) =$ $Q_1 \left( Q_2 \left( Q_3 (f) \right) \right)$.
+
+Recall the commutator $[-,-]$, introduced in Chapter $0$.  Note that the set of all differential operators is a Lie algebra under the commutator.  We say that $L$ is a \emu{first-order symmetry operator} for $Q$ if $[L, Q] = R(x,y) \circ Q$ ($= R(x,y)Q$) for some function $R \in \cF$.
+
+We now prove several properties of first-order symmetry operators.
+
+\begin{theorem}
+First-order symmetry operators map solutions to solutions.
+\end{theorem}
+
+\proof
+Let $f \in \cF_0$, so that $Qf = 0$.  We have that $[L, Q]f = R Q f$, and so $L Q f - Q L f = R (0) = 0$.  Thus, $L (0) - Q (L f) = 0$, which implies that $Q (L f) = 0$, and hence $L f \in \cF_0$ as well.$\ep$
+
+\begin{lemma}
+\label{prodrule}
+Let a first-order differential operator $L$ be of the form $L = A(x,y) \p x + B(x,y) \p y$.  Then $L$ obeys the product rule for differentiation.  That is, $L (f(x,y) g(x,y)) = f(x,y) (L g(x,y)) + (L f(x,y)) g(x,y)$.
+\end{lemma}
+
+\proof
+In order to show this, we calculate the action of $L$ on a product of two functions $f$ and $g$.
+\begin{eqnarray*}
+L (f(x,y) g(x,y)) & = & (A(x,y) \p x + B(x,y) \p y) (f(x,y) g(x,y)) \\
+		  & = & A(x,y) \p x (f(x,y) g(x,y)) + B(x,y) \p y (f(x,y) g(x,y)) \\
+		  & = & A(x,y) (f(x,y) \p x g(x,y)) + A(x,y) (\p x f(x,y) g(x,y)) \\
+		  &   & + B(x,y) (f(x,y) \p y g(x,y)) + B(x,y) (\p y f(x,y) g(x,y)) \\
+		  & = & f(x,y)(A(x,y) \p x g(x,y) + B(x,y) \p y g(x,y)) \\
+		  &   & + g(x,y)(A(x,y) \p x f(x,y) + B(x,y) \p y f(x,y)) \\
+		  & = & f(x,y) (L g(x,y)) + g(x,y) (L f(x,y)) \ep
+\end{eqnarray*}
+
+\begin{theorem}
+The set $\cS$ of first-order symmetry operators of a given differential operator $Q$ is a complex Lie algebra.  That is, $(i)$ $\cS$ is closed under Lie bracket, and $(ii)$ $\cS$ is closed under $\bC$-linear combinations.
+\end{theorem}
+
+\proof
+Let $L_1, L_2 \in \cS$.  We first verify that $[L_1,L_2]$ is a first-order differential operator:
+\begin{eqnarray*}
+L_1L_2f	& = &	(A_1 \p x + B_1 \p y + C_1)(A_2 \p x + B_2 \p y + C_2)f \\
+	& = &	(A_1 \p x + B_1 \p y + C_1)(A_2 f_x + B_2 f_y + C_2f) \\
+	& = &   A_1(A_{2x}f_x + A_2f_{xx} + B_{2x}f_y + B_2f_{xy} + C_{2x}f + C_2f_x) \\
+	&   &	+ B_1(A_{2y}f_x + A_2f_{xy} + B_{2y}f_y + B_2f_{yy} + C_{2y}f + C_2f_y) \\
+	&   &	+ C_1(A_2f_x + B_2f_y + C_2f),
+\end{eqnarray*}
+where $A_{2x} = \p x (A_2)$, etc.
+
+Similarly,
+\begin{eqnarray*}
+L_2L_1f	& = &	A_2(A_{1x}f_x + A_1f_{xx} + B_{1x}f_y + B_1f_{xy} + C_{1x}f + C_1f_x) \\
+	&   &	+ B_2(A_{1y}f_x + A_1f_{xy} + B_{1y}f_y + B_1f_{yy} + C_{1y}f + C_1f_y) \\
+	&   &	+ C_2(A_1f_x + B_1f_y + C_1f).
+\end{eqnarray*}
+Notice that, in the above expressions, wherever $f$ appears twice differentiated, its coefficient is not differentiated at all.  As a result, the coefficients of $f_{xx}$, $f_{xy}$, and $f_{yy}$ are the same in the expressions for $L_1L_2f$ and for $L_2L_1f$.  Thus, in the commutator, all second-derivatives of $f$ drop out, and we are left with
+\begin{eqnarray*}
+[L_1,L_2]f	& = & (A_1A_{2x} - A_2A_{1x} + B_1A_{2y} - B_2A_{1y})\p x f \\
+		&   &+(A_1B_{2x} - A_2B_{1x} + B_1B_{2y} - B_2B_{1y})\p y f \\
+		&   &+(A_1C_{2x} - A_2C_{1x} + B_1C_{2y} - B_2C_{1y}) f.
+\end{eqnarray*}
+The above is clearly a first-order differential operator acting on $f$.
+
+\noindent \pn{i}  From the Jacobi identity, we have that
+\begin{equation}
+\label{jacobident}
+[[L_1, L_2], Q] + [[L_2, Q], L_1] + [[Q, L_1], L_2] = 0.
+\end{equation}
+Thus, since $[L_1, Q] = R_1 Q$ and $[L_2, Q] = R_2 Q$, we have $[[L_1,L_2], Q] + [R_2 Q, L_1] + [-R_1 Q, L_2] = 0$.  Thus, (\ref{jacobident}) now implies that
+\begin{equation}
+\label{usedbelow}
+[[L_1,L_2], Q] = [R_1 Q, L_2] - [R_2 Q, L_1].
+\end{equation}
+
+We define the following function on first-order operators: Given $L = A(x,y) \p x + B(x,y) \p y + C(x,y)$, we set $\wtl = L - C(x,y) = A(x,y) \p x + B(x,y) \p y$.
+
+Note that 
+\begin{eqnarray*}
+[R_1 Q, L_2]f & = & R_1 Q L_2f - L_2 R_1 Qf \\
+	      & = & R_1 \left(L_2 Q - [L_2, Q]\right) f - \left(\wtl_2 + C_2\right) R_1 Qf \\
+	      & = & R_1 \left((\wtl_2 + C_2) Q - R_2 Q\right) f - \left(\wtl_2 + C_2\right) R_1 Qf \\
+	      & = & \left(R_1 \wtl_2 Q + R_1 C_2 Q - R_1 R_2 Q\right)f - \left( \wtl_2 R_1 Q + R_1 C_2 Q\right) f \\
+	      & = & R_1 \wtl_2 Qf - \wtl_2 (R_1 (Qf)) - R_1 R_2 Qf \\
+	      & = & R_1 \wtl_2 Qf - \left(R_1 \wtl_2 (Qf) + (\wtl_2 (R_1)) (Qf)\right) - R_1 R_2 Qf \quad \mbox{(by Lemma \ref{prodrule})}\\
+	     & = & -\left(\wtl_2 (R_1)\right) Qf - R_1 R_2 Qf.
+\end{eqnarray*}
+
+Similarly, $[R_2 Q, L_1]f = -(\wtl_1 (R_2)) Qf - R_1 R_2 Qf$.  Thus,
+\[
+[[L_1,L_2], Q] = (\wtl_1 (R_2) - \wtl_2 (R_1)) Q.
+\]
+
+\noindent \pn{ii}  Let $a_1, a_2 \in \bC$.  We consider $[a_1 L_1 + a_2 L_2, Q]$.  It is a property of Lie bracket that $[a_1 L_1 + a_2 L_2, Q] = [a_1 L_1, Q] + [a_2 L_2, Q]$.  Furthermore, $[a_1 L_1, Q] = a_1 [L_1, Q] = a_1 R_1 Q$, and similarly $[a_2 L_2, Q] = a_2 R_2 Q$.  So,
+\[
+[a_1 L_1 + a_2 L_2, Q] = (a_1 R_1 + a_2 R_2) Q. \ep
+\]
+
+\begin{theorem}
+\label{rez}
+Let $Q$ be a differential operator of the form $Q = k + \sum_{i=1}^m\sum_{j=1}^n(c_{ij} \p x^i \p y^j)$ with $k \in \bR-\{ 0 \}$ and $\forall i,j \in \bZ^+(C_{ij} \in \cF)$, and let $L$ be a first-order symmetry operator for $Q$ of the form $L = A \p x + B \p y + c$, with $A, B \in \cF$ and $c \in \bR$.  Then $[L, Q] = 0$.
+\end{theorem}
+
+\proof
+Since $L$ is a symmetry operator for $Q$, there exists some $R \in \cF$ such that for all $f \in \cF$, $[L, Q] f = R Q f$.  Choose $f(x,y) = 1$.  Then, since the derivative of a constant is zero, $[L, Q] 1 = L Q(1) - Q L(1) = L(k) - Q(c) = ck - kc = 0$.  So, we have $0 = R Q(1) = R k$, which, since $k \not= 0$, forces $R(x,y) = 0$.  Thus, $[L, Q] = 0 Q = 0$.$\ep$
+
+\eex
+
+\ex{fosymal}
+Consider for example the symmetry algebra $\cA$ of first-order symmetry operators of the Helmholtz equation (\ref{helmholtz}).  In this case, $Q = \cH = \pp x x + \pp y y + \omega^2$, where $\omega^2 \not= 0$.  Let $L \in \cA$.  We will characterize the possible forms that $L$ can assume and thereby describe a basis for $\cA$.
+
+We write $L = A \p x + B \p y + C$, with $A, B, C \in \cF$, and $[L, \cH] = R \cH$ for some $R \in \cF$.  Now, $[L, \cH]$ acts on a function as follows:  Given $f \in \cF$, $[L, \cH] f = L \cH f - \cH L f$.
+
+Observe that
+\begin{eqnarray}
+\nonumber	\pp x x (f g) 	& = & \p x (\p x (f g)) \\
+\nonumber			& = & \p x (f g_x + f_x g) \\
+\nonumber			& = & f g_{xx} + f_x g_x + f_x g_x + f_{xx} g \\
+\label{usingast}		& = & f g_{xx} + 2 f_x g_x + f_{xx} g.
+\end{eqnarray}
+
+We are now prepared to compute an expression for $[L, \cH]$.
+\begin{eqnarray}
+\label{lqf}
+L \cH f	& = & (A \p x + B \p y + C) (\pp x x f + \pp y y f + \omega^2 f) \nonumber\\
+	& = & A (f_{xxx} + f_{xyy} + \omega^2 f_x) + B (f_{xxy} + f_{yyy} + \omega^2 f_y) \nonumber\\
+	&   & + C (f_{xx} + f_{yy} + \omega^2 f)
+\end{eqnarray}
+
+And, using (\ref{usingast}),
+\begin{eqnarray}
+\label{qlf}
+\cH L f  	& = & (\pp x x + \pp y y + \omega^2) (A \p x f + B \p y f + C f) \nonumber\\
+	& = & A f_{xxx} + 2 A_x f_{xx} + A_{xx} f_x + B f_{xxy} + 2 B_x f_{xy} + B_{xx} f_y \nonumber\\
+	&   & + C f_{xx} + 2 C_x f_x + C_{xx} f \nonumber\\
+	&   & + A f_{xyy} + 2 A_y f_{xy} + A_{yy} f_x + B f_{yyy} + 2 B_y f_{yy} + B_{yy} f_y \nonumber\\
+	&   & + C f_{yy} + 2 C_y f_y + C_{yy} f \nonumber\\
+	&   & + \omega^2 A f_x + \omega^2 B f_y + \omega^2 C f \nonumber\\
+	& = & A (f_{xxx} + f_{xyy} + \omega^2 f_x) + B (f_{xxy} + f_{yyy} + \omega^2 f_y) \nonumber\\
+	&   & + C (f_{xx} + f_{yy} + \omega^2 f) \nonumber\\
+	&   & + 2 A_x f_{xx} + (2 A_y + 2 B_x) f_{xy} + 2 B_y f_{yy} \nonumber\\
+	&   & + (A_{xx} + A_{yy} + 2 C_x) f_x \nonumber\\
+	&   & + (B_{xx} + B_{yy} + 2 C_y) f_y \nonumber\\
+	&   & + (C_{xx} + C_{yy}) f.
+\end{eqnarray}
+
+Putting (\ref{lqf}) and (\ref{qlf}) together, we have $[L, \cH]f =  L \cH f - \cH L f$, and so,
+\begin{eqnarray*}
+-[L,\cH]f & = & \cH L f - L \cH f \\
+	& = & 2 A_x f_{xx} + (2 A_y + 2 B_x) f_{xy} + 2 B_y f_{yy} \\
+	&   & + (A_{xx} + A_{yy} + 2 C_x) f_x \\
+	&   & + (B_{xx} + B_{yy} + 2 C_y) f_y \\
+	&   & + (C_{xx} + C_{yy}) f \\
+	& = & 2 A_x \pp x x f + (2 A_y + 2 B_x) \pp x y f + 2 B_y \pp y y f \\
+	&   & + (A_{xx} + A_{yy} + 2 C_x) \p x f \\
+	&   & + (B_{xx} + B_{yy} + 2 C_y) \p y f \\
+	&   & + (C_{xx} + C_{yy}) f.
+\end{eqnarray*}
+Recall that $[L,\cH] = R\cH$.  Thus,
+\[
+-[L,\cH]f = -R \pp x x f - R \pp y y f - \omega^2 R f.
+\]
+
+Since this must hold true for all $f \in \cF$, we are left with several conditions that must be met by $A, B,$ and $C$.  From matching up the coefficients of $\pp xx$ and $\pp yy$, for instance, we see that
+\begin{equation}
+\label{axbyez}
+2 A_x = -R = 2 B_y.
+\end{equation}
+From matching up the coefficients of $\pp xy$, we see that
+\begin{equation}
+\label{aybxez}
+2 A_y + 2 B_x = 0.
+\end{equation}
+In like manner, we match up the other corresponding coefficients and see that
+\begin{eqnarray}
+\label{latcez}
+A_{xx} + A_{yy} + 2 C_x	& = & 0 \\
+\label{lbtcez}
+B_{xx} + B_{yy} + 2 C_y	& = & 0 \\
+\label{lcemr}
+C_{xx} + C_{yy}		& = & -\omega^2 R.
+\end{eqnarray}
+From (\ref{axbyez}) and (\ref{aybxez}), we have $A_x = B_y$ and $A_y = -B_x$.  These are the Cauchy-Riemann equations, and thus $A + iB$ is complex-analytic. This implies that $A$ and $B$ are harmonic functions of $x$ and $y$, and so $A_{xx} + A_{yy} = 0$ and $B_{xx} + B_{yy} = 0$.  Thus, (\ref{latcez}) and (\ref{lbtcez}) imply $C_x = 0$ and $C_y = 0$.  Thus, Lemma \ref{equalk} forces $C(x,y) = k$, a $\bC$-valued constant.  Since $\omega^2 \not= 0$, this, in turn, forces $R = 0$ (\ref{lcemr}).  This result in conjunction with (\ref{axbyez}) means that $A_x = 0$, so $A$ is a function only of $y$: $A(x,y) = g(y)$ for some $g$; and $B_y = 0$, so $B$ is a function only of $x$: $B(x,y) = f(x)$ for some $f$.  From (\ref{aybxez}), we now have that $f^\prime(x) = -g^\prime(y)$.  The only way for this to happen, as we saw in the separation of variables solution of the Helmholtz equation, is for $f^\prime(x)$ and $-g^\prime(y)$ both to equal some constant $-a \in \bC$.  Thus, $f(x) = -a x + c$ and $g(y) = a y + b$ for some $a, b, c \in \bC$.  Putting it all together, we have
+\[
+L = (a y + b) \p x + (-a x + c) \p y + k
+\]
+If we let $P_x = \p x$, $P_y = \p y$, $M = y \p x - x \p y$, and $E = 1$, then the set $\cA$ of first-order symmety operators is clearly spanned by the linearly independent set $\cS = \{P_x, P_y, M, E\}$, and so $\cS$ is a basis (over $\bC$) for $\cA$, the symmetry algebra of the Helmholtz equation (\ref{helmholtz}).  We say that $E$ is a \emu{trivial} symmetry operator, for it just maps solutions to themselves.  Furthermore, it will be useful to consider only the real symmetry operators.  Therefore, we often refer to the Lie algebra $\cA^\prime$, the span of the basis $\{P_x, P_y, M \}$ over $\bR$, as the symmetry algebra of the Helmholtz equation.
+
+Let us determine the commutation relations.  We have that every element commutes with itself, and furthermore $P_x$ commutes with $P_y$, so that $[P_x,P_y] = [P_y,P_x] = 0$.  Finally, $[M,P_x] = P_y$ and $[M,P_y] = -P_x$.  Notice that these commutation relations are the same as we saw for $\cE(2)$ in Example \ref{euclidean}.  Thus, $\cA^\prime$ is isomorphic to $\cE(2)$, and so we often refer to $\cE(2)$ as the symmetry algebra of the Helmholtz equation.  Because of the analogy to Example~\ref{euclidean}, we say that $P_x$ and $P_y$ correspond to translations and $M$ corresponds to a rotation.  We often refer to $E(2)$ as the symmetry group of the Helmholtz equation, although, properly speaking, \pn{i} the symmetry group of the Helmholtz equation really contains the set of exponentials\footnote{The exponential of an operator will be described in the next section.} of the elements of $\cA^\prime$, not the elements of $E(2)$ (which are matrices, not operators), and \pn{ii} the symmetry group also contains reflections, which are \emph{not} exponentials.
+
+\end{section}
+
+\begin{section}{The One-parameter Subgroup Revisited}
+We first remark that in order to make much of the discussion that follows fully rigorous, we would need to investigate topics from functional analysis that are beyond the scope of this paper.  For instance, we will implicitly assume (without proof) that certain infinite sums of operators converge, and that certain expressions correctly denote derivatives.
+
+Now, if $L$ is a differential operator, there is a one-parameter subgroup associated with it that acts on functions.  We define the one-parameter subgroup $T_{aL}$ (for $a \in \bR$) associated with $L$ in much the same manner as in Example \ref{expx} --- namely, with the exponential.  The exponential of an operator is just what we would expect:
+\[
+T_{aL} f = \exp(aL) f = \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n f \right) \mbox{ for all }f \in \cF.
+\]
+Often, we drop the $f$ from the above expression, and write
+\[
+T_{aL} = \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n \right).
+\]
+
+\begin{theorem}
+\label{symminvar}
+Let $Q$ be a differential operator, and let $L$ be a first order differential operator such that $L = \wtl$ (i.e., $C = 0$).  The following two conditions are equivalent:
+
+\noindent \pc{i}  $L$ is a first-order symmetry operator for $Q$ such that $[L,Q] = 0$.
+
+\noindent \pc{ii}  $Q$ is invariant under $T_{aL}$, the one-parameter subgroup associated with $L$, meaning that $Q T_{aL} f = T_{aL} Q f$, for all $f \in cF$.
+\end{theorem}
+
+\proof
+\noindent \pn{i} $\Longrightarrow$ \pn{ii}  By \pn{i}, we have that
+\[
+LQ = QL.
+\]
+Therefore, if we operate on the left by $L$, we have
+\[
+L^2Q = L(QL) = (LQ)L = (QL)L = QL^2.
+\]
+Similarly, if (for $n > 1$) $L^{n-1}Q = QL^{n-1}$, then, operating on the left by $L$ leaves us
+\[
+L^nQ = L(QL^{n-1}) = (LQ)L^{n-1} = (QL)L^{n-1} = QL^n.
+\]
+So, we have shown by induction on $n$ that for all $n \in \bN$, $L^nQ = QL^n$.  Thus, for $f \in \cF$,
+\begin{eqnarray}
+\nonumber T_{aL}Qf & = & \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n Q f \right) \\
+\nonumber	  & = & \sum_{n=0}^\infty \left( \frac{1}{n!} a^n Q L^n f \right) \\
+\nonumber	  & = & \sum_{n=0}^\infty \left( Q \frac{1}{n!} a^n L^n f \right) \\
+\nonumber	  & = & Q \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n f \right) \\
+\label{commwithQ}
+	  & = & Q T_{aL} f.
+\end{eqnarray}
+
+\noindent \pn{ii} $\Longrightarrow$ \pn{i}  By \pn{ii}, we have that for all $a \in \bR$ and for all $f \in \cF$, $T_{aL} Q f = Q T_{aL} f$.  So $T_{aL} Q f - Q T_{aL} f = 0$.  When we expand this, we have
+\[
+0 =  \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n Q f \right) - Q \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n f \right).
+\]
+And so, for all nonzero $a$, we have
+\[
+\left( \frac{1}{a} \right) \left( \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n Q f \right) - Q \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n f \right) \right) = 0,
+\]
+which means that
+\begin{eqnarray*}
+0	& = & \lim_{a \to 0} \left( \frac{1}{a} \right) \left( \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n Q f \right) - Q \sum_{n=0}^\infty \left( \frac{1}{n!} a^n L^n f \right) \right) \\
+	& = & \lim_{a \to 0} \left( \frac{1}{a} \right) \left( \left( Qf + a L Qf + \frac{a^2}{2!} L^2 Qf + \cdots \right) - Q \left( f + a L f + \frac{a^2}{2!} L^2 f + \cdots \right) \right) \\
+	& = & \lim_{a \to 0} \left( \frac{1}{a} \right) \left( \left( Qf + a L Qf + \frac{a^2}{2!} L^2 Qf + \cdots \right) - \left( Qf + a Q L f + \frac{a^2}{2!} Q L^2 f + \cdots \right) \right) \\
+	& = & \lim_{a \to 0} \left( \frac{1}{a} \right) \left( a L Qf - a Q L f + a^2 \left( \frac{1}{2!} \left( L^2 Qf - Q L^2 f \right) \right) + a^3(\cdots) + \cdots \right) \\
+	& = & \lim_{a \to 0} \left( L Qf - Q L f + a \left( \frac{1}{2!} \left( L^2 Qf - Q L^2 f \right) \right) + a^2(\cdots) + \cdots \right) \\
+	& = & L Q f - Q L f + \lim_{a \to 0} \left( a \left( \frac{1}{2!} \left( L^2 Qf - Q L^2 f \right) \right) + a^2 (\cdots) + \cdots \right) \\
+	& = & L Q f - Q L f + 0 \\
+	& = & [L,Q]f.
+\end{eqnarray*}
+We have demonstrated that $[L,Q] = 0 = 0 Q$, and thus that $L$ is a symmetry operator for $Q$.$\ep$
+
+\eex
+
+It turns out that the set of operators $\{ \exp(L): L \in \cA^\prime \}$ is closed under composition, and, as a group is isomorphic to $E(2)$.  If $L$ is a first-order symmetry operator for the Helmholtz equation, so that $L = aP_x + bP_y + \theta M$, then $L$ corresponds to the matrix $\bA = a \bPo + b \bPt + \theta \bM \in \cE(2)$.  The exponential $T_L$, then, corresponds to $\gl = e^{\bA} \in E(2)$.  Now, in accordance with Example~\ref{euclidean}, the action of $T_{\gl}$ on a function can be written as follows: $T_{\gl}f(\bx) = f(\bx \gl)$.  A useful fact, whose proof we omit, is that the action of $T_{\gl}$ on $f$ is the same as the action of the operator $T_L$ on $f$:
+\begin{equation}
+\label{actonf}
+T_L f(\bx) = T_{\gl}f(\bx) = f(\bx \gl).
+\end{equation}
+
+\end{section}
+
+\begin{section}{First-Order Symmetry and Separation of Variables}
+In rectangular coordinates, regardless of the choice of $k$, there exists a separated solution $\Psi_k$ of (\ref{helmholtz}) that is a simultaneous eigenfunction of $P_x$ and $P_y$.  There actually exist four linearly independent such separated solutions, but the existence of just one is sufficient for our purposes.  Consider $\Psi_k = X_1Y_1$, where $X_1 = e^{ikx}$ and $Y_1 = e^{i\sqrt{\omega^2 - k^2}y}$:
+\begin{equation}
+\label{eigenxy}
+P_x \left( \Psi_k \right) = ik \Psi_k
+\quad \mbox{and} \quad
+P_y \left( \Psi_k \right) = i \sqrt{\omega^2 - k^2} \Psi_k.
+\end{equation}
+Thus $\Psi_k$ is an eigenfunction of $P_x$ and $P_y$.
+
+In polar coordinates, a similar comment applies.  Here, regardless of the choice of $k$, there exists a separated solution $\Psi_k$ (again, actually four such solutions) that is an eigenfunction of $M$.  To see why, compare to (\ref{p theta}), and notice that, by its definition, $M = y \p x - x \p y = -\p \theta$.  Thus, if we let $\Psi_k = e^{ik\theta}J_k(\omega r)$, we have that
+\begin{equation}
+\label{eigentheta}
+M \left( \Psi_k \right) = -ik \Psi_k.
+\end{equation}
+
+It turns out that, given an arbitrary first-order symmetry operator for the Helmholtz equation $L \in \cE(2)$, there exists a coordinate system $\{ u,v \}$ in which (\ref{helmholtz}) is strongly separable, such that at least one separated solution is an eigenfunction of $L$ and $L = \parr{}{u}$.  To see this, we need the following theorems.
+
+\begin{theorem}
+\label{flow}
+Let $L = A(x,y)\p x + B(x,y)\p y$ be a first-order operator $($so that $A,B \in \cF$$)$ that is defined on an open, connected set $\Omega \in \bR^2$.  Then, given $\bx_0 = (x_0,y_0) \in \Omega$, there exist
+
+\noindent \pc{i} an open set $U$ with $\bx_0 \in U \subseteq \Omega$
+
+\noindent \pc{ii} an $\epsilon > 0$
+
+\noindent \pc{iii} a real-analytic map $X: (-\epsilon,\epsilon) \times U \longrightarrow \Omega$ which we will write as $X_t(a,b) = (x(t,a,b),y(t,a,b))$
+
+\noindent such that
+
+\noindent \pc{1} $X_0(a,b) = (a,b)$ --- that is, $x(0,a,b) = a$ and $y(0,a,b) = b$;
+
+\noindent \pc{2} if $s,t$ and $s+t$ lie in $(-\epsilon,\epsilon)$, then there exists an open set $V$ with $\bx_0 \in V \subseteq U$ such that $X_t(V) \subseteq U$ and $X_{s+t} = X_s \circ X_t$ on $V$;
+
+\noindent \pc{3} for $(a,b) \in U$ fixed, $x(t) = x(t,a,b)$ and $y(t) = y(t,a,b)$ is the unique solution to the initial value problem
+\[
+\frac{d x}{d t} = A(x,y), \quad \frac{d y}{d t} = B(x,y),
+\]
+\[
+x(0) = a, \quad y(0) = b.
+\]
+\end{theorem}
+
+This theorem follows from the existence and uniqueness theorems for first-order ordinary differential equations.  We will not prove it; we refer the curious reader to \cite[pp.~28-29]{hurewicz} and \cite[pp.~37-38]{warner} (they prove this in the case where $L$ and $X$ are $C^\infty$, but it is true in the real-analytic case as well).
+
+For $(a,b)$ fixed, note that $X_t(a,b)$ is a curve passing through $(a,b)$ at $t = 0$ (by \pn{1}) and the tangent vector $X_t^\prime (a,b)$ is given by the vector field $L$.  If we vary $t \in (-\epsilon,\epsilon)$, the curve $X_t(a,b)$ is called an \emu{integral curve} of the vector field.  Furthermore, the function $X(t,a,b)$ is called the \emu{flow} of the vector field.  Now the important result is the following theorem.
+
+\begin{theorem}
+\label{p u flow}
+Let $L = A(x,y)\p x + B(x,y)\p y$ be a real-analytic first-order operator defined on an open, connected set $\Omega \subseteq \bR^2$ and $\bx_0 = (x_0,y_0)$ be a point in $\Omega$ such that $(A(\bx_0),B(\bx_0)) \not= (0,0)$.  Then there is a change of coordinates $X: U \longrightarrow  V$ such that
+
+\noindent \pc{1} $U$ is a neighborhood of $(0,0)$ and $V$ is a neighborhood of $\bx_0$
+
+\noindent \pc{2} If $X(u,v) = (x(u,v),y(u,v))$, then $\p u = L$.
+\end{theorem}
+
+\proof
+Pick a real-analytic curve $\gamma$ such that $\gamma(0) = \bx_0$ and $\gamma^\prime(0)$ is linearly independent from $(A(\bx_0),B(\bx_0))$.  We may do this since, by hypothesis, $(A(\bx_0),B(\bx_0)) \not= (0,0)$.  Let $X_t(a,b)$ be the flow of the operator $L$, from Theorem \ref{flow}.  Then we define $X(u,v) = X_u(\gamma(v)) = (x(u,v),y(u,v))$.
+
+\noindent \underline{Claim $1$}
+\[
+\parr{x}{u}(u,v) = A(x(u,v),y(u,v))
+\]
+\[
+\parr{y}{u}(u,v) = B(x(u,v),y(u,v))
+\]
+This follows by fixing $v$ and letting $(a,b) = \gamma(v)$.  Then $(x(u,v),y(u,v)) = X_u(a,b)$ Claim $1$ now follows from \pn{3} of Theorem \ref{flow}.
+
+\noindent \underline{Claim $2$}
+\[
+\det \left( \begin{array}{cc}
+\parr{x}{u} & \parr{x}{v} \\ [2pt]
+\parr{y}{u} & \parr{y}{v} \end{array} \right) \not= 0
+\quad
+\mbox{at $(u,v) = (0,0)$}
+\]
+\noindent Proof of Claim $2$:
+
+\noindent Note that $X(0,0) = X_0(\gamma(0)) = X_0(\bx_0) = \bx_0 = (x_0,y_0)$.  Then, Claim $1$ implies that $\parr{x}{u}(0,0) = A(\bx_0)$ and $\parr{y}{u}(0,0) = B(\bx_0)$.  Furthermore, note that
+\begin{eqnarray*}
+\left( \parr{x}{v}(0,0),\parr{y}{v}(0,0) \right) & = & \frac{d}{d v} X(0,v) |_{v=0} \\
+ & = & \frac{d}{d v} X_0(\gamma(v)) |_{v=0} \quad \mbox{from the definition of $X$} \\
+ & = & \frac{d}{d v} \gamma(v) |_{v=0} \quad \mbox{since $X_0(a,b) = (a,b)$} \\
+ & = & \gamma^\prime(0).
+\end{eqnarray*}
+Since $\gamma^\prime(0)$ and $(A(\bx_0),B(\bx_0))$ are linearly independent, the rows of the Jacobian matrix are linearly independent.  Thus, the determinant is nonzero, as claimed.
+
+Now, Claim $2$ implies that the map $(u,v) \mapsto X(u,v) = (x,y)$ is a local change of coordinates in the neighborhoods of $(0,0)$ and $(x_0,y_0)$ (by the Inverse Function Theorem).  Then, Claim $1$ implies that $L = \p u$, because the chain rule implies that $\p u = \parr{x}{u}\p x + \parr{y}{u}\p y = A\p x + B\p y = L$.$\ep$
+
+\eex
+
+We have not required that the new coordinates $\{ u,v \}$ be orthogonal, so the Laplace operator is written in full generality as in (\ref{laplaciantrans}).  More simply, we write the Helmholtz operator as follows:
+\begin{equation}
+\label{helmgentrans}
+\cH = A_{11} \pp uu + A_{12} \pp uv + A_{22} \pp vv + A_1 \p u + A_2 \p v + \omega^2,
+\end{equation}
+where the $A_{ij}$ and $A_i$ equal the corresponding coefficient functions in (\ref{laplaciantrans}).  Let $L$ be a first-order symmetry operator.  We have that $[L,\cH] = 0$.  By Theorem \ref{p u flow}, we have that $L = \p u$.  We insert this into the commutator, and find that $\p u \cH - \cH \p u = 0$.  After some simplification, this yields
+\[
+A_{{11}_u}\pp uu + A_{{12}_u}\pp uv + A_{{22}_u}\pp vv + A_{1_u}\p u + A_{2_u}\p v = 0.
+\]
+This means that the above operator yields $0$ when operated on \emph{any} function $f \in \cF$.  It follows that each of the above coefficient functions is identically $0$.  Therefore, $A_{ij}$ and $A_i$ are functions only of $v$.  As a result, one finds that the function $\Psi_k = e^{iku}V(v)$ is a solution to $\cH \Psi = 0$, as long as $V$ satisfies
+\[
+A_{22}V^{\prime\prime} + \left( ikA_{12} + A_2 \right) V^\prime + \left( -k^2 A_{11} + ik A_1 + \omega^2 \right) V = 0.
+\]
+Clearly, then, $L \Psi_k = ik \Psi_k$, and so $\Psi_k$ is an eigenfunction of $L$.
+
+Although $\Psi_k$ is a weakly separated solution, the coordinates $\{ u,v \}$ might not be strongly separable in the sense of Chapter $1$.  But, it is possible to change coordinates so that we \pn{i} preserve $\p u = L$, and \pn{ii} achieve a coordinate system in which the Helmholtz equation is strongly separable.  If we perform this change of coordinates, the new coordinate system will be shapewise equivalent to either rectangular or polar coordinates, as we will discover below.
+
+Below, we will define an ``orbit'' of a first-order symmetry operator operator.  In brief, two operators $K$ and $L$ will be said to lie on the same orbit if $K = cL^g$, where $g \in E(2)$ and the expression $L^g$ will be made clear presently.  We will need some fairly involved discussion before we see exactly why this definition of an orbit is useful, but the idea will be that operators that lie on the same orbit correspond to shapewise equivalent coordinate systems.
+
+Recall that the set of exponentials of symmetry operators of the Helmholtz equation is isomorphic to $E(2)$.  Let $g = \glp \in E(2)$, where $\glp$ is the element of $E(2)$ corresponding to $T_{L^\prime} = e^{L^\prime}$, for some symmetry operator $L^\prime$.  Let $L^g = T_g L T_{g^{-1}}$, where $T_g$ and $T_{g^{-1}}$ operate on functions as described in Example~\ref{euclidean}.  As we saw in (\ref{commwithQ}), $T_{L^\prime}$ and $T_{L^\prime}^{-1}$ both commute with $\cH$.  Clearly, $L$ commutes with $\cH$, since all first-order symmetry operators do.  Thus, in accordance with (\ref{actonf}), we may write $L^g$ as a product of three operators that commute with $\cH$ (namely, $L^g = T_gLT_{g^-1} = T_{L^\prime}LT_{-L^\prime})$, and hence it commutes with $\cH$ and is a symmetry operator.  This follows, since $L^g$ commuting with $\cH$ means that $[L^g,\cH] = 0 = 0\cH$.  Write $L = A(\bx) \p x + B(\bx) \p y$; $\bx = (x,y)$; $\bx^\prime = (x^\prime,y^\prime) = \bx g$; and $\tilde{\bx} = (\tilde{x},\tilde{y}) = \bx g^{-1}$.  Note also that $L^g$ is a first-order operator, for $L$ involves only first-order derivatives, and $T_g$ and $T_{g^{-1}}$ only change coordinates.
+%We claim that $L^g = A(\bx^\prime)\p {x^\prime} + B(\bx^\prime)\p {y^\prime}$, and hence $L^g$ is a first-order operator.  To see why, examine the operation of $L^g$ on a function $f$:
+%\begin{eqnarray}
+%\nonumber L^g f(\bx) & = & \left( T_g L T_{g^{-1}} \right) f(\bx) \\
+%\nonumber & = & T_g L f(\bx g^{-1}) \\
+%\nonumber & = & T_g \left( A(\bx) \p x \left( f(\bx g^{-1}) \right) + B(\bx) \p y \left( f(\bx g^{-1}) \right) \right) \\
+%\nonumber & = & T_g \left( A(\bx) \left( D_1 f(\tilde{\bx}) \parr{\tilde{x}}{x} + D_2 f(\tilde{\bx}) \parr{\tilde{y}}{x} \right) + B(\bx) \left( D_1 f(\tilde{\bx}) \parr{\tilde{x}}{y} + D_2 f(\tilde{\bx}) \parr{\tilde{y}}{y} \right) \right) \\
+%\label{replacepxp} & = & A(\bx^\prime) \left( D_1 f(\bx) \parr{\tilde{x}}{x} + D_2 f(\bx) \parr{\tilde{y}}{x} \right) + B(\bx^\prime) \left( D_1 f(\bx) \parr{\tilde{x}}{y} + D_2 f(\bx) \parr{\tilde{y}}{y} \right)
+%\end{eqnarray}
+%We now must evaluate $\p {x^\prime}$ and $\p {y^\prime}$:
+%\[
+%\p {x^\prime} f(\bx) = D_1 f(\bx) \parr{x}{x^\prime} + D_2 f(\bx) \parr{y}{x^\prime}.
+%\]
+%Since $\bx$ bears the same relation to $\bx^\prime$ as $\tilde{\bx}$ does to $\bx$, we may rewrite the above equation as
+%\begin{equation}
+%\label{exp1}
+%\p {x^\prime} f(\bx) = D_1 f(\bx) \parr{\tilde{x}}{x} + D_2 f(\bx) \parr{\tilde{y}}{x}.
+%\end{equation}
+%Similarly, we have that
+%\begin{equation}
+%\label{exp2}
+%\p {y^\prime} f(\bx) = D_1 f(\bx) \parr{\tilde{x}}{y} + D_2 f(\bx) \parr{\tilde{y}}{y}.
+%\end{equation}
+%Replacing (\ref{exp1}) and (\ref{exp2}) into (\ref{replacepxp}) yields, as claimed,
+%\[
+%L^g f(\bx) = A(\bx^\prime) \p {x^\prime} f(\bx) + B(\bx^\prime) \p {y^\prime} f(\bx).
+%\]
+Finally, notice that
+\begin{eqnarray*}
+L^{g_1 g_2} & = & T_{g_1 g_2} L T_{g_2^{-1} g_1^{-1}} \\
+ & = & T_{g_1} \left( L^{g_2} \right) T_{g_1^{-1}} \\
+ & = & \left( L^{g_2} \right)^{g_1}.
+\end{eqnarray*}
+
+Let $\Psi_k = U(u)V(v)$ be a separated solution in the strongly separable coordinates $\{ u,v \}$.  Since $g \in E(2)$ implies that $g$ is an affine similitude and hence preserves shapewise equivalence, we have that $\bu^\prime = \bu g$ is a strongly separable coordinate system (Theorem \ref{shaprestrong}).  Since $T_g$ acts on $\Psi_k$ via $g$'s action on $\bu = (u,v)$, we have that $T_g \Psi_k$ is a separated solution in $\bu^\prime$ coordinates, for $T_g \Psi_k(\bu) = \Psi_k(\bu^\prime) = U(u^\prime)V(v^\prime)$.  If $\Psi_k$ is an eigenfunction of $L$ with eigenvalue $ik$, then so is $T_g \Psi$, for $L T_g \Psi = T_g L \Psi$ (this follows from Theorem \ref{symminvar}) which equals $T_g (ik) \Psi_k = (ik) T_g \Psi_k$.  Clearly, for $c \not= 0$, $cL$ will have the same eigenfunctions as $L$ (the eigenvalues will simply be multiplied by $c$): $cL \Psi_k = cik \Psi_k$.  Furthermore, the coordinates $\{ \tilde{u},v \}$ such that $cL = \p {\tilde{u}}$ are just a reparametrization of the coordinates $\{ u,v \}$ given by $L = \p u$, and hence are shapewise equivalent to $\{ u,v \}$.  So, for $g \in E(2)$, we have
+\begin{eqnarray*}
+cL^g \Psi_k & = & c \left( T_g L T_{g^{-1}} \right) \Psi_k \\
+ & = & cT_g L \left( T_{g^{-1}} \Psi_k \right) \\
+ & = & cT_g (ik) T_{g^{-1}} \Psi_k \\
+ & = & cik \Psi_k.
+\end{eqnarray*}
+And, of course, the coordinates given by $c L^g$ are a combination of a reparametrization of $\{ u,v \}$ and an affine similitude, and hence are shapewise equivalent to $\{ u,v \}$.  So, as stated above, if $K \in \cE(2)$, $K$ is said to lie on the same \emu{orbit} as $L \in \cE(2)$ if $K = cL^g$ for some $c \in \bR - \{ 0 \}$ and some $g \in E(2)$, for the coordinates that $K$ gives are shapewise equivalent to those that $L$ gives.
+
+We therefore want to find all equivalence classes of coordinate systems that we can obtain by requiring at least one separated solution to be an eigenfunction of $L$ for some $L \in \cE(2)$.  Define $g_1, g_2$, and $g_3$ so that $T_{g_1} = \exp(a P_x)$ and $T_{g_2} = \exp(b P_y)$, and $T_{g_3} = \exp(\theta M)$, where we will define $a,b,\theta$ below.  It is proven in \cite[p.~66]{hausner} that $e^{K}Le^{-K} = e^{\Ad K}L$, where $\Ad K(L) = [K,L]$.  A straightforward computation then leads to
+\begin{equation}
+\label{eM}
+P_x^{g_3} = \cos \theta P_x + \sin \theta P_y, \quad P_y^{g_3} = -\sin \theta P_x + \cos \theta P_y, \quad M^{g_3} = M.
+\end{equation}
+
+Therefore, if a first-order symmetry operator $L$ is of the form $c_1 P_x + c_2 P_y + c_3 M$ where $c_3 \not= 0$, then we claim that $L^{g_1 g_2} = c_3 M$ if $a = \frac{c_2}{c_3}$ and $b = -\frac{c_1}{c_3}$.  This follows since $g_1 g_2 = e^{aP_x + bP_y}$, which we will write as $e^P$, where $P = aP_x + bP_y$; and then we have
+\begin{eqnarray*}
+L^{g_1 g_2} & = & e^P L e^{-P} = e^{\Ad P} L = L + [P,L] + \textstyle{\frac{1}{2}}[P,[P,L]] + \textstyle{\frac{1}{6}}[P,[P,[P,L]]] + \cdots \\
+ & = & \mbox{ (since $[P,[P,L]] = 0$) } L + [P,L] = L + [P,c_3 M] = L + c_3 a [P_x,M] + c_3 b [P_y,M] \\
+ & = & L + c_2 (-P_y) - c_1 (P_x) \\
+ & = & (c_1 P_x + c_2 P_y + c_3 M) - c_2 P_y - c_1 P_x = c_3 M.
+\end{eqnarray*}
+If, however, $L = c_1 P_x + c_2 P_y \not= 0$, then setting $\theta = \left\{_{\cot^{-1}(\frac{c_2}{c_1}) \mbox{\footnotesize{ otherwise}}}^{\tan^{-1}(\frac{c_1}{c_2}) \mbox{\footnotesize{ if $c_2 \not= 0$}}}\right.$ yields $L^{g_3} = \sqrt{c_1^2 + c_2^2}P_y$:
+\begin{eqnarray*}
+L^{g_3} & = & e^{\theta M} L e^{-\theta M} = e^{\theta \Ad M} L \\
+ & = & \mbox{ (from (\ref{eM})) } c_1 (\cos \theta P_x + \sin \theta P_y) + c_2(-\sin \theta P_x + \cos \theta P_y) \\
+ & = & (c_1 \cos \theta - c_2 \sin \theta) P_x + (c_1 \sin \theta + c_2 \cos \theta) P_y \\
+ & = & 0 P_x + \sqrt{c_1^2 + c_2^2}P_y.
+\end{eqnarray*}
+In the first case, where $c_3 \not= 0$, $L$ lies on the same orbit as $M$; in the second case, where $c_3 = 0$, $L$ lies on the same orbit as $P_y$.  Thus, rectangular and polar are the two shapewise inequivalent, orthogonal, strongly separable coordinate systems that first-order symmetry analysis explains.
+
+\end{section}
+
+\begin{section}{Second-Order Symmetry}
+In our conception, the main goal of this paper is to clarify the terminology in the first two sections of \cite{miller}, and to provide enough background material and theoretical justification to allow a reader who is familiar with the typical undergraduate math curriculum to read those sections of Miller's book and hence to understand the group-theoretical explanation for the four coordinate systems in which the Helmholtz equation is strongly separable.  Because of \pn{i} the similarity between the way one obtains the second-order symmetry operators and the way one obtains the first-order symmetry operators, and \pn{ii} the similarity of the orbit-analysis of second-order symmetry operators to that of first-order symmetry operators, it seems that the above goal has now been accomplished.  In order to accomplish this goal, it has been necessary, in many places, to follow a line of reasoning similar to Miller's, with added detail or other clarifications.  We stress, however, that the goal of this paper is \emph{not} to recapitulate Miller's work.  Thus, although we will present the important results from the second-order symmetry analysis for the sake of completeness, we refer the reader to \cite[pp.~17-22]{miller} for all details.
+
+A second-order symmetry operator $S$ for (\ref{helmholtz}) is a real-analytic second-order differential operator $A_{11} \pp xx + A_{12} \pp xy + A_{22} \pp yy + A_1 \p x + A_2 \p y + A$ (real-analytic means that $A_{ij}, A_i, A \in \cF$) such that $[S,\cH] = Q \circ \cH$, where $Q$ is a real-analytic first-order differential operator.  Let $\cS$ denote the second-order symmetry algebra of the Helmholtz operator $\cH$.  Note that $[\cH,\cH] = 0 = 0 \cH$, so $\cH$ is a second-order symmetry operator.  One can show that, in fact, the product of any real-analytic function and $\cH$ is also a second-order symmetry operator.  Thus, $\cZ = \{ S: S = R \cH \mbox{ where } R \in \cF \}$ lies in $\cS$.  Since \pn{i} $\cZ$ is infinite dimensional, and \pn{ii} all symmetry operators in $\cZ$ map solutions of $\cH$ to $0$ and hence are said to be \emu{trivial}, it is useful to construct the set of non-trivial symmetries $\cS^\prime = \cS / \cZ$.  We compute $\cS^\prime$ in much the same way as we compute $\cA$ in the first-order case; and one can prove that a basis over $\bC$ for $\cS^\prime$ can be expressed as
+\[
+\bigg\{ P_x, P_y, M, E, P_x^2, P_xP_y, M^2, \{ M,P_x \}, \{ M,P_y \} \bigg\},
+\]
+where $\{ - , - \}$ denotes the \emu{anti-commutator}, so that $\{ Q_1,Q_2 \} = Q_1Q_2 + Q_2Q_1$.
+
+As in the first-order case, we restrict our attention to the real Lie algebra, and furthermore, we consider only purely second-order symmetry operators:
+\[
+\cS^{(2)} = \bigg\{ P_x^2, P_xP_y, M^2, \{ M,P_x \}, \{ M,P_y \} \bigg\}.
+\]
+
+The important result of the second-order orbit analysis is Theorem \ref{secondsymm} below, which we will present after defining an orbit of a second-order symmetry operator.
+
+First, note that the set of affine similitudes on $\bR^2$ forms a group, which we will denote $AS(2)$.  Just as with $E(2)$, we will say that given $g \in AS(2)$, $T_g$ acts on functions by $T_g f(\bx) = f(\bx g)$.
+
+\begin{definition}
+\label{secondsymmorbit}
+Let $S$ and $S^\prime$ be second-order symmetry operators of the Helmholtz equation, and let $g \in AS(2)$.  The construction $S^g$ is defined to equal $T_g S T_{g^{-1}}$.  We say that $S$ lies on the same \emu{orbit} as $S^\prime$ if $S = c(S^\prime)^g$, for some $c \in \bR - \{ 0 \}$ and some $g \in E(2)$.
+\end{definition}
+
+\begin{theorem}
+\label{secondsymm}
+Let $S_p = \{ M,P_y \}$ and $S_e = M^2 + P_y^2$.  Then,
+
+\noindent{\pc{1}} To every coordinate system that is shapewise equivalent to parabolic coordinates, there corresponds some second-order symmetry operator $S_{p^\prime} \in \cS^{(2)}$ of which at least one separated solution is an eigenfunction, where $S_{p^\prime}$ lies on the same orbit as $S_p$.
+
+\noindent{\pc{2}} To every coordinate system that is shapewise equivalent to elliptic coordinates, there corresponds some second-order symmetry operator $S_{e^\prime} \in \cS^{(2)}$ of which at least one separated solution is an eigenfunction, where $S_{e^\prime}$ lies on the same orbit as $S_e$.
+\end{theorem}
+
+\end{section}

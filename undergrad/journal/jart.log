@@ -1,0 +1,90 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 1999.9.25)  8 JAN 2001 11:26
+**jart
+(jart.tex
+LaTeX2e <1998/12/01> patch level 1
+Babel <v3.6x> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 1999/01/07 v1.4a Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 1999/01/07 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\c@theorem=\count87
+\c@lemma=\count88
+\c@example=\count89
+\c@corollary=\count90
+\c@conjecture=\count91
+\c@fact=\count92
+\c@definition=\count93
+ (jart.aux)
+\openout1 = `jart.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 114.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 114.
+ [1
+
+] (body.tex [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 59.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 59.
+
+Overfull \hbox (12.42479pt too wide) in paragraph at lines 79--81
+\OT1/cmr/m/it/10 where $\OML/cmm/m/it/10 A[]; A[]; A[]; A[]$\OT1/cmr/m/it/10 , 
+and $\OML/cmm/m/it/10 A$ \OT1/cmr/m/it/10 are real-analytic func-tions of $\OML
+/cmm/m/it/10 u$ \OT1/cmr/m/it/10 and $\OML/cmm/m/it/10 v$\OT1/cmr/m/it/10 . We 
+say that this equa-tion is $[]$
+ []
+
+
+Overfull \hbox (7.08434pt too wide) in paragraph at lines 79--81
+[]$ \OT1/cmr/m/it/10 or $[]$ if there ex-ists a so-lu-tion $\OT1/cmr/m/n/10 ^^I
+[](\OML/cmm/m/it/10 u; v\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 that can be writ-te
+n $\OML/cmm/m/it/10 U[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )$\OT1/cmr/m
+/it/10 ,
+ []
+
+[3] [4] [5] [6]
+Overfull \hbox (0.94016pt too wide) in paragraph at lines 257--258
+[]\OT1/cmr/m/n/10 We sum-ma-rize the re-la-tion-ship that holds among shape-wis
+e equiv-a-lent co-or-di-nate sys-tems in the schematic
+ []
+
+[7] [8]) (abiblio.tex) [9] (jart.aux) ) 
+Here is how much of TeX's memory you used:
+ 379 strings out of 10898
+ 3263 string characters out of 96881
+ 52687 words of memory out of 263001
+ 3363 multiletter control sequences out of 10000+0
+ 8966 words of font info for 31 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 24i,13n,19p,1455b,272s stack positions out of 300i,100n,500p,50000b,4000s
+
+Output written on jart.dvi (9 pages, 48120 bytes).
